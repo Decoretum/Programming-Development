@@ -7,6 +7,7 @@ from tkinter.scrolledtext import*
 from PIL import Image, ImageTk
 import random
 import time
+#sign of commit!
 
 #strings
 fireball = 'Fireball'
