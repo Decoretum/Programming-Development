@@ -1453,9 +1453,13 @@ game = Tk()
 game.title('Abyssal Advance')
 game.geometry('2000x2000')
 
-
-background = PhotoImage(file='backgroundpic.png')
-icon = PhotoImage(file='player.png')
+import sys
+pathfile1 = sys.path[0] + "/backgroundpic.png"
+pathfile2 = sys.path[0] + "/player.png"
+pathfile3 = sys.path[0] + "/Main.png"
+pathfile4 = sys.path[0] + "/arcaneboy.png"
+background = PhotoImage(file=pathfile1)
+icon = PhotoImage(file=pathfile2)
 game.iconphoto(False,icon)
 
 b = Label(image=background)
@@ -1511,7 +1515,7 @@ charges.grid(row=4,column=0,sticky=N)
 chargesnum = Label(game,text=gael.ultimate)
 chargesnum.grid(row=4,column=1,sticky=N)
 
-imgmain = (Image.open('Main.png'))
+imgmain = (Image.open(pathfile3))
 resizedmain = imgmain.resize((200,200),Image.ANTIALIAS)
 main = ImageTk.PhotoImage(resizedmain)
 hero = Label(image=main,height=135,width=125,bg='#C1FFC1')
@@ -1544,7 +1548,7 @@ abyssalentry.configure(state='normal')
 abyssalentry.grid(row=1,column=6,rowspan=8)
 
 
-img = (Image.open('arcaneboy.png'))
+img = (Image.open(pathfile4))
 resized = img.resize((75,60), Image.ANTIALIAS)
 arcaneboy = ImageTk.PhotoImage(resized)
 spacemaker = Label(image=arcaneboy,height=50,width=50)
