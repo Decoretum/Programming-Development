@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="website.css"> 
+    <title>Decoretum's Site</title>
+</head>
+<body>
+    <style>
+        .web{
+        font-family:system-ui; 
+        color: rgb(221, 237, 238); 
+        font-weight: light; 
+        background-color:dimgray;
+        padding: 10px;
+        border-radius: 9px;
+        text-decoration: none;
+          margin-left: 0vh;
+        }
+
+        .web:hover{
+            background-color: rgb(75, 58, 58);
+        }
+
+        .title{
+            font-family: Tahoma;
+            font-weight: 800;
+            color: aliceblue;
+            font-size: 20px;
+            margin-left: 23vh;
+            margin-top: -4vh;
+            margin-bottom: -4vh;
+        }
+
+
+        .wiz{
+            width: 10vh;
+            margin-left: 7vh;
+           
+            background-color: cornflowerblue;
+            padding: 10px;
+            border-radius: 9px;
+        }
+
+        .sub{
+          background-color: bisque;  
+          
+          margin-left: 4vh;
+          margin-bottom: 5vh;
+          width: 30vh;
+          padding: 10px;
+          border-radius: 8px;
+          text-align: center;
+          font-weight: 100;
+         
+        }
+
+        p{
+            font-size: large;
+            font-family:Georgia;
+            font-weight: 600;
+            
+            color: rgb(242, 242, 243);
+           
+        }
+
+        .inclusion{
+         line-height:4vh;
+         padding: 15px;
+        background-color:darksalmon;
+        width: fit-content;
+        border-radius: 9px;
+        }
+
+        html{
+            background-color: rgb(22, 24, 20);
+        }
+
+        @keyframes static{
+        0% {background-color: antiquewhite;}
+        25% {background-color: rgb(231, 229, 66); width: 150px;}
+        50% {background-color: rgb(34, 182, 182); height: 120px;}
+        75% {background-color: rgb(192, 162, 79);}
+        100% {background-color: antiquewhite;}
+}
+
+        @keyframes evolve{
+                0% {background-color: rgb(65, 235, 31); transform: translate(0,0);}
+                25% {background-color: rgb(24, 156, 117);}
+                50% {background-color: rgb(206, 22, 135);transform: translate(50px,0);}
+                75% {background-color: rgb(235, 240, 240);transform: translate(70px,0);}
+                100% {background-color: rgb(65, 235, 31);}
+        }
+
+        .animation{
+        border-radius: 59px;
+        width: 100px;
+        height: 100px;
+        background-color: antiquewhite;
+        animation-name: static;
+        animation-iteration-count: infinite;
+        animation-duration: 4s;
+        position: relative;
+        margin-top:-12vh;
+        margin-left:-25vh;
+
+
+    }
+
+    .animation2{
+        border-radius: 20px;
+        width: 90px;
+        height: 100px;
+        background-color: antiquewhite;
+        animation-name: evolve;
+        animation-iteration-count: infinite;
+        animation-duration: 4s;
+        position: relative;
+        margin-top:-12vh;
+        margin-left:25vh;
+
+
+    }
+
+       
+
+    </style>
+    <div class="flex01"> 
+        
+        <div class="flexchild flex1"> 
+            <img src="../picturesforweb/wizard.png" class="wiz"> <div class='animation'> </div><br>  
+            <div class="sub"> This will lead to Decoretum's personal website project! <br> It is currrently in development! </div><br>
+            <a class='web' href='website.html'> Decoretum's Mainpage </a> <div class='title'> Web Development </div> <br><br>
+            <p> What does this include? </p>
+            <div class="inclusion"> - Decoretum's Life <Br>- Decoretum's General Background and Aspirations <Br> - Decoretum's Skills <br> - Decoretum's Gaming Background</div> 
+            <p> What is trying to be honed in this section? </p>
+            <div class="inclusion"> - Programming! <br> Specifically, <br> - HTML <br> - CSS <br> - JavaScript</div>
+        
+        
+        
+        </div>
+        <div class="flexchild flex2">  
+            <img src="../picturesforweb/mageboy.png" class="wiz" style="background-color:rgb(228, 32, 81) ;"> <div class="animation2"> </div><br>
+            <div class="sub"> This leads to a repository for Decoretum's Javascript Projects </div>
+            <a class="web" href="javarepository.html"> JavaScript Page </a> <div class="title"> JavaScript Development </div><br><br>
+            <p> What does this include? </p>
+            <div class="inclusion" style="background-color:rgb(38, 61, 97); color:azure;"> - Decoretum's JavaScript Development </div>
+            <p> What is trying to be honed in this section? </p> 
+            <div class="inclusion" style="background-color:rgb(38, 61, 97); color: azure;"> JavaScript Development <br> - Fetching Data <br> - Sync and Async Functions </div>
+
+
+
+
+        </div>
+        <div class="flexchild flex3"> Hi! </div>
+        <div class="flexchild flex4"> Hi! </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Type Ahead 👀</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <form class="search-form">
+    <input type="text" class="search" placeholder="City or State">
+    <ul class="suggestions">
+      <li>Filter for a city</li>
+      <li>or a state</li>
+    </ul>
+  </form>
+
+
+
+
+
+
+
+<script>
+
+const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+const cities = [] //empty array to put cities to
+const promtest = fetch(endpoint).then(result => console.log(result)); /*once done, then an event. Result is data from what we fetched */
+fetch(endpoint)
+.then(result => result.json()) //We get JSON data in order to get its values and causes another promise
+.then(data => cities.push(...data)); //We convert raw JSON data to actual data and append to empty array. '...' spreads into a function or method to spread the data and not just add 
+// the original array as it is to the new array
+
+function matches(words,cities){
+return cities.filter(place => {
+// we figure out if city/state matches what was searched
+const regex = new RegExp(words, 'gi'); //will turn word into regular expression and is case insensitive and global
+return place.city.match(regex) || place.state.match(regex); //.match() used to find match of parameter from something. Parameter could be in " ", / /, / /g (for global), / /gi (case insensitive search)
+}); // we returned an array
+
+}
+
+function displaymatches(){
+const matchvalue = matches(this.value, cities);
+const values = matchvalue.map(place => {
+const highlight = new RegExp(this.value, 'gi'); //we are going to highlight words that we input relative to the string result below
+const cityhighlight = place.city.replace(highlight, `<span class="hl">${this.value}</span>`); //careful for spaces between codes, very important for capitalization
+const statehighlight = place.state.replace(highlight, `<span class="hl">${this.value}</span>`);
+function numtocommas(x){
+return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g,',');
+
+};
+  return `
+<li> 
+<span class='name'> ${cityhighlight}, ${statehighlight} </span>
+<span class='population'> ${numtocommas(place.population)} </span>
+</li>
+`;
+
+}).join(''); //since array will be returned here, only string will be returned through join
+searchsuggestions.innerHTML = values;
+};
+
+const searchinput = document.querySelector('.search'); 
+const searchsuggestions = document.querySelector('.suggestions');
+
+searchinput.addEventListener('change',displaymatches); //if input changes, we run matches function
+searchinput.addEventListener('keyup',displaymatches); //triggers everytime keys or text changes
+
+console.log(promtest);
+console.log(prom);
+console.log(cities);
+
+</script>
+</body>
+</html>

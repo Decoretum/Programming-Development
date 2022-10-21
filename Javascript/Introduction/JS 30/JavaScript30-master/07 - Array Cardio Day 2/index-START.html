@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Cardio 💪💪</title>
+</head>
+<body>
+  <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
+  <script>
+    // ## Array Cardio Day 2
+
+    const people = [
+      { name: 'Wes', year: 1988 },
+      { name: 'Kait', year: 1986 },
+      { name: 'Irv', year: 1970 },
+      { name: 'Lux', year: 2015 }
+    ];
+
+    const comments = [
+      { text: 'Love this!', id: 523423 },
+      { text: 'Super good', id: 823423 },
+      { text: 'You are the best', id: 2039842 },
+      { text: 'Ramen is my fav food ever', id: 123523 },
+      { text: 'Nice Nice Nice!', id: 542328 }
+    ];
+
+    // Some and Every Checks
+    // Array.prototype.some() // is at least one person 19 or older?
+    const is19 = people.some(function(person){ //checks if at least a person satisfies condition
+      const currentyear = (new Date()).getFullYear();
+      if (currentyear - person.year >= 19){
+        return true; //will return true regardless
+      }
+    });
+
+
+    //or
+    const is192 = people.some(person =>((new Date()).getFullYear() - person.year >= 19));
+
+    console.log(is192); //returns true/false
+    console.log({is192}); // if you put curly braces around, returns the object that satisfies
+
+
+
+    // Array.prototype.every() // is everyone 19 or older? Does all items satisfy condition
+    const everyadult = people.every(person =>((new Date()).getFullYear() - person.year >= 19));
+    console.log(everyadult); //this returns true/false without curly
+    console.log({everyadult}); //returns object that satisfies condition
+
+
+
+    // Array.prototype.find()
+    // Find is like filter, but instead returns just the one you are looking for
+    // find the comment with the ID of 823423
+
+    const comment = comments.find(comment => comment.id === 823423)
+
+    //or
+    const comment2 = comments.find(function(c){
+      if (c.id === 823423){
+        return `Yes!`;
+      }
+    });
+    console.log(comment); //returns the object youre looking for
+    console.log({comment}); //returns comment object
+
+
+
+    // Array.prototype.findIndex()
+    // Find the comment with this ID
+    // delete the comment with the ID of 823423
+
+    const findid = comments.findIndex(comment => comment.id === 823423);
+    console.log(findid);
+
+    //we delete comment form list permanently
+    //const deleteid = comments.splice(findid, 1);
+
+    //or make copy
+    const deleteid2 = comments.slice().splice(findid, 1);
+    console.log(deleteid2); //returns the object/element of array before the object/element that we have deleted
+
+    //another weird way...
+    const newcomments = [
+    ...comments.slice(0, findid),
+    ...comments.slice(findid + 1)
+    
+    ];
+    console.log(newcomments);
+    console.log(comments);
+
+  </script>
+</body>
+</html>

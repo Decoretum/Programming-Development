@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="http://jservice.io/global.css" type="stylesheet"> 
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr> 
+        <th> Difficulty </th>
+        <th> Category </th>
+        <th> Question </th>
+        <th> Answer </th>
+        <th> Airdate </th>
+        <th> ID </th>
+        </tr>
+        <tr>    
+            <td id="difficulty"> </td>
+            <td id="category"> </td>
+            <td id="question"> </td>
+            <td id="answer"> </td>
+            <td id="airdate"> </td>
+            <td id="id"> </td>
+
+        </tr>
+    </table>
+    <br>
+    <button id="refresh-question"> Submit answer! </button> <div class="raw"> </div> <input class="input"> </input> <div class="verdict"> </div> </div>  <div class="reminder"> </div>  
+    <br>
+    <div class="scoretext"> Score: <span class="score"> </span> <br><br>
+    <div class="comment"> </div>
+
+    <style>
+        .reminder{
+            display: inline;
+        }
+        .verdict{
+            padding: 10px;
+            display: inline;
+        }
+        input{
+            display: inline;
+            padding: 10px;
+            background-color: azure;
+        }
+        table{
+            padding: 10px;
+            align-items: center;
+            border: solid;
+            background-color: rgb(238, 216, 170);
+            height: 300px;
+            max-width: 1700px;
+            align-content: center;
+            resize: none;
+            font-family: 'Georgia';
+            border-color: transparent;
+            
+        }
+        th{
+            padding: 10px;
+            
+            margin: 10px;
+            background-color: chocolate;
+            max-width: 900px;
+            width: 500px;
+            height: 100px;
+            text-align: center;
+            resize: none;
+        }
+        td{
+            padding: 10px;
+            
+            margin: 10px;
+            max-width: 900px;
+            height: 200px;
+            text-align: center;
+            resize: none;
+        }
+        .raw{
+            display: inline;
+            
+            padding: 10px;
+            margin: 10px;
+        }
+
+
+
+    </style>
+
+<script>
+    let input = document.querySelector('.input');
+    let button = document.getElementById('refresh-question');
+    let verdict = document.querySelector('.verdict');
+    let score1 = document.querySelector('.score');
+    if (localStorage.number === undefined){
+        localStorage.number === 0
+        score1.innerHTML = 0;
+    }
+    else{
+        score1.innerHTML = localStorage.number;
+    }
+
+    
+    
+
+    function sendData(){
+    let request = new XMLHttpRequest();
+    request.onreadystatechange = function(){ //
+        if (this.readyState === 4 && this.status === 200){
+            async function GetRandom(){ //Answer and question
+
+                let response3 = await fetch('http://jservice.io/api/clues?value=100&min_date=1985-02-20')
+                let clues = await response3.json()
+
+                fetch('http://jservice.io/api/random')
+                .then(response2 => response2.json())
+                .then((data) => {
+                    let result2 = data;
+                    let firstpromise = new Promise(function(resolve,reject){ //State fulfilled, value or rejected, error
+                    document.getElementById('answer').innerHTML = `What is the answer?`;
+                    document.getElementById('question').innerHTML = result2[0].question
+                    document.getElementById('airdate').innerHTML = result2[0].airdate
+                    document.getElementById('id').innerHTML = result2[0].id
+                    document.getElementById('question').innerHTML = result2[0].question
+                    document.getElementById('category').innerHTML = result2[0].category.title
+                    if (result2[0].value === null){
+                        document.getElementById('difficulty').innerHTML = 'No difficulty!'
+                    }
+                    else{
+                    document.getElementById('difficulty').innerHTML = result2[0].value
+                    }
+                   
+                    resolve(console.log('Good!'))
+                    
+                 
+                }) //end of first promise
+
+                console.log(result2[0])
+
+                
+
+              let second = function reload(){
+                let time = 0
+                let removed = result2[0].answer.replace('<i>','').replace('</i>','').replace('<b>','').replace('</b>','').replace('<I>','').replace('</I>','');
+                if (input.value === removed){
+                    verdict.innerHTML = `Congratulations! You got the correct answer!`
+                    document.getElementById('answer').innerHTML = removed;
+                    if (localStorage.number){
+                        localStorage.number = Number(localStorage.number) + 1;
+                    }
+                    else{
+                        localStorage.number = 0;
+                    }
+                }
+                else{
+                    verdict.innerHTML = `Oops, you got it wrong! The right answer is "${removed}"`
+                    document.getElementById('answer').innerHTML = removed;
+                    if (localStorage.number){
+                        localStorage.number = Number(localStorage.number) - 1;
+                    }
+                    else{
+                        localStorage.number = 0;
+                    }
+                }
+                window.setTimeout(function(){
+                        window.location.reload()
+                    }, 6000)
+                score1.innerHTML = localStorage.number;
+                document.querySelector('.reminder').innerHTML = `This page will reload in 6 seconds!`;
+                    }
+                    
+                    
+                
+                button.addEventListener('click',second);
+                
+                }) //end of whole .then
+                
+                
+               
+                
+                
+            } //end of async    
+            
+            GetRandom();  
+        }}
+
+        request.open('GET','http://jservice.io/',true); //type of request
+        request.send(); //send request to server     
+        
+    };
+
+
+sendData();
+
+
+</script>  
+</body>
+</html>

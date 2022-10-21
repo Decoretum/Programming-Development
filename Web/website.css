@@ -1,0 +1,455 @@
+body{
+    font-family: Verdana;
+    line-height: 2;
+    margin: 20px;
+    
+}
+
+p{
+    font-family: Georgia;
+}
+
+.shrink{
+    font-size: 15px;
+}
+
+.randominfo{
+    border-radius: 70px;
+    position: absolute;
+    max-width: 1000px;
+    max-height: 1000px;
+    right: 630px;
+    background-color:blanchedalmond;
+    color:rgb(12, 10, 8);
+    text-align: center;
+    padding: 30px;
+    word-wrap: break-word;
+
+}
+
+.randombutton{
+    font-family: Georgia;
+    position: absolute;
+    background-color: chocolate;
+    cursor: pointer;
+    right: 650px;
+    bottom: 280px;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.randombutton:hover{
+    background-color: rgb(226, 214, 39);
+}
+
+.whatsnew{
+    color: rgb(5, 8, 10);
+    position: absolute;
+    right: 400px;
+    padding: 10px;
+    top: 920px;
+    border-radius: 30px;
+
+
+}
+
+.whatsnewbutton{
+
+    background-color: darkgray;
+    cursor: pointer;
+    position: absolute;
+    right: 1300px;
+    padding: 10px;
+    border-color: aquamarine;
+}
+
+.whatsnewbutton:hover{
+    background-color: cornsilk;
+
+}
+
+.box{
+    width: fit-content;
+    block-size: fit-content;
+    padding: 10px;
+    border: solid;
+    border-radius: 25px;
+    margin-bottom: 50px;
+    box-shadow:10px 10px rgb(173, 224, 226); 
+    position:relative;
+    
+}
+
+.ele{
+    padding: 10px;
+}
+
+.cubepic > * {
+    vertical-align: middle;
+      
+}
+.subtext{
+    background-color: rgb(195, 196, 211);
+    padding: 20px;
+    border-radius: 40px;
+}
+
+.subgroup{
+    font-size: 22px;
+    font-family: Helvetica;
+}
+
+.babygroup{
+    font-size: 20px;
+    font-family: Trebuchet MS;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 17px;
+}
+h1{
+    color: rgb(12, 10, 8);
+    text-align: center;
+    font-family: Arial; 
+    background-color:blanchedalmond;
+    border:transparent;
+    border-radius: 30px;
+    max-width: 600px;
+    display: inline;
+    padding: 20px;
+    text-shadow: 1px 0.59px;
+    box-shadow: 10px 10px;
+}
+
+h2{
+    color: orangered;
+    text-align: left;
+    font-family: Lucida Sans Regular;
+}
+
+.containerlabel{
+    font-family: Verdana; 
+    font-weight: 550; 
+    text-align: center; 
+    margin-left: 40px; 
+    margin-right: 90px;
+}
+.Frontend{
+    font-size: 25px;
+    font-family: Lucida Sans;
+    vertical-align: middle;
+}
+
+/* Java repository --------------------------------*/
+
+.homejs{
+    padding: 10px;
+    background-color: darkgoldenrod;
+    border-radius: 9px;
+    border-color: darkgoldenrod;
+    font-family: Verdana;
+    position: absolute;
+    right: 70px;
+    top: 20px;
+    color:rgb(233, 227, 208);
+    text-decoration: none;
+}
+
+.homejs:hover{
+    background-color: rgb(207, 155, 90);
+    border-color: rgb(207, 155, 90);
+    cursor: pointer;
+}
+
+.box.js1{
+    width: fit-content;
+    block-size: fit-content;
+    padding: 10px;
+    border: solid;
+    border-radius: 25px;
+    margin-bottom: 50px;
+    box-shadow:10px 10px rgb(173, 224, 226); 
+    position:relative;
+    width: 300px;
+    background-color: burlywood;
+    box-shadow:10px 10px rgb(83, 71, 29);
+
+}
+
+.Frontend.js1{
+    font-size: 25px;
+    font-family: Lucida Sans;
+    vertical-align: middle;
+    text-align: center;
+    margin: 10px;
+    padding: 15px;
+    background-color:rgb(133, 104, 26);
+    border-radius: 9px;
+}
+
+.box.js2{
+    width: fit-content;
+    block-size: fit-content;
+    padding: 10px;
+    border: solid;
+    border-radius: 25px;
+    margin-bottom: 50px;
+    box-shadow:10px 10px rgb(187, 156, 127); 
+    position:absolute;
+    top: 100px;
+    left: 500px;
+    background-color: rgb(223, 178, 83);
+
+}
+
+.Frontend.js2{
+    font-size: 25px;
+    font-family: Lucida Sans;
+    vertical-align: middle;
+    margin: 15px;
+    width: fit-content;
+    padding: 15px;
+    background-color:rgb(221, 204, 150);
+    border-radius: 9px;
+    position: relative;
+}
+
+.a.js1{
+    position: relative;
+    padding: 10px;
+    font-family: Cambria;
+    background-color: rgb(68, 142, 202);
+    color: antiquewhite;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 9px;
+}
+
+a.js1:hover{
+    background-color: rgb(71, 34, 22);
+    position: relative;
+}
+
+.triangle.one{
+    width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 75px solid rgb(126, 76, 10);
+    position: relative;
+    left: -100px;
+    top: -100px;
+}
+
+.triangle.one:hover{
+    transform: scale(1.7);
+    transform-origin: bottom;
+}
+
+/* --------------------------- */
+table {
+    border-collapse: collapse;
+}
+
+td{
+    padding: 10px;
+    border: 1px gray solid;
+    background-color: lightcyan;
+}
+
+th{
+padding: 10px;
+border: 4px solid goldenrod;
+font-family: Tahoma;
+}
+
+.amain:link,.amain:visited{
+    font-family: 'Franklin Gothic Medium';
+    background-color: crimson;
+    color: darkkhaki;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.amain:hover{
+    background-color: coral;
+    color: cornflowerblue;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.container{
+    display: inline-grid;
+    
+}
+
+.header{   
+    display: inline;
+    width: 600px;
+    float: right;
+    position: fixed;
+    margin-left: 60px;
+    height: 40px;
+    
+}
+
+button:active{
+    transform: translateY(4px);
+    box-shadow: darkolivegreen;
+}
+
+.info{ 
+    background-color:azure; 
+    width: 700px; 
+    height: 200px; 
+    position:absolute; 
+    border-radius: 20px;
+    padding: 10px;
+    color: black;
+    box-shadow: 10px 10px rgb(184, 170, 170);
+}
+
+.who{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    width: 200px;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 40px;
+    background-color: rgb(98, 118, 136);
+    position:relative;
+    top: 220px;
+}
+
+.who:hover {background-color: darkkhaki;}
+
+.hobbies{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    width: 200px;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 40px;
+    background-color: rgb(98, 118, 136);
+    position:relative;
+    top: 220px;
+    left: 30px;
+}
+
+.hobbies:hover {background-color: darkkhaki;}
+
+.relationship{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    width: 200px;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 40px;
+    background-color: rgb(98, 118, 136);
+    position:relative;
+    top: 220px;
+    left: 50px;
+}
+
+.relationship:hover {background-color: darkkhaki;}
+
+.timer{
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    border: solid;
+    background-color: beige;
+    color: rgb(55, 90, 143);
+    border-radius: 8px;
+    border-color: cornsilk;
+    font-weight: 500;
+    margin: 10px;
+    
+}
+/* Animations */
+@keyframes square{
+    0% {background-color: antiquewhite;}
+    25% {background-color: coral; right: 10px;}
+    50% {background-color: darkslategray; right: 10px;}
+    75% {background-color: green; right: 5px;}
+    100% {background-color: darkred;}
+}
+
+@keyframes static{
+    0% {background-color: rgb(228, 194, 100);}
+    25% {background-color: rgb(126, 108, 59);}
+    50% {background-color: rgb(179, 131, 42);}
+    75% {background-color: rgb(226, 174, 31);}
+    100% {background-color: rgb(228, 171, 97);}
+}
+
+.animation{
+    border-radius: 9px;
+    width: 100px;
+    height: 100px;
+    background-color: antiquewhite;
+    animation-name: square;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    position: relative;
+    right: -500px;
+
+}
+
+.Frontend.js1.jsanimation{
+    border-radius: 9px;
+    background-color: antiquewhite;
+    animation-name: static;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    position: relative;
+
+}
+
+/* ---------------------------- */
+.flex01{
+    
+    flex-wrap: wrap;
+    display: flex;
+    border-color:darkgreen;
+}
+
+
+.flexchild{
+    flex:1;
+    flex-direction: column;
+    border-color:aliceblue;
+    border-left: solid;
+    border-right: solid;
+    border-radius: 9px;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    
+    
+}
+
+.flex1{
+    text-align: justify;
+    background-color: rgb(37, 66, 66);
+}
+
+.flex2{
+    text-align: justify;
+    background-color: rgb(157, 158, 72);
+}
+

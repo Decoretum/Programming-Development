@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Canvas</title>
+</head>
+<body>
+<canvas id="draw" width="800" height="800"></canvas>
+<script>
+  const canvas = document.querySelector('#draw');
+  const cont = canvas.getContext('2d'); // you draw on this context, not on canvas directly
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  cont.strokeStyle = '#BADA55';
+  cont.lineWidth = 10;
+  cont.lineJoin = 'round'; //when line meets another line
+  cont.lineCap = 'round';
+
+  let hue = 0;
+  let size = true;
+  
+
+  let isdrawing = false;  //to be used later to indicate if we press mouse down or let go
+  let lastx = 0; 
+  let lasty = 0; // x and y will dictate where line starts and ends when we draw
+
+  function draw(e){
+    if (!isdrawing) return; //stop function from running with the condition
+    
+    cont.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+    cont.beginPath();
+    cont.moveTo(lastx, lasty); //we initialize the starting point
+    cont.lineTo(e.offsetX, e.offsetY); //we go to lineto
+    cont.stroke();
+    lastx = e.offsetX; //to set them to where last left
+    lasty = e.offsetY;
+    hue ++;
+    if (hue >= 360){
+      hue = 0;
+    }
+    
+    if (cont.lineWidth >= 100 || cont.lineWidth <= 1){
+      size = !size;
+    }
+    if (size === true){
+      cont.lineWidth++;
+      console.log('too big'); 
+    }
+    else if (size === false) {
+      cont.lineWidth--;
+      console.log('too small');
+    }
+    };
+  
+
+  canvas.addEventListener('mousemove',draw); //we listen to the event of mouse movement around area
+  canvas.addEventListener('mousedown', (e) => {
+    isdrawing = true;
+    lastx = e.offsetX;
+    lasty = e.offsetY;
+  
+
+  }); // if mouse pressed, will trigger the change in variable
+
+  canvas.addEventListener('mouseup', () => isdrawing = false); // 
+  canvas.addEventListener('mouseout', () => isdrawing = false); // if mouse is out of canvas, will trigger false
+
+</script>
+
+<style>
+  html, body {
+    margin: 0;
+  }
+</style>
+
+</body>
+</html>

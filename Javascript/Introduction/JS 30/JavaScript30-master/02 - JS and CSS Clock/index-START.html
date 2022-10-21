@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS + CSS Clock</title>
+</head>
+<body>
+
+<div class="time" style="border: solid; padding: 10px; position:absolute; top:200px; right:900px; background-color: #e9cf86;"> </div>
+    <div class="clock">
+      <div class="clock-face">
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+      </div>
+    </div>
+
+
+  <style>
+    html {
+      background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5);
+      background-size: cover;
+      font-family: 'helvetica neue';
+      text-align: center;
+      font-size: 10px;
+    }
+
+    body {
+      margin: 0;
+      font-size: 2rem;
+      display: flex;
+      flex: 1;
+      min-height: 100vh;
+      align-items: center;
+    }
+
+    .clock {
+      width: 30rem;
+      height: 30rem;
+      border: 20px solid white;
+      border-radius: 50%;
+      margin: 50px auto;
+      position: relative;
+      padding: 2rem;
+      box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2);
+      
+    }
+
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px); /* account for the height of the clock hands */
+    }
+
+    .hand { /*The cartesian plane in javascript is from 0 ---- ------ 180, left to right */
+      width: 50%;
+      height: 6px;
+      background: black;
+      position: absolute;
+      top: 50%;
+      transition: all 0.05;
+      transform-origin: 100%; /* allows us to change origin of object */
+      transform: rotate(90deg); /* rotates 90 deg */
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); /* Shows how object will be calculated during transition */
+    }
+
+      .second-hand{
+      transform-origin: 100%; /* allows us to change origin of object */
+      transform: rotate(90deg); /* rotates 90 deg */
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+
+      }
+
+      .hour-hand{
+      transform-origin: 100%; /* allows us to change origin of object */
+      transform: rotate(90deg); /* rotates 90 deg */
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+
+      }
+
+
+  </style>
+
+  <script>
+    const info = document.querySelector('.time');
+    const secondhand = document.querySelector('.second-hand');
+    const hourhand = document.querySelector('.hour-hand');
+    const minutehand = document.querySelector('.min-hand');
+    function setDate(){ // new creates instance of a constructor (class or function). You can call out their attributes/properties repeatedly
+      const now = new Date(); 
+      const sec = now.getSeconds();
+      const min = now.getMinutes();
+      const hour = now.getHours();
+      const secdeg = ((sec/60) * 360) + 90; // we put seconds in the scale of a 360 degree cartesian plane // we added 90 cause hand class is originally at 90 which makes it left to right, not top to bottom 
+      const mindeg = ((min/60) * 360) + 90;
+      const hourdeg = ((hour/12) * 360) + 90;
+      let day='';
+      if (hour >= 12){
+        day = 'PM';
+      }
+      else if (hour <= 12){
+        day = 'AM';
+      }
+      info.textContent = `${hour}: ${min}: ${sec} ${day}`;
+
+      secondhand.style.transform = `rotate(${secdeg}deg)`;
+      minutehand.style.transform = `rotate(${mindeg}deg)`;
+      hourhand.style.transform = `rotate(${hourdeg}deg)`;
+      console.log(mindeg);
+    
+      console.log(now);
+
+      }
+      
+      
+      
+      
+
+    
+
+    setInterval(setDate,1000); // Runs function every 1000 ms or 1 second
+  </script>
+</body>
+</html>

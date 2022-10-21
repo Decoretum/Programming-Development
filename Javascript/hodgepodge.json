@@ -1,0 +1,2357 @@
+{
+  "id": 227,
+  "title": "hodgepodge",
+  "clues_count": 235,
+  "clues": [
+    {
+      "id": 1393,
+      "answer": "=",
+      "question": "=",
+      "value": 100,
+      "airdate": "1985-11-25T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 1405,
+      "answer": "=",
+      "question": "=",
+      "value": 300,
+      "airdate": "1985-11-25T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 1411,
+      "answer": "Chipmunks",
+      "question": "April 13,1985 was proclaimed in L.A. \"Ruby-Spears/Bagdasarian Day\" saluting this animated rock group",
+      "value": 400,
+      "airdate": "1985-11-25T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 1416,
+      "answer": "motion sickness",
+      "question": "It's affected 48% of U.S. astronauts, including Sen. Garn, who made it his study project",
+      "value": 500,
+      "airdate": "1985-11-25T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 1399,
+      "answer": "=",
+      "question": "=",
+      "value": 200,
+      "airdate": "1985-11-25T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": 1
+    },
+    {
+      "id": 3791,
+      "answer": "April 1st",
+      "question": "Rachmaninoff, Bismarck & Edmond Rostand were all born on this day, no \"fool\"ing",
+      "value": 100,
+      "airdate": "1988-02-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 3797,
+      "answer": "\"Casey\"",
+      "question": "RR engineer John Luther Jones got this nickname from his Kentucky hometown",
+      "value": 200,
+      "airdate": "1988-02-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 3803,
+      "answer": "a style of pasta",
+      "question": "Of Italy's president, a style of pasta, or a brand of motor scooter, what tagliatelle is",
+      "value": 300,
+      "airdate": "1988-02-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 3809,
+      "answer": "sapphire",
+      "question": "If a corundum gem is red, it's a ruby; if it's any other color -- especially blue -- it's this",
+      "value": 400,
+      "airdate": "1988-02-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 3815,
+      "answer": "sebaceous glands",
+      "question": "Your hair gets oily when these glands secrete too much oil",
+      "value": 500,
+      "airdate": "1988-02-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 5666,
+      "answer": "Moscow",
+      "question": "Weighing over 400,000 pounds, the Czar Kolokol in this capital is the world's largest bell",
+      "value": 100,
+      "airdate": "1990-05-09T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 5672,
+      "answer": "Heads",
+      "question": "Im, a black rat snake in a Knoxville, Tn. university lab, fights itself for food since it has 2 of these",
+      "value": 200,
+      "airdate": "1990-05-09T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 5678,
+      "answer": "(Elijah) Blue (Allman)",
+      "question": "It's the colorful middle name of Cher's son",
+      "value": 300,
+      "airdate": "1990-05-09T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 5684,
+      "answer": "The Girl Scouts",
+      "question": "Their emblem is a 3-leaf clover representing the 3 parts of their promise",
+      "value": 400,
+      "airdate": "1990-05-09T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 5690,
+      "answer": "Richard Nixon",
+      "question": "This Republican was the last president who had no sons -- but he did have daughters",
+      "value": 500,
+      "airdate": "1990-05-09T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 7166,
+      "answer": "Betsy Ross",
+      "question": "She outlived 3 husbands, was kicked out of the Society of Friends & we have our doubts about the flag",
+      "value": 100,
+      "airdate": "1990-01-10T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 7172,
+      "answer": "helium",
+      "question": "Macy's claims to be the 2nd largest consumer of this gas in the U.S.; the U.S. gov't is 1st",
+      "value": 200,
+      "airdate": "1990-01-10T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 7178,
+      "answer": "corn",
+      "question": "Hominy is this vegetable hulled, degermed & broken up",
+      "value": 300,
+      "airdate": "1990-01-10T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 7184,
+      "answer": "<i>Funky Chicken</i>",
+      "question": "Just the dance to do at a fowl ball; Rufus Thomas sang about doing it in 1970",
+      "value": 400,
+      "airdate": "1990-01-10T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 7190,
+      "answer": "London",
+      "question": "The international headquarters of the Salvation Army is in this world capital",
+      "value": 500,
+      "airdate": "1990-01-10T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 7259,
+      "answer": "Chiang Kai-shek",
+      "question": "During WWII he was head of the Kuomintang party & commander of the Chinese army",
+      "value": 100,
+      "airdate": "1989-12-29T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 7265,
+      "answer": "Hirohito",
+      "question": "On the day this emperor was buried, Japan granted amnesty to 30,000 people",
+      "value": 200,
+      "airdate": "1989-12-29T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 7271,
+      "answer": "Aegean Sea",
+      "question": "Plate pressure is compressing the Mediterranean, but this sea, bordering Greece, is expanding",
+      "value": 300,
+      "airdate": "1989-12-29T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 7277,
+      "answer": "6 Weeks",
+      "question": "To get a Nevada divorce, you have to live there at least this long",
+      "value": null,
+      "airdate": "1989-12-29T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 7283,
+      "answer": "Giovanni Verrazano",
+      "question": "The 1st explorer to see N.Y. harbor; a bridge opened there in 1964 is named for him",
+      "value": 500,
+      "airdate": "1989-12-29T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 8655,
+      "answer": "sloth",
+      "question": "Of the 7 deadly sins, the one that's also the name of an animal",
+      "value": 400,
+      "airdate": "1990-11-14T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 8637,
+      "answer": "choice",
+      "question": "USDA meat grade between prime & good",
+      "value": 100,
+      "airdate": "1990-11-14T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 8643,
+      "answer": "RCA",
+      "question": "In 1919 this company absorbed the Marconi Wireless Co. & got David Sarnoff with it",
+      "value": 200,
+      "airdate": "1990-11-14T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 8649,
+      "answer": "(Jacques) Cousteau",
+      "question": "After WWII he founded the French Navy's Undersea Research Group",
+      "value": 300,
+      "airdate": "1990-11-14T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 8661,
+      "answer": "\"The Star-Spangled Banner\"",
+      "question": "\"To Anacreon In Heaven\" is the original title of the music to which this is set",
+      "value": 500,
+      "airdate": "1990-11-14T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 9417,
+      "answer": "kimono",
+      "question": "A style of sleeve cut in 1 piece with the bodice, or a Japanese robe",
+      "value": 100,
+      "airdate": "1992-01-20T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 9423,
+      "answer": "I",
+      "question": "This vowel should be capitalized when used as a pronoun",
+      "value": 200,
+      "airdate": "1992-01-20T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 9429,
+      "answer": "Iceland",
+      "question": "Akureyri, the 2nd largest city in this country, has only 13,000 people while Reykjavik has 89,000",
+      "value": 300,
+      "airdate": "1992-01-20T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 9435,
+      "answer": "National Geographic Society",
+      "question": "\"Rocky Mountain Beaver Pond\" & \"Man-Eaters of India\" are 2 of this society's nature videotapes",
+      "value": 400,
+      "airdate": "1992-01-20T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 9441,
+      "answer": "snow",
+      "question": "On USA Today's weather page, \"sn\" stands for this condition",
+      "value": 500,
+      "airdate": "1992-01-20T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 11049,
+      "answer": "Velvet",
+      "question": "Gordon Carruth reports that in 1811 a Mrs. Andrews in New York City gave instructions on painting on this plush fabric",
+      "value": 100,
+      "airdate": "1992-11-11T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 11055,
+      "answer": "6",
+      "question": "In a standard set of dominoes, the tiles range from double blank to this double number",
+      "value": 200,
+      "airdate": "1992-11-11T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 11061,
+      "answer": "J. Paul Getty",
+      "question": "On his death in 1976 he left his museum $725 million dollars",
+      "value": 300,
+      "airdate": "1992-11-11T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 11067,
+      "answer": "The Brooklyn Bridge",
+      "question": "Steve Brodie leaped onto the front pages when he leaped from this into the East River, July 23, 1886",
+      "value": 400,
+      "airdate": "1992-11-11T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 11073,
+      "answer": "The Fosbury Flop",
+      "question": "The 2 styles most commonly used by high-jumpers are the forward, or straddle, & the backward, called this",
+      "value": 500,
+      "airdate": "1992-11-11T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 12160,
+      "answer": "Sauerkraut",
+      "question": "\"Joy of Cooking\" suggests adding paprika & lemon juice to the juice of this fermented cabbage",
+      "value": 100,
+      "airdate": "1993-11-16T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 12166,
+      "answer": "Henna",
+      "question": "Ancient Egyptians used this hair dye on the soles of their feet, too",
+      "value": 200,
+      "airdate": "1993-11-16T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 12172,
+      "answer": "Fashion design",
+      "question": "The Perry Ellis Award is presented to people in this field",
+      "value": 300,
+      "airdate": "1993-11-16T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 12178,
+      "answer": "Monaco",
+      "question": "In 1505, Prince Jean the II was murdered by his brother Lucien in this tiny principality on the Riviera",
+      "value": 400,
+      "airdate": "1993-11-16T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 12184,
+      "answer": "Melbourne",
+      "question": "The National Gallery of Victoria is in this Australian city, capital of the state of Victoria",
+      "value": 500,
+      "airdate": "1993-11-16T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 12640,
+      "answer": "St. Peter\\'s Cathedral",
+      "question": "It's believed that the first pope is buried under this building",
+      "value": 100,
+      "airdate": "1994-11-29T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 12646,
+      "answer": "Helen",
+      "question": "In Greek Myth this most beautiful woman was not so much born as hatched",
+      "value": 200,
+      "airdate": "1994-11-29T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 12652,
+      "answer": "jacks",
+      "question": "\"Pigs in the Pen\" is a variation of this kid's game played on floors & sidewalks",
+      "value": 300,
+      "airdate": "1994-11-29T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 12658,
+      "answer": "trillions",
+      "question": "An abacus with 13 columns can count as high as these Nos., handy for working on the U.S. national debt",
+      "value": 400,
+      "airdate": "1994-11-29T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 12729,
+      "answer": "The Eye",
+      "question": "This calm center of the hurricane may be 20 miles in diameter",
+      "value": 100,
+      "airdate": "1994-11-23T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 12735,
+      "answer": "Maori",
+      "question": "New Zealand's 2 official languages are English & this native one",
+      "value": 200,
+      "airdate": "1994-11-23T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 12741,
+      "answer": "Cecil Rhodes",
+      "question": "For a while, this statesman who established an Oxford scholarship also had a country named for him",
+      "value": 300,
+      "airdate": "1994-11-23T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 12747,
+      "answer": "Sun Myung Moon",
+      "question": "This founder of the Unification Church was originally a Presbyterian",
+      "value": 400,
+      "airdate": "1994-11-23T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 12753,
+      "answer": "Young Man",
+      "question": "Yeoman, as in Yeoman of the Guard, is probably a contraction of forms of these two words",
+      "value": 500,
+      "airdate": "1994-11-23T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 13540,
+      "answer": "Papier-mache",
+      "question": "Newspaper is most often the basic ingredient for making this modeling material",
+      "value": 100,
+      "airdate": "1996-04-15T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 13546,
+      "answer": "Horsepower",
+      "question": "This unit used to measure the power of engines is equal to 746 watts",
+      "value": 200,
+      "airdate": "1996-04-15T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 13552,
+      "answer": "Geneva",
+      "question": "The former palace of the League of Nations in this Swiss city houses a philatelic museum",
+      "value": 300,
+      "airdate": "1996-04-15T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 13558,
+      "answer": "Hundred Years\\' War",
+      "question": "The fundamental cause of this 1337-1453 conflict was England's possession of the Fief of Guienne",
+      "value": 400,
+      "airdate": "1996-04-15T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 13564,
+      "answer": "Architecture",
+      "question": "From 1938 to 1952 Walter Gropius served as chairman of this department at Harvard",
+      "value": 500,
+      "airdate": "1996-04-15T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 14200,
+      "answer": "The Olympic Games",
+      "question": "Ancient Greeks dated events from the first of these, held in 776 B.C.",
+      "value": 100,
+      "airdate": "1996-01-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 14206,
+      "answer": "Tonto",
+      "question": "Name shared by a national monument in Arizona & a famous \"faithful Indian companion\"",
+      "value": 200,
+      "airdate": "1996-01-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 14212,
+      "answer": "etymology",
+      "question": "This word comes from the Greek etymon, \"the meaning of a word from its origin\" & logos, \"word\"",
+      "value": 300,
+      "airdate": "1996-01-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 14218,
+      "answer": "Lion",
+      "question": "This animal on Saskatchewan's flag stands for Great Britain",
+      "value": 400,
+      "airdate": "1996-01-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 14224,
+      "answer": "Falcon",
+      "question": "An Atlanta football player, or the middle name of explorer Robert Scott",
+      "value": 500,
+      "airdate": "1996-01-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 14380,
+      "answer": "Dragon",
+      "question": "In heraldry a wyvern is one of these mythical beasts depicted with 2 legs, wings & a barbed tail",
+      "value": 100,
+      "airdate": "1996-01-11T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 14386,
+      "answer": "Pop-Tarts",
+      "question": "Kellogg introduced these toaster pastries in 1964",
+      "value": 200,
+      "airdate": "1996-01-11T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 14392,
+      "answer": "Barometer",
+      "question": "Mercury & aneroid are the 2 main types of this instrument used to measure air pressure",
+      "value": 300,
+      "airdate": "1996-01-11T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 14398,
+      "answer": "Unification Church",
+      "question": "Members of this church are popularly called \"Moonies\"",
+      "value": 400,
+      "airdate": "1996-01-11T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 14404,
+      "answer": "Charles Dickens",
+      "question": "The fish called the Dolly Varden Trout was named for a character in this author's \"Barnaby Rudge\"",
+      "value": 500,
+      "airdate": "1996-01-11T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 15040,
+      "answer": "Crocodile",
+      "question": "Larousse says the eggs of this African alligator relative \"Apparently make excellent omelettes\"",
+      "value": 100,
+      "airdate": "1997-07-17T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 15046,
+      "answer": "St. Valentine",
+      "question": "Some romantics really lose their heads on the day named for this saint who was probably beheaded",
+      "value": 200,
+      "airdate": "1997-07-17T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 15052,
+      "answer": "Napoleon",
+      "question": "Some speculate that he may have been poisoned on St. Helena by arsenic in his wallpaper",
+      "value": 300,
+      "airdate": "1997-07-17T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 15058,
+      "answer": "William the Conqueror",
+      "question": "Queen Matilda, the wife of this Norman conqueror, was just 4' 2\" tall",
+      "value": 400,
+      "airdate": "1997-07-17T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 15064,
+      "answer": "Calvin Coolidge",
+      "question": "It's said this silent pres. liked to eat breakfast in bed while having Vaseline rubbed on his head",
+      "value": 500,
+      "airdate": "1997-07-17T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 16959,
+      "answer": "Yolks",
+      "question": "The record for the greatest number of these found in one hen's egg is 9",
+      "value": 100,
+      "airdate": "1997-04-17T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 16965,
+      "answer": "Thyroid",
+      "question": "Iodine is part of the hormone thyroxine, produced by this gland",
+      "value": 200,
+      "airdate": "1997-04-17T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 16971,
+      "answer": "Judo",
+      "question": "This martial art whose name means \"The Way of Softness\" was developed from jujitsu",
+      "value": 300,
+      "airdate": "1997-04-17T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 16977,
+      "answer": "Meyer Lansky",
+      "question": "This U.S. crime figure was born Maier Suchowljansky in 1902",
+      "value": 400,
+      "airdate": "1997-04-17T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 16983,
+      "answer": "Saccharin",
+      "question": "In 1879 the discovery of this artificial sweetener was announced",
+      "value": 500,
+      "airdate": "1997-04-17T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 17259,
+      "answer": "the Pillsbury Doughboy (or Poppin\\' Fresh)",
+      "question": "This character jumped out of his first biscuit can on TV in 1965",
+      "value": 100,
+      "airdate": "1997-04-02T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 17265,
+      "answer": "Bayonet",
+      "question": "The earliest form of this weapon was a dagger that fit into the muzzle of a musket",
+      "value": 200,
+      "airdate": "1997-04-02T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 17271,
+      "answer": "Remote control",
+      "question": "To play Milton Bradley's \"Channel Surfing\" you need one of these hand-held devices",
+      "value": 300,
+      "airdate": "1997-04-02T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 17277,
+      "answer": "Joseph Pulitzer",
+      "question": "He bequeathed $2 million to Columbia University to establish a school of journalism",
+      "value": 400,
+      "airdate": "1997-04-02T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 17283,
+      "answer": "Tuberculosis",
+      "question": "Christmas Seals were first sold in 1907 to raise funds to fight this disease",
+      "value": 500,
+      "airdate": "1997-04-02T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 17589,
+      "answer": "Kisses",
+      "question": "\"Currency\" used to pay for the delivery of \"letters\" in the kids' game of Post Office",
+      "value": 100,
+      "airdate": "1997-03-18T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 17595,
+      "answer": "Fasten your seat belt",
+      "question": "In 1971 Volvo introduced a warning light to remind you to do this",
+      "value": 200,
+      "airdate": "1997-03-18T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 17601,
+      "answer": "S-P-A-T-U-L-A",
+      "question": "Spelling of the kitchen tool whose phonetic spelling is \"SPACH-oo-luh\"",
+      "value": 300,
+      "airdate": "1997-03-18T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 17613,
+      "answer": "Prime numbers",
+      "question": "A number with factors of only 1 & itself; a 1742 theory says all even numbers over 2 are the sum of 2 of them",
+      "value": 500,
+      "airdate": "1997-03-18T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 18339,
+      "answer": "Thor",
+      "question": "This Norse god had iron gloves, a belt of strength & a magic hammer",
+      "value": 100,
+      "airdate": "1997-02-06T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 18345,
+      "answer": "brass",
+      "question": "Wind instruments blown by the player are traditionally divided into woodwinds & these",
+      "value": 200,
+      "airdate": "1997-02-06T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 18351,
+      "answer": "Rubber",
+      "question": "In 1844 Charles Goodyear earned a patent to inhibit this material from melting & sticking",
+      "value": 300,
+      "airdate": "1997-02-06T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 18357,
+      "answer": "Beefeaters",
+      "question": "Carnivorous name for the warders of the Tower of London",
+      "value": 400,
+      "airdate": "1997-02-06T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 18363,
+      "answer": "Helen Keller",
+      "question": "Though blind & deaf since age 19 months, she graduated with honors from Radcliffe in 1904",
+      "value": 500,
+      "airdate": "1997-02-06T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 20140,
+      "answer": "doughnuts",
+      "question": "In 1996 the Winchell's chain began selling a cologne that smells like these breakfast goodies",
+      "value": 100,
+      "airdate": "1996-11-12T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 20146,
+      "answer": "Model T",
+      "question": "This early type of Ford was nicknamed the \"Tin Lizzie\"",
+      "value": 200,
+      "airdate": "1996-11-12T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 20152,
+      "answer": "Barbara Bush",
+      "question": "",
+      "value": null,
+      "airdate": "1996-11-12T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 20158,
+      "answer": "Jacqueline Bouvier Kennedy",
+      "question": "",
+      "value": null,
+      "airdate": "1996-11-12T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 20164,
+      "answer": "Pat Nixon",
+      "question": "",
+      "value": null,
+      "airdate": "1996-11-12T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 27728,
+      "answer": "Alfred E. Neuman",
+      "question": "He's considered the mascot of Mad Magazine",
+      "value": 100,
+      "airdate": "1999-07-20T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 27734,
+      "answer": "Dennis Rodman",
+      "question": "He said, \"You don't have to be drunk or intoxicated to be attracted to Carmen Electra.  She is a beautiful woman\"",
+      "value": 200,
+      "airdate": "1999-07-20T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 27740,
+      "answer": "Duct tape",
+      "question": "A lab in Berkeley recently tested this versatile product's ability to seal air ducts & it failed",
+      "value": 300,
+      "airdate": "1999-07-20T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 27746,
+      "answer": "Anne Frank",
+      "question": "In December 1998 a Dutch court banned any publication questioning the veracity of this girl's diary",
+      "value": 400,
+      "airdate": "1999-07-20T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 27752,
+      "answer": "Denmark",
+      "question": "According to the U.N. World Food Map, this country's people have the most per person; hope it doesn't get rotten!",
+      "value": 500,
+      "airdate": "1999-07-20T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 34538,
+      "answer": "Golf",
+      "question": "Born in 1912, the man nicknamed \"Slammin' Sam\" played this sport",
+      "value": 100,
+      "airdate": "2000-07-18T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 34544,
+      "answer": "Rosary",
+      "question": "On the large beads on these you say the Lord's Prayer; on the smaller beads, the Hail Mary",
+      "value": 200,
+      "airdate": "2000-07-18T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 34550,
+      "answer": "3",
+      "question": "Of 3, 30, or 300, number of days Jonah spent inside a \"great fish\"",
+      "value": 300,
+      "airdate": "2000-07-18T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 34556,
+      "answer": "Asia & Europe",
+      "question": "The 2 continents separated by the Dardanelles",
+      "value": 400,
+      "airdate": "2000-07-18T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 34562,
+      "answer": "Constitutional Convention",
+      "question": "In May 1787 this convention convened in Independence Hall",
+      "value": 500,
+      "airdate": "2000-07-18T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 34899,
+      "answer": "John Stamos",
+      "question": "In 1991, his character of Jesse married a Rebecca; in 1998, in real life, he married a Rebecca, Rebecca Romijn",
+      "value": 100,
+      "airdate": "2000-06-30T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 34905,
+      "answer": "Telephone",
+      "question": "According to the Italian version of Encarta, Antonio Meucci rang in first with this invention, 5 years before that Scot",
+      "value": 200,
+      "airdate": "2000-06-30T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 34911,
+      "answer": "Hollingsworth",
+      "question": "After hiring Reginald Barnett Hollingsworth to be your butler, you should address him this way",
+      "value": 300,
+      "airdate": "2000-06-30T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 34917,
+      "answer": "Flesh",
+      "question": "In 1999 Crayola decided to rename its Indian Red crayon, the first renaming since 1962 when this became \"Peach\"",
+      "value": 400,
+      "airdate": "2000-06-30T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 34923,
+      "answer": "Oprah Winfrey",
+      "question": "In 1999 she & Stedman Graham taught a \"Dynamics of Leadership\" course at an Illinois college",
+      "value": 500,
+      "airdate": "2000-06-30T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 44589,
+      "answer": "rainbow",
+      "question": "Superstition says don't point at this colorful arch or you may see even wetter weather",
+      "value": 100,
+      "airdate": "2001-02-07T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 44601,
+      "answer": "owl",
+      "question": "A symbol of wisdom, this bird was associated with the goddess Athena",
+      "value": 300,
+      "airdate": "2001-02-07T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 44607,
+      "answer": "\"American Pie\"",
+      "question": "Pop classic that includes the line \"Drove my Chevy to the levee but the levee was dry\"",
+      "value": 400,
+      "airdate": "2001-02-07T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 44613,
+      "answer": "okra",
+      "question": "Like gumbo, a stew called burgoo is traditionally thickened with this vegetable",
+      "value": 500,
+      "airdate": "2001-02-07T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 45490,
+      "answer": "it",
+      "question": "2-letter term for what you become when you're tagged in tag",
+      "value": 100,
+      "airdate": "2000-12-27T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 45496,
+      "answer": "elves",
+      "question": "Keebler claims these creatures make its cookies",
+      "value": 200,
+      "airdate": "2000-12-27T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 45502,
+      "answer": "blue",
+      "question": "Alphabetically, the 7 colors of the visible light spectrum run from this to violet",
+      "value": 300,
+      "airdate": "2000-12-27T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 45508,
+      "answer": "lira",
+      "question": "As of July 1, 2002 this currency of Italy will be no more; that's when Europe switches to using Euros for everything",
+      "value": 400,
+      "airdate": "2000-12-27T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 45514,
+      "answer": "Joseph Pulitzer",
+      "question": "This publisher who died in 1911 set up a prize fund for awards in journalism, literature, music & drama",
+      "value": 500,
+      "airdate": "2000-12-27T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 68946,
+      "answer": "bananas",
+      "question": "Don't slip on this one:  some Africans eat matoke & drink waragi, both made from this fruit",
+      "value": 200,
+      "airdate": "2004-09-30T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 68952,
+      "answer": "knitting needles",
+      "question": "World Book says most of these are at least 7 inches long, have a knob on one end & are used to make scarves",
+      "value": 400,
+      "airdate": "2004-09-30T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 68958,
+      "answer": "Marcel Marceau",
+      "question": "This often quiet Frenchman said Michael Jackson's Moonwalk was influenced by his own \"Walking Against the Wind\"",
+      "value": 600,
+      "airdate": "2004-09-30T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 68964,
+      "answer": "Queen Elizabeth I",
+      "question": "She gave Kenilworth Castle to Robert Dudley, who was (wink, wink) a \"favorite\" of hers",
+      "value": 800,
+      "airdate": "2004-09-30T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 68970,
+      "answer": "Muscat",
+      "question": "The Captain & Tennile would \"love\" this capital of Oman",
+      "value": 1000,
+      "airdate": "2004-09-30T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 76478,
+      "answer": "a chimp",
+      "question": "At a 2005 auction, paintings by Warhol & Renoir didn't sell, but 3 by Congo, one of these playful primates, did",
+      "value": 200,
+      "airdate": "2007-07-25T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 76484,
+      "answer": "Barbie",
+      "question": "The \"Citrus Obsession\" version of this classic Mattel doll is scented to smell like a piece of fruit",
+      "value": 400,
+      "airdate": "2007-07-25T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 76490,
+      "answer": "a moose",
+      "question": "Hey, Bullwinkle!  On Aug. 16, 2001, one of these large deer took a dip in a swimming pool near Spokane",
+      "value": 600,
+      "airdate": "2007-07-25T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 76496,
+      "answer": "a dummy",
+      "question": "It sounds rude, but this 5-letter word is the correct term for a ventriloquist's puppet",
+      "value": 800,
+      "airdate": "2007-07-25T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 76502,
+      "answer": "Miss Universe",
+      "question": "I was disappointed that Miss Pluto & Miss Venus weren't contestants in this international pageant run by Donald Trump",
+      "value": 1000,
+      "airdate": "2007-07-25T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 82026,
+      "answer": "Beavis",
+      "question": "He's Butt-Head's partner in the cartoon",
+      "value": 200,
+      "airdate": "2006-11-08T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 82032,
+      "answer": "the Ouija Board",
+      "question": "Using this trademarked type of \"board\" might get you some answers from beyond",
+      "value": 400,
+      "airdate": "2006-11-08T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 82038,
+      "answer": "stations of the cross",
+      "question": "These \"of the cross\" include Veronica wiping the face of Jesus",
+      "value": 600,
+      "airdate": "2006-11-08T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 82044,
+      "answer": "Chivas Regal",
+      "question": "Precedes \"regal\" in the name of a popular whisky",
+      "value": 800,
+      "airdate": "2006-11-08T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 82050,
+      "answer": "Venus",
+      "question": "The second planet from the sun",
+      "value": 1000,
+      "airdate": "2006-11-08T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 84216,
+      "answer": "the pussy willow",
+      "question": "This \"feline\" variety of willow tree belongs to the same family as aspens & cottonwoods",
+      "value": 200,
+      "airdate": "2008-06-13T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 84222,
+      "answer": "birth",
+      "question": "Psychologist Otto Rank ranked this trauma as the no. 1 cause of neurosis",
+      "value": 400,
+      "airdate": "2008-06-13T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 84228,
+      "answer": "sleeveless",
+      "question": "10-letter word describing a woman's dress without arm coverings",
+      "value": 600,
+      "airdate": "2008-06-13T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 84234,
+      "answer": "Chile",
+      "question": "Augusto Pinochet, who ousted Salvador Allende in 1973, led the junta in this country until 1990",
+      "value": 800,
+      "airdate": "2008-06-13T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 84240,
+      "answer": "(R. Stanton) Avery",
+      "question": "In 1935 he invented a self-adhesive label, & even though he's gone, his name still sticks with us",
+      "value": 1000,
+      "airdate": "2008-06-13T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 84788,
+      "answer": "California",
+      "question": "9 out of every 10 tomatoes grown in the U.S. come from this state",
+      "value": 200,
+      "airdate": "2008-05-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 84794,
+      "answer": "a do-not-call list",
+      "question": "Telemarketers must search this registry every 31 days & drop those who are on it",
+      "value": 400,
+      "airdate": "2008-05-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 84800,
+      "answer": "Chile",
+      "question": "Thin must be in for this country with the highest life expectancy in South America, nearly 77 years",
+      "value": 600,
+      "airdate": "2008-05-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 84806,
+      "answer": "Sherlock Holmes",
+      "question": "In \"The Seven-Per-Cent Solution\", this literary character is treated by Sigmund Freud for drug addiction",
+      "value": 800,
+      "airdate": "2008-05-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 84812,
+      "answer": "the catfish",
+      "question": "Originally from Asia, the \"walking\" variety of this fish was introduced into Florida in the 1960s",
+      "value": 1000,
+      "airdate": "2008-05-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 86438,
+      "answer": "a flight attendant",
+      "question": "On a flight from Oakland to Chicago on May 15, 1930, Ellen Church became the first woman to work as one of these",
+      "value": 200,
+      "airdate": "2008-03-03T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 86444,
+      "answer": "a genie",
+      "question": "These mischievous supernatural creatures of Arab lore were made famous by \"The 1,001 Nights\"; make a wish!",
+      "value": 400,
+      "airdate": "2008-03-03T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 86450,
+      "answer": "Zimbabwe",
+      "question": "It's alphabetically last among the member countries of the United Nations",
+      "value": 600,
+      "airdate": "2008-03-03T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 86456,
+      "answer": "the Hare Krishna",
+      "question": "The rock musical \"Hair\" features a chant of this Hindu sect founded in the U.S. in 1966",
+      "value": 800,
+      "airdate": "2008-03-03T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 86462,
+      "answer": "a Rebel Yell",
+      "question": "Yeeeeeee-haaaa!  Billy Idol knows this drink's got bourbon, triple sec, lemon juice, an egg white & an orange slice",
+      "value": 1000,
+      "airdate": "2008-03-03T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 86648,
+      "answer": "the penny",
+      "question": "From 1909 until 1958, ears of wheat appeared on the back of this U.S. coin",
+      "value": 200,
+      "airdate": "2008-02-21T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 86654,
+      "answer": "the Tropic of Cancer",
+      "question": "On our summer solstice, the sun at noon is directly over this \"tropic\"",
+      "value": 400,
+      "airdate": "2008-02-21T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 86660,
+      "answer": "Mountain",
+      "question": "Phoenix, Arizona is in this time zone",
+      "value": 600,
+      "airdate": "2008-02-21T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 86666,
+      "answer": "adobe",
+      "question": "Name shared by a clay & straw brick home & a Photoshop maker",
+      "value": 800,
+      "airdate": "2008-02-21T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 86672,
+      "answer": "filters",
+      "question": "In photography, these lens attachments include polarizing, star & neutral density",
+      "value": 1000,
+      "airdate": "2008-02-21T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 89256,
+      "answer": "the unicorn",
+      "question": "Some say that the medieval tapestries about the hunting of this mythical beast symbolize the life of Christ",
+      "value": 200,
+      "airdate": "2009-05-11T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 89262,
+      "answer": "5",
+      "question": "(Jon of the Clue Crew shows a geometric diagram on the monitor.)  If side a equals 3 & side B equals 4, it's the length of side C",
+      "value": 400,
+      "airdate": "2009-05-11T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 89268,
+      "answer": "Evangeline",
+      "question": "In \"Uncle Tom's Cabin\", Littte Eva's first name is actually this, like the heroine of a Longfellow poem",
+      "value": 600,
+      "airdate": "2009-05-11T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 89274,
+      "answer": "kabuki theatre",
+      "question": "Aptly, a big, fluffy makeup brush is named for this form of Japanese theatre known for its distinctive heavy makeup",
+      "value": 800,
+      "airdate": "2009-05-11T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 89280,
+      "answer": "Alaska",
+      "question": "More than 1,000 islands make up the Alexander Archipelago in this U.S. state",
+      "value": 1000,
+      "airdate": "2009-05-11T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 91207,
+      "answer": "flat",
+      "question": "Encyclopedia Britannica says this basic shape of roof is used \"where the climate is arid\"",
+      "value": 200,
+      "airdate": "2009-02-09T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 91213,
+      "answer": "a flush",
+      "question": "In poker, 3 & 5 of hearts, 10 of clubs, jack of hearts, king of hearts is called a busted this",
+      "value": 400,
+      "airdate": "2009-02-09T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 91219,
+      "answer": "caramel",
+      "question": "Per the ingredients listed on the label, it provides the color in Coca-Cola",
+      "value": 600,
+      "airdate": "2009-02-09T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 91225,
+      "answer": "spare a dime",
+      "question": "In 1932 Yip Harburg was in Central Park trying to come up with a song lyric when a man asked, \"Buddy, can you\" do this",
+      "value": 800,
+      "airdate": "2009-02-09T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 91231,
+      "answer": "Dr. Sam Sheppard",
+      "question": "This Ohio doctor got a retrial for wife murder partly because a judge told a journalist he was \"guilty as hell\"",
+      "value": 1000,
+      "airdate": "2009-02-09T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 101376,
+      "answer": "Exodus",
+      "question": "The Ten Commandments first appear in this book of the Bible",
+      "value": 200,
+      "airdate": "2009-09-15T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 101382,
+      "answer": "Hubert Humphrey",
+      "question": "Nixon beat this Democrat in the 1968 presidential election",
+      "value": 400,
+      "airdate": "2009-09-15T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 101388,
+      "answer": "Quasimodo",
+      "question": "He's the title guy in \"The Hunchback of Notre-Dame\"",
+      "value": 600,
+      "airdate": "2009-09-15T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 101394,
+      "answer": "Scorpio",
+      "question": "This sign of the zodiac follows Libra",
+      "value": 800,
+      "airdate": "2009-09-15T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 101400,
+      "answer": "Norwegian",
+      "question": "Explorer & sailor Thor Heyerdahl was of this nationality",
+      "value": 1000,
+      "airdate": "2009-09-15T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 101616,
+      "answer": "Leo",
+      "question": "The bright star Regulus represents the lion's foot in this constellation",
+      "value": 200,
+      "airdate": "2011-07-21T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 101622,
+      "answer": "Siegfried and Roy",
+      "question": "Fischbacher & Horn are the last names of this pair made famous by their magical live performances with tigers",
+      "value": 400,
+      "airdate": "2011-07-21T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 101628,
+      "answer": "a dance-a-thon (or a dance marathon)",
+      "question": "You might do the funky chicken or the fox trot at one of these endurance contests for couples",
+      "value": 600,
+      "airdate": "2011-07-21T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 101634,
+      "answer": "Caterpillar",
+      "question": "This \"insect\" of a company calls itself the world's leading maker of construction & mining equipment",
+      "value": 800,
+      "airdate": "2011-07-21T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 101640,
+      "answer": "Gaelic (or Irish)",
+      "question": "This language has 3 main dialects: Connact, Munster & Ulster",
+      "value": 1000,
+      "airdate": "2011-07-21T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 108398,
+      "answer": "Apple",
+      "question": "Steve Jobs sold his VW minibus & Steve Wozniak sold his calculator to get the money to form this company",
+      "value": 200,
+      "airdate": "2012-07-31T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 108404,
+      "answer": "Martin Luther King",
+      "question": "A national holiday observed each year on the third Monday of January honors this man--his actual birthday was Jan. 15, 1929",
+      "value": 400,
+      "airdate": "2012-07-31T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 108410,
+      "answer": "Ben & Jerry\\'s",
+      "question": "Flavors from this ice cream maker include Bonnaroo Buzz, Chunky Monkey & Chocolate",
+      "value": 600,
+      "airdate": "2012-07-31T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 108416,
+      "answer": "a preposition",
+      "question": "In the sentence \"Yo, check it, I left my CD on C-Dub's desk\", \"on\" is this part of speech",
+      "value": 800,
+      "airdate": "2012-07-31T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 108422,
+      "answer": "Thomas Jefferson",
+      "question": "The second U.S. president born in Virginia, he enrolled at the College of William & Mary at age 16",
+      "value": 1000,
+      "airdate": "2012-07-31T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 120185,
+      "answer": "JetBlue",
+      "question": "TrueBlue is this airline's rewards program",
+      "value": 200,
+      "airdate": "2012-12-13T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 120191,
+      "answer": "Syria",
+      "question": "Many of this country's diplomats were expelled after its Houla massacre in 2012",
+      "value": 400,
+      "airdate": "2012-12-13T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 120197,
+      "answer": "Big Ben",
+      "question": "Since 1924 this alliterative item has been used as a daily time signal by the BBC",
+      "value": 600,
+      "airdate": "2012-12-13T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 120203,
+      "answer": "a nymph",
+      "question": "Achilles' mom Thetis was the sea type of this minor deity",
+      "value": 800,
+      "airdate": "2012-12-13T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 120209,
+      "answer": "Easter Island (or Rapa Nui)",
+      "question": "The bacterial byproduct rapamycin, first found in this island's soil, may help Alzheimer patients",
+      "value": 1000,
+      "airdate": "2012-12-13T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 122694,
+      "answer": "Michael Jordan",
+      "question": "A man sued this ex-Chicago Bull for $832 million for the discomfort the man felt over looking too much like the superstar",
+      "value": 200,
+      "airdate": "2014-07-15T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 122700,
+      "answer": "Babel",
+      "question": "Because of events in this place, the Lord said, \"Let us go down, and there confound their language\"",
+      "value": 400,
+      "airdate": "2014-07-15T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 122706,
+      "answer": "the preamble",
+      "question": "\"We the people of the United States, in order to form a more perfect union\" begins this part of the Constitution",
+      "value": 600,
+      "airdate": "2014-07-15T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 122712,
+      "answer": "beds",
+      "question": "Hospital size is often ranked by number of these items; New York-Presbyterian has about 2,600",
+      "value": 800,
+      "airdate": "2014-07-15T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 122718,
+      "answer": "a Napoleon",
+      "question": "I'm laying things N to N with this thin-layered puff pastry with cream filling",
+      "value": 1000,
+      "airdate": "2014-07-15T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 127133,
+      "answer": "40",
+      "question": "1,742,400 square feet gets you this many acres (mule not included)",
+      "value": 200,
+      "airdate": "2013-12-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 127139,
+      "answer": "the White House",
+      "question": "Translate from Esperanto: in January 2009 there was a new resident at the blanka domo, this place",
+      "value": 400,
+      "airdate": "2013-12-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 127145,
+      "answer": "Kristin Chenoweth",
+      "question": "This small blonde Oklahoma-born dynamo has been \"Wicked\" on stage & full of \"Glee\" on television",
+      "value": 600,
+      "airdate": "2013-12-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 127151,
+      "answer": "Cassandra",
+      "question": "This woman of myth could've foreseen Agamemnon taking her to Mycenae as a slave, but no one would have believed her",
+      "value": 800,
+      "airdate": "2013-12-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 127157,
+      "answer": "Freetown",
+      "question": "This capital of Sierra Leone was founded as a home for liberated slaves",
+      "value": 1000,
+      "airdate": "2013-12-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 128035,
+      "answer": "Hebrew",
+      "question": "Seen here is a page printed in this language in the 15th century",
+      "value": 200,
+      "airdate": "2013-11-07T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 128041,
+      "answer": "Sony",
+      "question": "Echoing the size of some of its early audio products, the RX100 HD digital camera from this company fits in a pocket",
+      "value": 400,
+      "airdate": "2013-11-07T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 128047,
+      "answer": "Gulliver",
+      "question": "The 1880s cartoonseen here shows the helpless Cherokee nation tied down like this Swift character",
+      "value": 600,
+      "airdate": "2013-11-07T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 128053,
+      "answer": "<i>ad hominem</i>",
+      "question": "Responding to criticism by calling the critic an illiterate moron is this kind of attack with a 2-word Latin name",
+      "value": 800,
+      "airdate": "2013-11-07T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 128059,
+      "answer": "Ayers Rock",
+      "question": "The monolith that Aborigines call Uluru was named this by surveyor William Gosse",
+      "value": 1000,
+      "airdate": "2013-11-07T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": null
+    },
+    {
+      "id": 131965,
+      "answer": "Apple",
+      "question": "Steve Jobs sold his VW minibus & Steve Wozniak sold his calculator to get the money to form this company",
+      "value": 200,
+      "airdate": "2012-07-31T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 3965,
+      "invalid_count": null
+    },
+    {
+      "id": 131971,
+      "answer": "Martin Luther King",
+      "question": "A national holiday observed each year on the third Monday of January honors this man--his actual birthday was Jan. 15, 1929",
+      "value": 400,
+      "airdate": "2012-07-31T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 3965,
+      "invalid_count": null
+    },
+    {
+      "id": 131977,
+      "answer": "Ben & Jerry\\'s",
+      "question": "Flavors from this ice cream maker include Bonnaroo Buzz, Chunky Monkey & Chocolate",
+      "value": 600,
+      "airdate": "2012-07-31T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 3965,
+      "invalid_count": null
+    },
+    {
+      "id": 131983,
+      "answer": "a preposition",
+      "question": "In the sentence \"Yo, check it, I left my CD on C-Dub's desk\", \"on\" is this part of speech",
+      "value": 800,
+      "airdate": "2012-07-31T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 3965,
+      "invalid_count": null
+    },
+    {
+      "id": 131989,
+      "answer": "Thomas Jefferson",
+      "question": "The second U.S. president born in Virginia, he enrolled at the College of William & Mary at age 16",
+      "value": 1000,
+      "airdate": "2012-07-31T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 3965,
+      "invalid_count": null
+    },
+    {
+      "id": 143752,
+      "answer": "JetBlue",
+      "question": "TrueBlue is this airline's rewards program",
+      "value": 200,
+      "airdate": "2012-12-13T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4037,
+      "invalid_count": null
+    },
+    {
+      "id": 143758,
+      "answer": "Syria",
+      "question": "Many of this country's diplomats were expelled after its Houla massacre in 2012",
+      "value": 400,
+      "airdate": "2012-12-13T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4037,
+      "invalid_count": null
+    },
+    {
+      "id": 143764,
+      "answer": "Big Ben",
+      "question": "Since 1924 this alliterative item has been used as a daily time signal by the BBC",
+      "value": 600,
+      "airdate": "2012-12-13T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4037,
+      "invalid_count": null
+    },
+    {
+      "id": 143770,
+      "answer": "a nymph",
+      "question": "Achilles' mom Thetis was the sea type of this minor deity",
+      "value": 800,
+      "airdate": "2012-12-13T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4037,
+      "invalid_count": null
+    },
+    {
+      "id": 143776,
+      "answer": "Easter Island (or Rapa Nui)",
+      "question": "The bacterial byproduct rapamycin, first found in this island's soil, may help Alzheimer patients",
+      "value": 1000,
+      "airdate": "2012-12-13T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4037,
+      "invalid_count": null
+    },
+    {
+      "id": 146063,
+      "answer": "Michael Jordan",
+      "question": "A man sued this ex-Chicago Bull for $832 million for the discomfort the man felt over looking too much like the superstar",
+      "value": 200,
+      "airdate": "2014-07-15T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4581,
+      "invalid_count": null
+    },
+    {
+      "id": 146069,
+      "answer": "Babel",
+      "question": "Because of events in this place, the Lord said, \"Let us go down, and there confound their language\"",
+      "value": 400,
+      "airdate": "2014-07-15T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4581,
+      "invalid_count": null
+    },
+    {
+      "id": 146075,
+      "answer": "the preamble",
+      "question": "\"We the people of the United States, in order to form a more perfect union\" begins this part of the Constitution",
+      "value": 600,
+      "airdate": "2014-07-15T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4581,
+      "invalid_count": null
+    },
+    {
+      "id": 146081,
+      "answer": "beds",
+      "question": "Hospital size is often ranked by number of these items; New York-Presbyterian has about 2,600",
+      "value": 800,
+      "airdate": "2014-07-15T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4581,
+      "invalid_count": null
+    },
+    {
+      "id": 146087,
+      "answer": "a Napoleon",
+      "question": "I'm laying things N to N with this thin-layered puff pastry with cream filling",
+      "value": 1000,
+      "airdate": "2014-07-15T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4581,
+      "invalid_count": null
+    },
+    {
+      "id": 150502,
+      "answer": "40",
+      "question": "1,742,400 square feet gets you this many acres (mule not included)",
+      "value": 200,
+      "airdate": "2013-12-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4376,
+      "invalid_count": null
+    },
+    {
+      "id": 150508,
+      "answer": "the White House",
+      "question": "Translate from Esperanto: in January 2009 there was a new resident at the blanka domo, this place",
+      "value": 400,
+      "airdate": "2013-12-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4376,
+      "invalid_count": null
+    },
+    {
+      "id": 150514,
+      "answer": "Kristin Chenoweth",
+      "question": "This small blonde Oklahoma-born dynamo has been \"Wicked\" on stage & full of \"Glee\" on television",
+      "value": 600,
+      "airdate": "2013-12-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4376,
+      "invalid_count": null
+    },
+    {
+      "id": 150520,
+      "answer": "Cassandra",
+      "question": "This woman of myth could've foreseen Agamemnon taking her to Mycenae as a slave, but no one would have believed her",
+      "value": 800,
+      "airdate": "2013-12-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4376,
+      "invalid_count": null
+    },
+    {
+      "id": 150526,
+      "answer": "Freetown",
+      "question": "This capital of Sierra Leone was founded as a home for liberated slaves",
+      "value": 1000,
+      "airdate": "2013-12-19T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4376,
+      "invalid_count": null
+    },
+    {
+      "id": 151410,
+      "answer": "Sony",
+      "question": "Echoing the size of some of its early audio products, the RX100 HD digital camera from this company fits in a pocket",
+      "value": 400,
+      "airdate": "2013-11-07T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4346,
+      "invalid_count": null
+    },
+    {
+      "id": 151416,
+      "answer": "Gulliver",
+      "question": "The 1880s cartoonseen here shows the helpless Cherokee nation tied down like this Swift character",
+      "value": 600,
+      "airdate": "2013-11-07T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4346,
+      "invalid_count": null
+    },
+    {
+      "id": 151422,
+      "answer": "<i>ad hominem</i>",
+      "question": "Responding to criticism by calling the critic an illiterate moron is this kind of attack with a 2-word Latin name",
+      "value": 800,
+      "airdate": "2013-11-07T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4346,
+      "invalid_count": null
+    },
+    {
+      "id": 151428,
+      "answer": "Ayers Rock",
+      "question": "The monolith that Aborigines call Uluru was named this by surveyor William Gosse",
+      "value": 1000,
+      "airdate": "2013-11-07T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4346,
+      "invalid_count": null
+    },
+    {
+      "id": 156562,
+      "answer": "the Puppy Bowl",
+      "question": "Animal Planet is on its 11th version of this annual feature with a different feel from the big football game",
+      "value": 200,
+      "airdate": "2015-01-30T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4797,
+      "invalid_count": null
+    },
+    {
+      "id": 156568,
+      "answer": "gazpacho",
+      "question": "This cold soup is a puree of tomatoes & green peppers; in its homeland of Spain, cookbooks classify it as salad",
+      "value": 400,
+      "airdate": "2015-01-30T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4797,
+      "invalid_count": null
+    },
+    {
+      "id": 156574,
+      "answer": "privilege",
+      "question": "The American Bar Association's ethical rules include protection of confidences under attorney-client this",
+      "value": 600,
+      "airdate": "2015-01-30T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4797,
+      "invalid_count": null
+    },
+    {
+      "id": 156580,
+      "answer": "the Seven Sisters",
+      "question": "This consortium of colleges traces its origins to a conference held at Vassar College in 1915",
+      "value": 800,
+      "airdate": "2015-01-30T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4797,
+      "invalid_count": null
+    },
+    {
+      "id": 156586,
+      "answer": "the Alien and Sedition Acts",
+      "question": "In 1798 Congress passed these 4 internal security laws aimed at immigrants & at curtailing the press",
+      "value": 1000,
+      "airdate": "2015-01-30T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4797,
+      "invalid_count": null
+    },
+    {
+      "id": 12664,
+      "answer": "the lemur",
+      "question": "This Madagascan animal is the only primate that pulls hair from its body to make a nest",
+      "value": 500,
+      "airdate": "1994-11-29T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": 7
+    },
+    {
+      "id": 17607,
+      "answer": "Hodgepodge",
+      "question": "Category on this board that's a synonym for gallimaufry",
+      "value": 400,
+      "airdate": "1997-03-18T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": 1
+    },
+    {
+      "id": 44595,
+      "answer": "Michael Flatley",
+      "question": "(Alex: To help us out with that clue, we have some very special guests)  These are members of a wildly popular show created by this man",
+      "value": 200,
+      "airdate": "2001-02-07T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": null,
+      "invalid_count": 1
+    },
+    {
+      "id": 151404,
+      "answer": "Hebrew",
+      "question": "Seen here is a page printed in this language in the 15th century",
+      "value": 200,
+      "airdate": "2013-11-07T12:00:00.000Z",
+      "category_id": 227,
+      "game_id": 4346,
+      "invalid_count": 1
+    }
+  ]
+}

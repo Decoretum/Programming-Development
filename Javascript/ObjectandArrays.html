@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 1</title>
+</head>
+<body>
+    <h style="background-color:antiquewhite; padding: 10px; margin-left: 100px;"> 100 </h>
+    <p class="one"> </p>
+    <br><br><Br>
+    <h style="background-color:antiquewhite; padding: 10px; margin-left: 100px;"> 200 </h>
+    <p class="two"> </p> 
+    <br><br><br>
+    <h style="background-color:antiquewhite; padding: 10px; margin-left: 100px;"> 300 </h>
+    <p class="three"> </p> 
+    <Br><br><br>
+    <h style="background-color:antiquewhite; padding: 10px; margin-left: 100px;"> 400 </h>
+    <p class="four"> </p> 
+    <br><br><br>
+    <h style="background-color:antiquewhite; padding: 10px; margin-left: 100px;"> 500 </h>
+    <p class="five"> </p>
+    <Br><br><br>
+    <h style="background-color:antiquewhite; padding: 10px; margin-left: 100px;"> AirDate </h>
+    <p class="airdate"> </p>
+    
+    
+
+    <script> 
+    //The list methods I've used are push(), filter(), reduce(), and sort() 
+        let text1 = document.querySelector('.one');
+        let text2 = document.querySelector('.two');
+        let text3 = document.querySelector('.three');
+        let text4 = document.querySelector('.four');
+        let text5 = document.querySelector('.five');
+        let airdate = document.querySelector('.airdate');
+        let manylists = [];
+
+        async function getData(){
+            try{
+            let response = await fetch('hodgepodge.json');
+            return await response.json();
+            }
+            catch(error){
+             console.log(error);
+            }
+        };
+
+        
+        async function UserData(){
+            let objects = await getData();
+            let objectslist = []
+            objectslist.push(objects.clues);
+            objects.clues.filter((a) => {
+
+                let newlist1 = [];
+                if (a.value === 100){
+                 newlist1.push(a);
+                 let removedup = new Set(newlist1);
+                 for (let a of removedup){
+                 let newarray = `#|ID: ${a.id}|answer: ${a.answer}|question: ${a.question}| <b>value: ${a.value}</b> |airdate:${a.airdate}|category_id: ${a.category_id}|game_id: ${a.game_id}|invalid_count: ${a.invalid_count}#`
+                 let makestring = String(newarray);
+                 let finalarray = makestring.replaceAll('#','<br>');
+                 text1.innerHTML += finalarray;
+                 };
+
+                }
+                
+                
+
+                let newlist2 = [];
+                if (a.value === 200){
+                 newlist2.push(a);
+                 let removedup = new Set(newlist2);
+                 for (let a of removedup){
+                 let newarray = `#|ID: ${a.id}|answer: ${a.answer}|question: ${a.question}| <b>value: ${a.value}</b> |airdate:${a.airdate}|category_id: ${a.category_id}|game_id: ${a.game_id}|invalid_count: ${a.invalid_count}#`
+                 let makestring = String(newarray);
+                 let finalarray = makestring.replaceAll('#','<br>');
+                 text2.innerHTML += finalarray;
+                 };
+                }
+
+                let newlist3 = [];
+                if (a.value === 300){
+                newlist3.push(a);
+                 let removedup = new Set(newlist3);
+                 for (let a of removedup){
+                 let newarray = `#|ID: ${a.id}|answer: ${a.answer}|question: ${a.question}| <b>value: ${a.value}</b> |airdate:${a.airdate}|category_id: ${a.category_id}|game_id: ${a.game_id}|invalid_count: ${a.invalid_count}#`
+                 let makestring = String(newarray);
+                 let finalarray = makestring.replaceAll('#','<br>');
+                 text3.innerHTML += finalarray;
+                 };
+                }
+
+                let newlist4 = [];
+                if (a.value === 400){
+                 newlist4.push(a);
+                 let removedup = new Set(newlist4);
+                 for (let a of removedup){
+                 let newarray = `#|ID: ${a.id}|answer: ${a.answer}|question: ${a.question}| <b>value: ${a.value}</b> |airdate:${a.airdate}|category_id: ${a.category_id}|game_id: ${a.game_id}|invalid_count: ${a.invalid_count}#`
+                 let makestring = String(newarray);
+                 let finalarray = makestring.replaceAll('#','<br>');
+                 text4.innerHTML += finalarray;
+                 };
+                }
+
+                let newlist5 = [];
+                 if (a.value === 500){
+                 newlist5.push(a);
+                 let removedup = new Set(newlist5);
+                 for (let a of removedup){
+                 let newarray = `#|ID: ${a.id}|answer: ${a.answer}|question: ${a.question}| <b>value: ${a.value}</b> |airdate:${a.airdate}|category_id: ${a.category_id}|game_id: ${a.game_id}|invalid_count: ${a.invalid_count}#`
+                 let makestring = String(newarray);
+                 let finalarray = makestring.replaceAll('#','<br>');
+                 text5.innerHTML += finalarray;
+                 };
+                }
+
+            });
+                let newarray = objectslist[0];
+                let airdategroup = Object.values(newarray.reduce((object, { //object as reducer, right parameter as all properties of iterated values. .values() in order to return several values, and not just 1 object from reduce
+                    id, question, value, category_id, game_id, invalid_count, airdate
+
+                })  => { //creation of an object group with specific airdate property, which is object[airdate]
+                    if (!object[airdate]) {
+                        object[airdate] = {
+                        airdate,
+                        inf : []
+                    }};
+
+                    object[airdate].inf.push({ //we push properties of each object to empty array as we iterate
+                        id, question, value, category_id, game_id, invalid_count
+                    }); // we use braces around properties to create objects as arguments as we push to list
+                    return object;
+                },{}))
+
+                    
+                console.log(airdategroup)
+                
+    
+                for (let a of airdategroup){ //every group with same airdate
+                    airdate.innerHTML += `<br><br><br><b>Airdate of ${a.airdate}<b><br>`
+                    for (let b of a.inf){ //individual info
+                        let value = `<br> |ID : ${b.id}|Question: ${b.question}|Value: ${b.value}|Category ID : ${b.category_id}|Game ID : ${b.game_id}|Invalid Count : ${b.invalid_count}|<br>`
+                        airdate.innerHTML += value;
+                    }
+                }
+
+
+              
+              
+                
+            };
+                
+        
+
+     
+        
+       
+        UserData();
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="baby">1</div>
+        <div class="baby">2</div>
+        <div class="baby">3</div>  
+      </div> <br><br>
+
+      <div class="flex-container1">
+        <div class="baby">1</div>
+        <div class="baby">2</div>
+        <div class="baby">3</div>  
+      </div><br><br>
+
+      <div class="flex-container2">
+        <div class="baby">1</div>
+        <div class="baby">2</div>
+        <div class="baby">3</div>  
+      </div><br><br>
+
+
+<style>
+.flex-container {
+  display: flex; /* child elements become flexible due to this */
+  flex-wrap: wrap; /* flex item/container will wrap if needed, not get cut off from page. options are nowrap, wrap-reverse (html elements reverse) */
+  background-color: DodgerBlue; 
+  /* flex-flow: shorthand property to set flex-direction and flex-wrap properties */
+
+}
+.flex-container > .baby { /* children */
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+  width: 100px;
+  text-align: center;
+  display: flex;
+  
+}
+
+.flex-container1 {
+  display: flex;
+  background-color: DodgerBlue;
+  flex-direction: column; /* reverse stacks column in reverse order of HTML elements, row for horizontal, row-reverse for baliktad */
+  
+
+}
+.flex-container1 > .baby { /* children */
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+  width: 100px;
+  text-align: center;
+  display: flex;
+  
+}
+
+.flex-container2 {
+  display: flex;
+  background-color: DodgerBlue;
+  flex-direction: column; /* reverse stacks column in reverse order of HTML elements, row for horizontal, row-reverse for baliktad */
+  flex-flow: row wrap;
+  justify-content: flex-end; /* alignment of flex items, options are flex-start, flex-end, space-around, space-between */
+  
+
+}
+.flex-container2 > .baby { /* children */
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+  width: 100px;
+  text-align: center;
+  display: flex;
+  
+}
+
+.grow{
+    
+    font-size: 50px;
+    background-color: beige;
+    color: blueviolet;
+    transform: translateX(100%);
+
+}
+
+
+
+
+</style>
+
+<script>
+
+function toggle(){
+this.classList.toggle('grow');
+console.log(this);
+};
+
+const babies = document.querySelectorAll('.baby');
+babies.forEach(baby => baby.addEventListener('click', toggle));
+
+
+</script>
+
+</body>
+</html>

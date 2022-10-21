@@ -1,0 +1,67 @@
+html notes:
+<b> - Bold text
+<strong> - Important text
+<i> - Italic text
+<em> - Emphasized text
+<mark> - Marked text
+<small> - Smaller text
+<del> - Deleted text
+<ins> - Inserted text
+<sub> - Subscript text
+<sup> - Superscript text
+<q> - quote
+<abbr title =' '> - abbreviation with mouse over
+
+<address> - to italicize as address
+
+in between texts
+
+background-color:hsl(0, 100%, 20%) - hue saturation light
+rgb(x,x,x) - color
+font-size: - font size
+text-decoration: - underline etc.
+
+letter-spacing: value;
+line-height: value;
+
+
+<a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/" target="__blank"> Bootstrap introduction :)</a>
+        
+
+
+        <h3 style="margin-left:20px"> This is 2nd heading </h3> 
+
+        <div class="container" style="border: solid; padding: 15px; margin: 10px; color: black;">
+            <div class="row" style="margin: 10px;">
+                <br> <span style="font-family: Verdana; font-weight: 550;"> CSS Cool fonts </span>
+                <a href='https://www.w3schools.com/cssref/css_websafe_fonts.asp' target='_blank' id="othervid1" style="margin-left: 50px;"> CSS cool fonts :)</a>
+                <span style="background-color: bisque; margin-left: 10px;"> This enables me to learn more CSS fonts and stylings! </span>
+                <img src="picturesforweb/wizard.png" style="width: 70px; height: 70px; margin-top: -70px; margin-bottom: -10px; margin-left: 55px;"> 
+            </div>
+
+            <div class="row" style="padding: 10px;">
+                <br> <span style="font-family: Verdana; font-weight: 550; text-align: center; margin-left: 40px; margin-right: 90px;"> Gael </span>
+                <a href="https://www.w3schools.com/css/css_intro.asp" target="_blank" id="othervid"> CSS learning :)</a>
+                <span style="background-color: aquamarine; margin-left: 21px;"> This is where everything I need to learn CSS! The basic! </span>
+                <img src="picturesforweb/player.png" style="width: 70px; height: 70px; margin-top: -290px; margin-bottom: -10px; margin-left: 50px;">
+            </div>
+
+            <div class="row" style="margin: 10px;">
+            </div>
+        </div>
+        <br></br><br><br>
+</body>
+    <table>
+        <tr>
+            <th> Name </th>
+            <th> Classification </th>
+            <th> Magic Type </th>
+            <th> Attributes </th>
+        </tr>
+        <tr> 
+            <td> Decoretum </td>
+            <td> BattleMage </td>
+            <td> Abyssal </td>
+            <td> Mastery in Arcane arts, especially destruction </td> 
+        </tr>
+    </table>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        async function getIt(){
+            let responsecategory = await fetch('http://jservice.io/api/categories?count=5');
+            let datacategory = await responsecategory.json();
+            return Promise.all([datacategory])
+        }
+
+        async function Data(){
+            let idlist = [];
+            let keyvalue = [];
+            let datacategory = await getIt();
+            for (let objects of datacategory[0]){
+                idlist.push(objects.id); //these are our Category IDs we got from responsecategory
+            }
+
+            let firstcateg = idlist[0];
+            let secondcateg = idlist[1];
+            let thirdcateg = idlist[2];
+            let fourthcateg = idlist[3];
+            let fifthcateg = idlist[4];
+            let response1 = await fetch(`https://jservice.io/api/category?id=${firstcateg}`) //Fetched the objects of the id number from the fetched category id numbers
+            let firstcateg100 = await response1.json();
+            let firstcat100 = []
+            let firstcat200 = []
+            let firstcat300 = []
+            let firstcat400 = []
+            let firstcat500 = []
+            for (let object of firstcateg100.clues){
+                if (object.value === 100){
+                    firstcat100.push(object)
+                }
+                else if(object.value === 200) {
+                    firstcat200.push(object)
+                }
+                else if(object.value === 300){
+                    firstcat300.push(object)
+                }
+                else if(object.value === 400){
+                    firstcat400.push(object)
+                }
+                else if(object.value === 500){
+                    firstcat500.push(object)
+                }
+                
+            }
+
+
+            let response2 = await fetch(`https://jservice.io/api/category?id=${secondcateg}`)
+            let secondcateg100 = await response2.json();
+            let secondcat100 = []
+            let secondcat200 = []
+            let secondcat300 = []
+            let secondcat400 = []
+            let secondcat500 = []
+
+            for (let object of secondcateg100.clues){
+                if (object.value === 100){
+                    secondcat100.push(object)
+                }
+                else if(object.value === 200) {
+                    secondcat200.push(object)
+                }
+                else if(object.value === 300){
+                    secondcat300.push(object)
+                }
+                else if(object.value === 400){
+                    secondcat400.push(object)
+                }
+                else if(object.value === 500){
+                    secondcat500.push(object)
+                }
+                
+            }
+            
+            let response3 = await fetch(`https://jservice.io/api/category?id=${thirdcateg}`)
+            let thirdcateg100 = await response3.json();
+            let thirdcat100 = []
+            let thirdcat200 = []
+            let thirdcat300 = []
+            let thirdcat400 = []
+            let thirdcat500 = []
+
+            for (let object of thirdcateg100.clues){
+                if (object.value === 100){
+                    thirdcat100.push(object)
+                }
+                else if(object.value === 200) {
+                    thirdcat200.push(object)
+                }
+                else if(object.value === 300){
+                    thirdcat300.push(object)
+                }
+                else if(object.value === 400){
+                    thirdcat400.push(object)
+                }
+                else if(object.value === 500){
+                    thirdcat500.push(object)
+                }
+                
+            }
+
+            let response4 = await fetch(`https://jservice.io/api/category?id=${fourthcateg}`)
+            let fourthcateg100 = await response4.json();
+            let fourthcat100 = []
+            let fourthcat200 = []
+            let fourthcat300 = []
+            let fourthcat400 = []
+            let fourthcat500 = []
+
+            for (let object of fourthcateg100.clues){
+                if (object.value === 100){
+                    fourthcat100.push(object)
+                }
+                else if(object.value === 200) {
+                    fourthcat200.push(object)
+                }
+                else if(object.value === 300){
+                    fourthcat300.push(object)
+                }
+                else if(object.value === 400){
+                    fourthcat400.push(object)
+                }
+                else if(object.value === 500){
+                    fourthcat500.push(object)
+                }
+                
+            }
+
+            let response5 = await fetch(`https://jservice.io/api/category?id=${fifthcateg}`)
+            let fifthcateg100 = await response5.json();
+            let fifthcat100 = []
+            let fifthcat200 = []
+            let fifthcat300 = []
+            let fifthcat400 = []
+            let fifthcat500 = []
+
+            for (let object of fifthcateg100.clues){
+                if (object.value === 100){
+                    fifthcat100.push(object)
+                }
+                else if(object.value === 200) {
+                    fifthcat200.push(object)
+                }
+                else if(object.value === 300){
+                    fifthcat300.push(object)
+                }
+                else if(object.value === 400){
+                    fifthcat400.push(object)
+                }
+                else if(object.value === 500){
+                    fifthcat500.push(object)
+                }
+                
+            }
+
+            let dupfirst100 = firstcat100.slice()
+            dupfirst100['VALUE'] = 100
+            dupfirst100['CATEGORY'] = firstcateg
+            console.log(dupfirst100)
+
+            let dupfirst200 = firstcat200.slice()
+            dupfirst200['VALUE'] = 200
+            dupfirst200['CATEGORY'] = firstcateg
+            console.log(dupfirst200)
+
+            let dupfirst300 = firstcat300.slice()
+            dupfirst300['VALUE'] = 300
+            dupfirst300['CATEGORY'] = firstcateg
+            console.log(dupfirst300)
+
+            let dupfirst400 = firstcat400.slice()
+            dupfirst400['VALUE'] = 400
+            dupfirst400['CATEGORY'] = firstcateg
+            console.log(dupfirst400)
+
+            let dupfirst500 = firstcat500.slice()
+            dupfirst500['VALUE'] = 500
+            dupfirst500['CATEGORY'] = firstcateg
+            console.log(dupfirst500)
+
+
+            console.log('\n')
+
+            let dupsecond100 = secondcat100.slice()
+            dupsecond100['VALUE'] = 100
+            dupsecond100['CATEGORY'] = secondcateg
+            console.log(dupsecond100)
+
+            let dupsecond200 = secondcat200.slice()
+            dupsecond200['VALUE'] = 200
+            dupsecond200['CATEGORY'] = secondcateg
+            console.log(dupsecond200)
+
+            let dupsecond300 = secondcat300.slice()
+            dupsecond300['VALUE'] = 300
+            dupsecond300['CATEGORY'] = secondcateg
+            console.log(dupsecond300)
+
+            let dupsecond400 = secondcat400.slice()
+            dupsecond400['VALUE'] = 400
+            dupsecond400['CATEGORY'] = secondcateg
+            console.log(dupsecond400)
+
+            let dupsecond500 = secondcat500.slice()
+            dupsecond500['VALUE'] = 500
+            dupsecond500['CATEGORY'] = secondcateg
+            console.log(dupsecond500)
+
+            console.log('\n')
+
+            let dupthird100 = thirdcat100.slice()
+            dupthird100['VALUE'] = 100
+            dupthird100['CATEGORY'] =thirdcateg
+            console.log(dupthird100)
+
+            let dupthird200 = thirdcat200.slice()
+            dupthird200['VALUE'] = 200
+            dupthird200['CATEGORY'] =thirdcateg
+            console.log(dupthird200)
+
+            let dupthird300 = thirdcat300.slice()
+            dupthird300['VALUE'] = 300
+            dupthird300['CATEGORY'] =thirdcateg
+            console.log(dupthird300)
+
+            let dupthird400 = thirdcat400.slice()
+            dupthird400['VALUE'] = 400
+            dupthird400['CATEGORY'] =thirdcateg
+            console.log(dupthird400)
+
+            let dupthird500 = thirdcat500.slice()
+            dupthird500['VALUE'] = 500
+            dupthird500['CATEGORY'] =thirdcateg
+            console.log(dupthird500)
+
+            console.log('\n')
+
+            let dupfourth100 = fourthcat100.slice()
+            dupfourth100['VALUE'] = 100
+            dupfourth100['CATEGORY'] =fourthcateg
+            console.log(dupfourth100)
+
+            let dupfourth200 = fourthcat200.slice()
+            dupfourth200['VALUE'] = 200
+            dupfourth200['CATEGORY'] =fourthcateg
+            console.log(dupfourth200)
+
+            let dupfourth300 = fourthcat300.slice()
+            dupfourth300['VALUE'] = 300
+            dupfourth300['CATEGORY'] =fourthcateg
+            console.log(dupfourth300)
+
+            let dupfourth400 = fourthcat400.slice()
+            dupfourth400['VALUE'] = 400
+            dupfourth400['CATEGORY'] =fourthcateg
+            console.log(dupfourth400)
+
+            let dupfourth500 = fourthcat500.slice()
+            dupfourth500['VALUE'] = 500
+            dupfourth500['CATEGORY'] =fourthcateg
+            console.log(dupfourth500)
+
+            console.log('\n')
+
+            let dupfifth100 = fifthcat100.slice()
+            dupfifth100['VALUE'] = 100
+            dupfifth100['CATEGORY'] =fifthcateg
+            console.log(dupfifth100)
+
+            let dupfifth200 = fifthcat200.slice()
+            dupfifth200['VALUE'] = 200
+            dupfifth200['CATEGORY'] =fifthcateg
+            console.log(dupfifth200)
+
+            let dupfifth300 = fifthcat300.slice()
+            dupfifth300['VALUE'] = 300
+            dupfifth300['CATEGORY'] =fifthcateg
+            console.log(dupfifth300)
+
+            let dupfifth400 = fifthcat400.slice()
+            dupfifth400['VALUE'] = 400
+            dupfifth400['CATEGORY'] =fifthcateg
+            console.log(dupfifth400)
+
+            let dupfifth500 = fifthcat500.slice()
+            dupfifth500['VALUE'] = 100
+            dupfifth500['CATEGORY'] =fifthcateg
+            console.log(dupfifth500)
+
+            console.log('\n')
+
+
+            let firstlist100 = firstcat100.concat(secondcat100, thirdcat100, fourthcat100, fifthcat100)
+            firstlist100['LABEL'] = 100;
+            let secondlist100 = firstcat200.concat(secondcat200, thirdcat200, fourthcat200, fifthcat200)
+            secondlist100['LABEL'] = 200
+            let thirdlist100 = firstcat300.concat(secondcat300, thirdcat300, fourthcat300, fifthcat300)
+            thirdlist100['LABEL'] = 300
+            let fourthlist100 = firstcat400.concat(secondcat400, thirdcat400, fourthcat400, fifthcat400)
+            fourthlist100['LABEL'] = 400
+            let fifthlist100 = firstcat500.concat(secondcat500, thirdcat500, fourthcat500, fifthcat500)
+            fifthlist100['LABEL'] = 500
+
+
+            //time for Sets
+            let lahat = firstlist100.concat(secondlist100, thirdlist100, fourthlist100, fifthlist100) //all values of categories
+            let initialdate = []
+            for (let object of lahat){
+                initialdate.push(object.airdate)
+            }
+            let removeddate = new Set(initialdate)
+            let newairdatelist = Array.from(removeddate) //list of unique airdates
+            let lengthairdate = (newairdatelist.length)
+            
+            let airdatereducer = Object.values(lahat.reduce((object, {id, category_id, answer, value, airdate}) => {
+                if (!object[airdate]){
+                    object[airdate] = {
+                        Airdate : airdate,
+                        Objects : []
+                    }
+                }
+                object[airdate].Objects.push({id, category_id, answer, value, airdate});
+                //object[airdate] += {AIRDATE : airdate}
+                return object;
+
+            },{}));
+            
+            
+            
+            
+
+
+
+            console.log('\n')
+            console.log(firstlist100)
+            console.log(secondlist100)
+            console.log(thirdlist100)
+            console.log(fourthlist100)
+            console.log(fifthlist100)
+            console.log('\n')
+            console.log(airdatereducer)
+            
+            };
+            
+
+        Data()
+
+
+
+
+
+
+    </script>
+</body>
+</html>

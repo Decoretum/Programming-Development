@@ -1,0 +1,101 @@
+<html lang="en"> 
+    <head>
+
+    </head>
+    <body>
+        <script> 
+            const inventors = [
+                  { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
+                  { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
+                  { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
+                  { first: 'Marie', last: 'Curie', year: 1867, passed: 1934 },
+                  { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 },
+                  { first: 'Nicolaus', last: 'Copernicus', year: 1473, passed: 1543 },
+                  { first: 'Max', last: 'Planck', year: 1858, passed: 1947 },
+                  { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 },
+                  { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 },
+                  { first: 'Sarah E.', last: 'Goode', year: 1855, passed: 1905 },
+                  { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
+                  { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
+                ];
+    
+            
+            const pers = inventors.slice().sort(function lastname(a1,b1){ //we used slice to make copy
+                if (a1.last < b1.last){
+                    return -1;
+                }
+                else{
+                    return 1;
+                }
+            });
+            console.log(pers);
+            
+
+            const pers3 = inventors.slice().sort(function firstname(a,b){
+                if (a.first < b.first){
+                    return -1;
+                    }
+                else {
+                    return 1;
+                    }
+                });
+            console.log(pers3);
+
+            const date = inventors.slice().sort(function sort(a,b){
+                aguy = a.passed - a.year;
+                bguy = b.passed - b.year;
+                if (aguy > bguy){
+                    return -1;
+                    
+                }
+                else{
+                    return 1;
+                }
+            })
+            console.log(date);
+            
+            const live = inventors.slice().sort(function(a,b){
+                if (a.year < b.year){
+                    return 1;
+
+                }
+                else{
+                    return -1;
+                }
+
+
+            })
+            console.log(live);
+        
+            const add1 = inventors.map(function adding(a){
+                let letter = a.first[0];
+                return 'First name starts with ' + letter;
+            });
+
+            console.log(add1);
+
+
+            const add2 = inventors.map(function adding(a){
+                let letter = a.last[0];
+                return 'Last name starts with ' + letter;
+            });
+
+            console.log(add2);
+
+            const add = inventors.reduce(function adding(total1,a){
+                if (a.first[0] === 'A'){
+                    total1++;
+                }          
+                if (a.last[0] === 'C'){
+                    total1++;
+                }   
+            
+            return `${total1}`;
+            },0);
+            console.log(add);
+        
+        </script>
+    </body>
+</html>
+
+

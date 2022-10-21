@@ -1,0 +1,13 @@
+.objects{
+    padding: 10px;
+    background-color: cadetblue;
+    line-height: 3;
+    font-family:monospace;
+    height: 200px;
+    border-radius: 8px;
+}
+.ind{
+    font-family:Impact;
+    display: inline;
+    color: brown;
+}
