@@ -1,0 +1,9 @@
+ID  Product  Price  Quantity  Total
+12   Salt - Kosher   126   4   504
+
+5   Appetizer - Sausage Rolls   76   4   304
+
+1   Soup Bowl Clear 8oz92008   171   5   855
+------------------------------------
+Grand Total     1663
+

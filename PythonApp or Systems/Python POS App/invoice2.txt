@@ -1,0 +1,9 @@
+ID  Product  Price  Quantity  Total
+4   Orange - Canned, Mandarin   189   5   945
+
+2   Hersey Shakes   126   5   630
+
+44   Seaweed Green Sheets   160   5   800
+------------------------------------
+Grand Total     2375
+

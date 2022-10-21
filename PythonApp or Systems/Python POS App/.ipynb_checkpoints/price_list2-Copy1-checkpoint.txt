@@ -1,0 +1,51 @@
+ID	Product	Price
+1	Soup Bowl Clear 8oz92008	180
+2	Hersey Shakes	132
+3	Corn Meal	93
+4	"Orange - Canned, Mandarin"	198
+5	Appetizer - Sausage Rolls	80
+6	Wine - Carmenere Casillero Del	96
+7	Butter Sweet	198
+8	Irish Cream - Butterscotch	198
+9	Haggis	148
+10	"Lamb - Whole, Frozen"	163
+11	Wine - Redchard Merritt	193
+12	Salt - Kosher	132
+13	2Flour Dark Rye	152
+14	Nantucket - Kiwi Berry Cktl.	188
+15	Bay Leaf Ground	64
+16	Chocolate - Milk Coating	64
+17	Cheese - Asiago	123
+18	Salami - Genova	169
+19	Cheese - Cambozola	126
+20	Plasticforkblack	165
+21	Pop Shoppe Cream Soda	67
+22	Wine - Taylors Reserve	68
+23	Ecolab - Medallion	96
+24	Red Cod Fillets - 225g	96
+25	Plastic Arrow Stir Stick	110
+26	Vodka - Moskovskaya	196
+27	Pants Custom Dry Clean	59
+28	Beer - Paulaner Hefeweisse	122
+29	Eggplant - Regular	184
+30	Wine - Ej Gallo Sierra Valley	114
+31	Lettuce - Baby Salad Greens	152
+32	Wasabi Powder	78
+33	"Tart Shells - Sweet, 2"	152
+34	Easy Off Oven Cleaner	59
+35	"Beef - Chuck, Boneless"	135
+36	"Wine - White, Pelee Island"	181
+37	Soup Campbells Mexicali Tortilla	183
+38	Bowl 12 Oz - Showcase 92012	131
+39	"Veal - Inside, Choice"	59
+40	Cup - Paper 10oz 92959	92
+41	Lettuce - Iceberg	125
+42	Mussels - Frozen	207
+43	Broom - Corn	162
+44	Seaweed Green Sheets	168
+45	Steampan - Foil	71
+46	Compound - Strawberry	144
+47	Pork Loin Cutlets	203
+48	Anchovy Paste - 56 G Tube	210
+49	"Beans - Navy, Dry"	206
+50	Icecream - Dibs	108
