@@ -543,7 +543,7 @@ for (key of map.keys()){
 }
 return map;
 }
-
+//testiong
 console.log(CheckMap(gaelmap));
 
 //Sets (review again, lol)
