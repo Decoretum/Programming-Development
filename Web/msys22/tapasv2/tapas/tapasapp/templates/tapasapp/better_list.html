@@ -1,0 +1,48 @@
+{% extends 'tapasapp/base.html' %}
+{% load static %}
+
+<!-- I hereby attest to the truth of the following facts:
+- I have not discussed the <programming language used> language code in my program
+with anyone other than my instructor or the teaching assistants assigned to this course.
+- I have not used <programming language used> language code obtained from another
+student, or any other unauthorized source, either modified or unmodified.
+- If any <programming language used> language code or documentation used in my
+program was obtained from another source, such as a text book or course notes, that has
+been clearly noted with a proper citation in the comments of my program. -->
+
+
+
+                {% block content %}
+                <div class="row" style="margin-left: 50px;">
+                    {{person}} is logged in
+                </div>
+
+                <div class="row" style="margin-left: 50px;">
+                    <a href="{% url 'basic_list' %}" style="text-decoration: none;">
+                        Basic List Page
+                    </a>
+                </div>
+                
+                <div class="col-12">
+                    <table class="table table-striped mb-5">
+                        <thead>
+                            <th scope="col"> Name </th>
+                            <th scope="col"> Cooking Time </th>
+                            <th scope="col"> Prep Time </th>
+                            <th scope="col">  </th>
+                        </thead>
+                        <tbody>
+                            {% for d in dishes %}
+                            <tr>
+                                <td> {{ d.name }} </td>
+                                <td> {{ d.prep_time }} </td>
+                                <td> {{ d.cook_time }} </td>
+                                <td><a href="{% url 'view_detail' pk=d.pk %}"  class="btn btn-dark">Details</button></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% endblock %}
+
+            

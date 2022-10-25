@@ -1,0 +1,73 @@
+{% extends 'Myinventoryapp/base.html' %}
+{% load static %}
+
+<!-- I hereby attest to the truth of the following facts:
+- I have not discussed the <programming language used> language code in my program
+with anyone other than my instructor or the teaching assistants assigned to this course.
+- I have not used <programming language used> language code obtained from another
+student, or any other unauthorized source, either modified or unmodified.
+- If any <programming language used> language code or documentation used in my
+program was obtained from another source, such as a text book or course notes, that has
+been clearly noted with a proper citation in the comments of my program. -->
+
+{% block data %}
+
+<div class="row" style="position: relative; right:-1010px; top: -50px;">
+    Account logged in: {{user}}  
+</div>
+
+<form method="POST" action="{% url 'update_bottle' pk=o.pk %}">{% csrf_token %}
+
+    <div class="container" style="width: 700px; margin-left: 130px; border-style:groove; margin-top: -50px; border-radius: 30px;">
+        <div class="row" style="background-color: rgb(228, 175, 115); padding: 10px; border-radius: 30px; padding: 10px;">
+            <h1 style="font-size: 27px; border-radius: 30px;"> Type in Bottle Details </h1>
+        </div>
+        <div class='row' style="padding: 10px;">
+            <span style='font-family:Lucida Sans;'> Brand </span> <br>
+            <input type="text" class="form-control" idname="oname" name="oname" value="{{o.Brand}}"></input> <br><br>
+
+            <span style='font-family:Lucida Sans;'> SKU </span> <br>
+            <input type="text" class="form-control" idname="snum" name="snum" value="{{o.SKU}}"> </input> <br><br>
+            
+            <span style='font-family:Lucida Sans;'> Cost </span>
+            <span style="font-family: Lucida Sans; margin-left: 450px;"> Size </span>    
+        </div>
+        <div class="row" style="padding: 10px;">
+            <input type="number" class="form-control" style="width: 150px;" idname="cost" name="cost" value="{{o.Cost}}"></input>
+            <input type="text" class="form-control" style="width: 150px; margin-left: 335px;" idname="sizenum" name="sizenum" value="{{o.Size}}"></input>
+        </div>
+        <div class='row' style="padding: 10px;">
+            <span style='font-family:Lucida Sans;'> Color </span> <br>
+            <span style="font-family: Lucida Sans; margin-left: 440px;"> Quantity </span>    
+        </div>
+        <div class="row" style="padding: 10px;">
+            <input type="text" class="form-control" style="width: 150px;" idname="cname" name="cname" value="{{o.Color}}"></input>
+            <input type="number" class="form-control" style="width: 150px; margin-left: 335px;" idname="qname" name="qname" value="{{o.CurrentQuantity}}"></input>
+        </div>
+        <div class='row' style="padding: 10px;">
+            <span style='font-family:Lucida Sans;'> Mouth Size </span> <br>
+            <span style="font-family: Lucida Sans; margin-left: 400px;"> Supplied by: </span>    
+        </div>
+        
+        <div class="row" style="padding: 10px;">
+            <input type="text" class="form-control" style="width: 150px;"idname="mouthname" name="mouthname" value="{{o.MouthSize}}"></input>
+            <select class="form-control" name="supplyname" idname="supplyname" Supplier" aria-label="Default select example" data-live-search="true" data-selected-text-format="value" style="position: relative; right: -335px; border-radius: 10px; width: 150px;">
+                <option selected value="{{o.Suppliedby}}" disabled> {{o.Suppliedby}} </option>
+                {% for user in supplier %}
+                {% if user.Name != o.Suppliedby %}
+                <option value='{{user.Name}}'> {{user.Name}} </option>
+                {% endif %}
+                {% endfor %} 
+                
+                
+            </select> 
+        </div>
+        <div class='row' style="padding: 10px;">
+            <button class="btn" type="submit" style="margin-left:80px; width:500px; background-color: gray; color: azure; margin-bottom: 10px;"> Update </button>
+        </div>
+        <div class='row' style="padding: 10px;">
+            <a href="{% url 'view_details' pk=o.pk %}" class="btn" style="margin-left:80px; width:500px; background-color: rgb(206, 144, 63); color: azure; margin-bottom: 10px;"> Back </a>
+        </div>
+    </div>
+</form>
+{% endblock %}

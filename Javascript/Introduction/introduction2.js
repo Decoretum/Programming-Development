@@ -225,6 +225,7 @@ let findobjectarray = cars.find(function(a){
   return a.specialization === "sex" && a.year > 2010;
 });
 
+console.log(findobjectarray);
 
 console.log(Array.from("Y|es123NoWhy"));
 
@@ -235,3 +236,321 @@ for (x of matchy){
   console.log(x);
 }
 
+//dates
+let date = new Date(); //current date of computer, date objects are static
+let gaeldate=  new Date(2003, 1, 7, 0, 0, 0, 0); //js counts months from 0 to 11, if excess, will add to overflow only, same to days
+//creating date can also include only 2 arguments minimum, year and month
+let archexam = new Date(2022, 9, 27,3,30);
+let motherdate = new  Date(86, 0, 24); //interpreted from previous century
+console.log(`Enterprise Architecture exam: ${archexam}`);
+console.log(`Mother's Birthday: ${motherdate}`);
+console.log(`Gael's Bday: ${gaeldate}`);
+
+let Break2022 = new Date("December 20, 2022 12:00:00:00"); //we made custom date using string
+console.log("Break: ", Break2022);
+
+//JavaScript stores dates as number of milliseconds since January 01, 1970, 00:00:00 UTC (Universal Time Coordinated).
+
+let totalmilli = new Date(0); //origin date, meaning date of 0 time plus 0 milliseconds
+console.log(date);
+console.log(date - totalmilli); //total number of milliseconds that have passed
+
+let oldDate = new Date(5000000);
+let olderDate = new Date(-50000000); //older date since negative
+console.log(oldDate);
+console.log(olderDate);
+
+//One day (24 hours) is 86 400 000 milliseconds.
+
+//Date Displays
+
+console.log(gaeldate.toUTCString());
+console.log(gaeldate.toDateString());
+console.log(gaeldate.toISOString());
+
+console.log(new Date("2003-02-07")); // ISO 8601 international standard for input, can also only accept year and month or year only
+
+//ISO dates can be written with added hours, minutes, and seconds (YYYY-MM-DDTHH:MM:SSZ):
+
+console.log(new Date("1981-06-20T03:20:45Z")); //date and time separated by "T", Z represents UTC time
+
+console.log(new Date("01/03/1986")); //short date
+console.log(new Date("January 3 1986")); //long date
+
+//Date parsing - returns value of milliseconds between time 0 and date
+
+let momandson = Date.parse("1986-01-03");
+let gaelolddate = Date.parse(gaeldate);
+console.log(momandson);
+
+//we can convert milliseconds to date object
+let newdate = new Date(gaelolddate);
+console.log(newdate);
+
+
+
+//get methods from dateobjet
+console.log(gaeldate.getDate());
+console.log((Date.now()/31536000000))
+
+
+//set date methods
+let nowdate = new Date();
+nowdate.setDate(nowdate.getDate() + 61);
+console.log(nowdate);
+
+console.log("\n\n\n");
+
+//Math Object - static, no need to make objects for it
+//Properties (some)
+console.log(Math.E);
+console.log(Math.PI);
+
+//methods
+console.log(Math.round(8.124));
+console.log(Math.ceil(8.124)); //rounded up
+console.log(Math.floor(8.124)); //rounded down
+console.log(Math.trunc(8.125)); //returns integer part of argument
+console.log(Math.sign(8.124)); //returns if argument is negative (-1), positive (+1), or null (0)
+console.log(Math.pow(2,4));
+console.log(Math.sqrt(64));
+console.log(Math.abs(8.124));
+console.log(Math.sin(301 * Math.PI / 180)); //returns sin of argument radians, same as cos()
+//Math.min() and Math.max() used to find min and max
+
+console.log(Math.random()*2); //random value between 0 and 1
+
+//Math.log() returns natural logarithm of argument
+
+//good random function
+
+function Random(min,max){
+  return Math.floor(Math.random() * (max-min)) + min;
+}
+
+
+
+
+//Boolean
+
+console.log("\n\n\n\n");
+let x5125 = 0;
+console.log(Boolean(52<12));
+console.log(Boolean(x5125)); //false since no value number, same as with -0
+console.log(Boolean("")); //same as with undefined, null, and NaN
+
+//make Boolean object
+let joke = new Boolean(124<4);
+//comparing two javascript objects always result to false
+
+//comparisons
+
+let condition = (gaeldate > oldDate) ? "Current is nigh!":"Did we Time travel?";
+console.log(condition);
+
+//nullish coalescing operator - for null or undefined
+let whamper = null;
+let condition1 = whamper ?? "This aint even exist!";
+console.log(condition1);
+
+//optional chaining operator - returns undefined if object is undefined or null
+console.log(condition1?.name);
+
+
+//javascript switches - basically the one in Java
+
+let synt = [1,2,54,"Yo"];
+switch(synt[3]){
+case "Yo":
+  console.log("Yo is here!");
+  break;
+case 0:
+  console.log("0 bro");
+  break;
+case 1:
+  console.log("Problem?");
+  break;
+default:
+  console.error("No Index of that sort");
+}
+
+//break keyword used to break out of the switch case block
+//default keyword used if no case matches it - if its not in the last, add break to it. 
+
+//common code blocks that use same output
+
+switch(Math.floor(Math.random() * 10)){
+  default:
+    console.log("What you think this number gon be?");
+    break;
+  case 0:
+    console.log("Bottom bro");
+    break;
+  case 1:
+    console.log("Still down but good");
+    break;
+  case 2:
+  case 3:
+  case 4:
+  case 5:
+      console.log("Growing! Still down.");
+}
+
+//if multiple case values match the expression, first case for that value is selected
+
+
+//loops
+//for loop
+
+for (let i=0, text = '', placeholder="||"; i < synt.length; i++){ //you can initialize as much in expression 1, you can also leave it blank with ;
+  text += String(synt[i] + placeholder);
+}
+
+
+//you can also leave expression 2 and 3 blank
+// for 2, you need to provide break though if thats the case. If expression 2 returns true, loop continues
+
+for (let i=0, text = '', pd="||"; ;i++){
+  text += String(synt[i] + pd);
+  if (i === synt.length-1){
+    console.log(text);
+    break
+  }
+}
+
+//for in - more on keys of arraylist or iterable, also on properties of objects
+for (key in synt){ //index of arraylist
+  console.log(key);
+}
+
+let deadperson = {
+  first : "Gael",
+  last : "Estrera",
+  hobby : "Gaming"
+}
+
+for (key in deadperson){ //to iterate over properties, but no need really
+  console.log(`${key} : ${deadperson[key]}`);
+}
+
+//forEach
+let haha = '';
+synt.forEach(function(a){
+haha += " " + String(a) + " LOL";
+})
+console.log(haha);
+
+//for of you know too much already
+
+
+
+//while loops
+
+//normal while loop, too ez
+
+
+//do while loop
+
+let i = 0;
+do {
+  if (i === 0){
+    console.log("Here it goes!");
+  }
+  console.log("Skadooshy");
+  i++;
+}
+while(i < 5);
+
+//breaks
+
+let fun = [
+  {first : "Gael", second : "Cool", Power : "Thunder", Desire : "Power"},
+  {first : "Decoretum", second : "Scary", Power : "Abyss", Desire : "Lust"}
+]
+
+for (x of fun){
+  if (x.first === "Decoretum"){
+    console.log(`Fine! The lewd one here has the desire of ${x.Desire}`);
+    break;
+  }
+  console.log(`${x.first}, ${x.second}, power of ${x.Power}`)
+}
+
+function ObjectPurifier(ObjectArray){
+  for (obj of ObjectArray){
+    if (obj.Desire === "Lust" || obj.Desire === "Power"){
+      obj['WARNING'] = `This user has the inappropriate desire: ${obj.Desire}`;
+    }
+  }
+  console.log(ObjectArray)
+}
+
+function Verdict(array){
+for (x of array){
+  if (typeof x === "string"){
+    console.log(`HA! The suspect "${x}" is at index ${array.indexOf(x)}`)
+    break;
+  }
+}
+}
+
+function Smart(ObjectArray){
+  let list = [];
+  for (x of ObjectArray){
+    if (x.Desire === "Power"){
+      continue;
+    }
+    list.unshift(x);
+  }
+  console.log(list);
+}
+
+
+ObjectPurifier(fun);
+Verdict(synt);
+Smart(fun);
+
+
+//Javascript labels
+
+//you can limit code blocks and break out of any of them using "break <label>;"
+
+
+
+//Maps (review lol, its basically Java's hashmap)
+let gaelmap = new Map();
+gaelmap.set("Authenticity",0)
+.set("Power",0)
+.set("Credentials","Active")
+.set("Name","Gael")
+.set("Ability","Lackluster");
+
+
+function CheckMap(map){ //hashmap
+  let list = [];
+for (key of map.keys()){
+  if (map.get(key) === "Lackluster"){
+    map.set("Verdict","Needs more tuning");
+    map.delete(key);
+  }
+  else if (key === "Power" && map.get(key) === 0){
+    map.set("Power Assurance","Stable and Qualified");
+  }
+  else if (key === "Authenticity" && map.get(key) === 0){
+    list.unshift("This is a valid list for credentials");
+    map.set("Credentials",list);
+  }
+}
+return map;
+}
+
+console.log(CheckMap(gaelmap));
+
+//Sets (review again, lol)
+
+let testarray = [1,1,1,2,3,4];
+let nomore = new Set(testarray);
+console.log(nomore);
+console.log(nomore.values());
+
+//.add to add, .iterator() to create object containing all values/elements of set

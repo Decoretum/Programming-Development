@@ -1,0 +1,82 @@
+{% extends 'Halalan2022/base.html' %}
+{% load static %}
+
+<!-- I hereby attest to the truth of the following facts:
+- I have not discussed the <programming language used> language code in my program
+with anyone other than my instructor or the teaching assistants assigned to this course.
+- I have not used <programming language used> language code obtained from another
+student, or any other unauthorized source, either modified or unmodified.
+- If any <programming language used> language code or documentation used in my
+program was obtained from another source, such as a text book or course notes, that has
+been clearly noted with a proper citation in the comments of my program. -->
+
+
+{% block data %}
+<div class="container" style="padding: 10px;border: solid; border-radius: 30px; background-color:bisque; width: 900px; position:relative;top: -100px; font-family: Tahoma;">
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        <h1 style="color:rgb(148, 59, 67)"> Hi there, {{firstname}} {{lastname}}! </h1> <br><br>
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        <b> Votes for the candidates for the 2022 Elections in the Philippines </b>
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px; margin-top: 10px; color: azure; background-color:brown; max-width: 500px;">
+        Presidential Candidates
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        Leni Robredo, Vote count: {{countleni}}
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        Ping Lacson, Vote count: {{countping}}
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        Noberto Gonzales, Vote count: {{countnob}}
+    </div>  
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        Isko Moreno, Vote count: {{countisk}}
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        Bongbong Marcos, Vote count: {{countbong}}
+    </div>
+
+    <div class="row" style="padding: 10px; margin-left: 10px; margin-top: 10px; color: azure; background-color:brown; max-width: 500px;">
+        Vice-Presidential Candidates
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        Kiko Pangilinan, Vote count: {{countkiko}}
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        Sara Duterte, Vote count: {{countsara}}
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        Rizalito David, Vote count: {{countrizal}}
+    </div>  
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        Walden Bello, Vote count: {{countwald}}
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        Lito Atienza, Vote count: {{countlito}}
+    </div>
+
+    <div class="row" style="padding: 10px; margin-left: 10px; margin-top: 10px; color: azure; background-color:brown; max-width: 500px;">
+        Senatorial Candidates
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        Win Gatchalian, Vote count: {{countwin}}
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        Fernando Diaz, Vote count: {{countdiaz}}
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        Herbert Bautista, Vote count: {{countherb}}
+    </div>  
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        Chel Diokno, Vote count: {{countchel}}
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        Neri Colmenares, Vote count: {{countneri}}
+    </div>
+    
+</div>
+{% endblock %}
+
+  

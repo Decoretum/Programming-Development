@@ -1,0 +1,34 @@
+{% extends 'tapasapp/base.html' %}
+{% load static %}
+
+<!-- I hereby attest to the truth of the following facts:
+- I have not discussed the <programming language used> language code in my program
+with anyone other than my instructor or the teaching assistants assigned to this course.
+- I have not used <programming language used> language code obtained from another
+student, or any other unauthorized source, either modified or unmodified.
+- If any <programming language used> language code or documentation used in my
+program was obtained from another source, such as a text book or course notes, that has
+been clearly noted with a proper citation in the comments of my program. -->
+
+{% block content %}
+<div class="container" style="position: relative; left: -70px; width: 2000px;">
+    <div class="row" style="float: left; padding: 10px; margin-right: 40px;">
+        <div class="col" style="padding: 10px; margin-right: 50px; max-width: 200px;">
+        Account name: {{u.username}}
+        </div>
+        <div class="col">
+            <a href="{% url 'change' pk=u.pk %}" class="btn" style="border-radius: 20px; background-color: bisque; padding: 10px; width: 250px; margin-top: 10px;" > Change Password </a>
+        </div>
+    
+        <div class="col">
+            <a href="{% url 'delete_user' pk=u.pk %}" class="btn" style="border-radius: 20px; background-color: coral; padding: 10px; width: 250px; margin-top: 10px;" > Delete Account </a>
+        </div>
+        <div class="col">
+            <a href="{% url 'basic_list' %}" class="btn" style="border-radius: 20px; background-color: rgb(224, 222, 98); padding: 10px; width: 250px; margin-top: 10px;" > Back </a>
+        </div>
+    </div>
+</div>
+
+{{message}}
+
+{% endblock %}

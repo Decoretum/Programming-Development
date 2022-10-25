@@ -1,0 +1,85 @@
+{% extends 'Halalan2022/base.html' %}
+{% load static %}
+
+<!-- I hereby attest to the truth of the following facts:
+- I have not discussed the <programming language used> language code in my program
+with anyone other than my instructor or the teaching assistants assigned to this course.
+- I have not used <programming language used> language code obtained from another
+student, or any other unauthorized source, either modified or unmodified.
+- If any <programming language used> language code or documentation used in my
+program was obtained from another source, such as a text book or course notes, that has
+been clearly noted with a proper citation in the comments of my program. -->]
+
+{% block data %}
+
+
+{% for person in u %}
+{% if person.username == user %}
+<div class="container" style="padding: 10px;border: solid; border-radius: 30px; background-color:aliceblue; width: 900px; position:relative;top: -100px; font-family: Tahoma;">
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        <span style="font-family: Tahoma; font-size: 25px; color:rgb(10, 12, 11);">
+            Hi there, {{firstname}} {{lastname}}! 
+        </span>
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        <span style="font-family: Tahoma; font-size: 25px; color:rgb(10, 12, 11);">
+            Username: {{person.username}} 
+        </span>
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        <span style="font-family: Tahoma; font-size: 25px; color:rgb(10, 12, 11);">
+            First Name: {{person.first_name}} 
+        </span>
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        <span style="font-family: Tahoma; font-size: 25px; color:rgb(10, 12, 11);">
+            Last Name: {{person.last_name}} 
+        </span>
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        <span style="font-family: Tahoma; font-size: 25px; color:rgb(10, 12, 11);">
+            Birthday: {{person.birthday}} 
+        </span>
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        <span style="font-family: Tahoma; font-size: 25px; color:rgb(10, 12, 11);">
+            Sex: {{person.sex}} 
+        </span>
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        <span style="font-family: Tahoma; font-size: 20px; color:rgb(10, 12, 11)";>
+            Customize your user profile here with the aid of the buttons!
+        </span>
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px; margin-bottom: 10px;">
+        <a href="{% url 'logout' %}" class="btn" style="position:relative; bottom: -30px; width:150px; height: 40px; margin-left: 30px; margin-bottom: 10px; background-color: rgb(240, 172, 70); color: azure; margin-bottom: 10px;"> Logout </a>
+        <a href="{% url 'update' pk=person.pk %}" class="btn" style="position:relative; bottom: -30px; width:200px; height: 40px; margin-left: 30px; margin-bottom: 10px; background-color: rgb(18, 87, 47); color: azure; margin-bottom: 10px;"> Update User Details </a>
+    </div>
+
+    <div class="container" style="margin-top: 50px; margin-left:30px;">
+        <div class="row" style="margin-bottom: 20px;">
+            <b>Candidates voted by user {{person.username}}:</b>
+        </div>
+        {% if condition == 5 %}
+            {% for vote in v %}
+            {% if vote in id %}
+            <div class="row" style="margin-bottom: 20px; padding: 10px; margin-right: 20px;">
+                {{vote.candidate_id.position_id.name}} vote: {{vote.candidate_id.first_name}} {{vote.candidate_id.last_name}} <br>
+                Comments: {{vote.comment}}
+            </div>
+            {% endif %}
+            {% endfor %}
+        {% elif condition == 10 %}
+            <div class="row" style="margin-bottom: 20px;">
+                You haven't voted yet!
+            </div>
+        {% endif %}
+      
+    </div>
+
+</div>
+{% endif %}
+{% endfor %}
+
+
+{% endblock %}

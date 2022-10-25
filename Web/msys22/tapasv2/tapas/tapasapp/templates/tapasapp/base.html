@@ -1,0 +1,49 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>The List</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+        <link rel="stylesheet" href="{% static '/bootstrap/css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static '/bootstrap/css/custom.css' %}">
+
+        <script src="{% static '/bootstrap/jquery-3.4.1.slim.min.js' %}"></script>
+        <script src="{% static '/bootstrap/popper.min.js' %}"></script>
+        <script src="{% static '/bootstrap/js/bootstrap.min.js' %}"></script>
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-custom mb-3 sticky-top" style="background-color: #590404;">
+            <a class="navbar-brand mb-0" href="{% url 'better_menu' %}">My Tapas Menu</span> </a>
+            <a href="{% url 'add_menu' %}" style="color:white"><i class="material-icons">add</i></a>
+
+        </nav>
+
+
+        <div class="container">
+            <div class="row">
+
+                {% block content %}
+                {% endblock %}
+
+            </div>
+        </div>  
+        
+
+    </body>
+
+    <nav class="navbar bg-custom fixed-bottom justify-content-center" style="background-color: #590404;">
+         <div class="footer">&copy; 2020</div>
+    </nav>
+
+    <!--<div class="row fixed-botom bg-custom" style="background-color: #590404;"> -->
+        <!-- Copyright -->
+       <!-- <div class="col-12 text-center"> -->
+                <!--<p class="text-center"> &copy; 2020</p> -->
+
+            
+        <!-- </div> -->
+        <!-- Copyright -->
+      
+    </div>
+</html>

@@ -1,0 +1,26 @@
+username: Mystrus
+password: touchmeyes
+
+username: Fly
+pass: basic
+
+username: Test
+pass: 123
+
+username: New
+pass: 321
+
+username: Old
+pass: young
+
+username: Mommy
+pass: 123
+
+vote:
+candidate (including position)
+user
+comments
+
+
+
+

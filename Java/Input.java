@@ -1,5 +1,7 @@
 
 import magepack.*;
+import DataStructuring.*;
+import java.util.*;
 public class Input {
     public static void main (String args[]){
        Mage mage = new Mage();
@@ -31,6 +33,16 @@ public class Input {
         DarkMother.WarCry();
         DarkAdept.WarCry();
 
+        System.out.println("");
 
+        //trying out structuring
+        HashMap<Object,Object>ErrorObject = new HashMap<Object,Object>();
+        ErrorObject.put(false,"Killed a lion");
+        ErrorObject.put(123124,"Destroyed Worlds");
+        ErrorObject.put(true, "Defied the devil");
+        ErrorObject.put(1231, true);
+        
+        DataStructures2 Gael = new DataStructures2();
+        Gael.ObjectFilter(ErrorObject);
     }
 }

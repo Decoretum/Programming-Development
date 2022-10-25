@@ -1,0 +1,51 @@
+{% extends 'tapasapp/base.html' %}
+{% load static %}
+
+<!-- I hereby attest to the truth of the following facts:
+- I have not discussed the <programming language used> language code in my program
+with anyone other than my instructor or the teaching assistants assigned to this course.
+- I have not used <programming language used> language code obtained from another
+student, or any other unauthorized source, either modified or unmodified.
+- If any <programming language used> language code or documentation used in my
+program was obtained from another source, such as a text book or course notes, that has
+been clearly noted with a proper citation in the comments of my program. -->
+
+{% block content %}
+
+<form method="POST" action="{% url 'login' %}">{% csrf_token %}
+
+    <div class="container" style="border: solid; border-radius: 20px; margin-left: 400px; width: 400px;">
+
+        <div class="row" style="padding: 10px;">
+            Username 
+        </div>
+        <div class="row" style="padding: 10px;">
+            <input type="text" class="form-control" style="width: 400px;" name='username' idname='username'></input>
+        </div>
+        <div class="row" style="padding: 10px;">
+            Password
+        </div>
+        <div class="row" style="padding: 10px;">
+            <input type="text" class="form-control" style="width: 400px;" name='password' idname='password'></input>
+        </div>
+        <div class="row" style="padding: 10px;">
+            <button class="btn" type="submit" style="width:300px; margin-left: 30px; background-color: gray; color: azure; margin-bottom: 10px;"> Login </button>
+        </div>
+        <div class="row" style="padding: 10px;">
+            <a href="{% url 'signup' %}" class="btn" style="width:300px; margin-left: 30px; background-color: rgb(71, 169, 226); color: azure; margin-bottom: 10px;"> Signup </a>
+        </div>
+
+    </div>
+</form>
+
+<div class="container" style="margin-left: 480px; margin-top: 70px; padding: 10px; width: 230px;">
+    {% for m in messages %}
+    <b> {{m}} </b>
+    {% endfor %}
+</div>
+
+
+
+
+
+{% endblock %}

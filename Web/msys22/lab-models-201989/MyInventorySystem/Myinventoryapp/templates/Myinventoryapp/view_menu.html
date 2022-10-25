@@ -1,0 +1,24 @@
+{% extends 'Myinventoryapp/base.html' %}
+{% load static %}
+
+<!-- I hereby attest to the truth of the following facts:
+- I have not discussed the <programming language used> language code in my program
+with anyone other than my instructor or the teaching assistants assigned to this course.
+- I have not used <programming language used> language code obtained from another
+student, or any other unauthorized source, either modified or unmodified.
+- If any <programming language used> language code or documentation used in my
+program was obtained from another source, such as a text book or course notes, that has
+been clearly noted with a proper citation in the comments of my program. -->
+
+
+{% block data %}
+
+<div class="col" style="position: relative; top:-90px; right:-800px;">
+    {{user}} is logged in 
+</div>
+
+<div class='container' style="border:solid; margin-top: 100px; text-align: center; border-radius: 20px; padding: 20px; width: 300px; background-color: rgb(241, 210, 70);">
+    <div class='row'> You are looking at an empty page :D </div>
+    <div class="row"> Please Check the references on the left to navigate the website of Bottles </div>
+</div>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'tapasapp/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<form method="POST" action="{% url 'add_bottle' %}">{% csrf_token %}
+
+    <div class="container" style="width: 700px; margin-left: 230px; border-style:groove; margin-top: -50px; border-radius: 30px;">
+        <div class="row" style="background-color: rgb(228, 175, 115); padding: 10px; border-radius: 30px; padding: 10px;">
+            <h1 style="font-size: 27px; border-radius: 30px;"> Type in Bottle Details </h1>
+        </div>
+        <div class='row' style="padding: 10px;">
+            <span style='font-family:Lucida Sans;'> Brand </span> <br>
+            <input type="text" class="form-control" idname="oname" name="oname"></input> <br><br>
+
+            <span style='font-family:Lucida Sans;'> SKU </span> <br>
+            <input type="text" class="form-control" idname="snum" name="snum"> </input> <br><br>
+            
+            <span style='font-family:Lucida Sans;'> Cost </span>
+            <span style="font-family: Lucida Sans; margin-left: 450px;"> Size </span>    
+        </div>
+        <div class="row" style="padding: 10px;">
+            <input type="number" class="form-control" style="width: 150px;" idname="cost" name="cost"></input>
+            <input type="text" class="form-control" style="width: 150px; margin-left: 335px;" idname="sizenum" name="sizenum"></input>
+        </div>
+        <div class='row' style="padding: 10px;">
+            <span style='font-family:Lucida Sans;'> Color </span> <br>
+            <span style="font-family: Lucida Sans; margin-left: 440px;"> Quantity </span>    
+        </div>
+        <div class="row" style="padding: 10px;">
+            <input type="text" class="form-control" style="width: 150px;" idname="cname" name="cname"></input>
+            <input type="number" class="form-control" style="width: 150px; margin-left: 335px;" idname="qname" name="qname"></input>
+        </div>
+        <div class='row' style="padding: 10px;">
+            <span style='font-family:Lucida Sans;'> Mouth Size </span> <br>
+            <span style="font-family: Lucida Sans; margin-left: 400px;"> Supplied by: </span>    
+        </div>
+        
+        <div class="row" style="padding: 10px;">
+            <input type="text" class="form-control" style="width: 150px;"idname="mouthname" name="mouthname"></input>
+            <input type="text" class="form-control" style="width: 150px; margin-left: 335px;" idname="supplyname" name="supplyname"></input>
+        </div>
+        <div class='row' style="padding: 10px;">
+            <button class="btn" type="submit" style="margin-left:80px; width:500px; background-color: gray; color: azure; margin-bottom: 10px;"> Add to Bottles </button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

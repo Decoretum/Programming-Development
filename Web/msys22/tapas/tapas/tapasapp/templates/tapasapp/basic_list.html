@@ -1,0 +1,61 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>The List</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+        <link rel="stylesheet" href="{% static '/bootstrap/css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static '/bootstrap/css/custom.css' %}">
+
+        <script src="{% static '/bootstrap/jquery-3.4.1.slim.min.js' %}"></script>
+        <script src="{% static '/bootstrap/popper.min.js' %}"></script>
+        <script src="{% static '/bootstrap/js/bootstrap.min.js' %}"></script>
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-custom mb-3 sticky-top" style="background-color: #590404;">
+            <a class="navbar-brand mb-0" href="{% url 'view_menu' %}">My Tapas Menu</span> </a>
+            <a href="" style="color:white"><i class="material-icons">add</i></a>
+
+        </nav>
+
+        <div class="container">
+            <div class="row">
+
+
+                <div class="col-12">
+
+                    <table class="table table-striped">
+                        <thead>
+                            <th scope="col"> Name </th>
+                            <th scope="col"> Cooking Time </th>
+                            <th scope="col"> Prep Time </th>
+                        </thead>
+                        <tbody>
+                            {% for d in dishes %}
+                            <tr>
+                                <td> {{ d.name }} </td>
+                                <td> {{ d.prep_time }} </td>
+                                <td> {{ d.cook_time }} </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                </div>
+            
+
+
+            </div>
+        </div>  
+        
+        <footer class="footer bg-custom" style="background-color: #590404;">
+
+            <!-- Copyright -->
+            <div class="container">&copy; 2020</div>
+            <!-- Copyright -->
+          
+        </footer>
+
+    </body>
+</html>

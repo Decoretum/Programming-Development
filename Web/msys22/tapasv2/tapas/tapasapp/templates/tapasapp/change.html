@@ -1,0 +1,49 @@
+{% extends 'tapasapp/base.html' %}
+{% load static %}
+
+<!-- I hereby attest to the truth of the following facts:
+- I have not discussed the <programming language used> language code in my program
+with anyone other than my instructor or the teaching assistants assigned to this course.
+- I have not used <programming language used> language code obtained from another
+student, or any other unauthorized source, either modified or unmodified.
+- If any <programming language used> language code or documentation used in my
+program was obtained from another source, such as a text book or course notes, that has
+been clearly noted with a proper citation in the comments of my program. -->
+
+{% block content %}
+<form method="POST" action="{% url 'change' pk=u.pk %}">{% csrf_token %}
+    <div class="container">
+        <div class="row">
+            Current Password
+        </div>
+        <div class="row">
+            <input type="text" class="form-control" id="current" name="current">
+        </div>
+        <div class="row">
+            New Password
+        </div>
+        <div class="row">
+            <input type="text" class="form-control" id="new" name="new">
+        </div>
+        <div class="row">
+            Confirm New Password
+        </div>
+        <div class="row">
+            <input type="text" class="form-control" id="newagain" name="newagain">
+        </div>
+        <div class="row">
+            <button class="btn" type="submit" style="border-radius: 20px; background-color: rgb(224, 222, 98); padding: 10px; width: 250px; margin-top: 10px;" > Confirm </a>
+        </div>
+        <div class="row">
+            <a href="{% url 'manage_account' pk=u.pk %}" class="btn" style="border-radius: 20px; background-color: rgb(224, 80, 205); padding: 10px; width: 250px; margin-top: 10px;" > Back </a>
+        </div>
+    </div>
+</form>
+
+    <span style="margin-left: 50px; margin-top: 30px;">
+    {% for m in messages %}
+    {{m}}
+    {% endfor %}
+    </span>
+
+{% endblock %}

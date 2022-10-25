@@ -1,0 +1,25 @@
+{% load static %}
+
+<html>
+    <head>
+        <title> Gael's Server Realm </title>
+        <link rel="stylesheet" href="{% static '/css/creation.css' %}">
+
+    </head>
+
+<h1> Gael's Django Workouts! </h1>
+
+<div class="realm">
+    These are the mighty legends! <br><br>
+    <span style="margin-left: 20px;"> Mage Name </span> 
+    <span style="margin-left: 20px; margin-right: 20px;"> Classification </span> <strong>You might know several of them!</strong> <br><br><br>
+    
+        {% for a in Heroes %} 
+
+            <div class='ele'> {{a.name}} <span style="margin-left: 20px;"> {{a.classification}} </span></div>  <br><br><br>
+
+        {% endfor %}
+        
+</div>
+
+</html>

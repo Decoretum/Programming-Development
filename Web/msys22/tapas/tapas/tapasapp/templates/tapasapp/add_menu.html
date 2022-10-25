@@ -1,0 +1,48 @@
+{% extends 'tapasapp/base.html' %}
+{% load static %}
+
+<!-- I hereby attest to the truth of the following facts:
+- I have not discussed the <programming language used> language code in my program
+with anyone other than my instructor or the teaching assistants assigned to this course.
+- I have not used <programming language used> language code obtained from another
+student, or any other unauthorized source, either modified or unmodified.
+- If any <programming language used> language code or documentation used in my
+program was obtained from another source, such as a text book or course notes, that has
+been clearly noted with a proper citation in the comments of my program. -->
+
+
+        {% block header %}
+        <div class="container" style=" float: left; width: 150px; margin-left: 10px;">
+            <div class="row" style="margin-bottom: 10px;">
+                <a href="{% url 'view_menu' %}" style="color: black;"> * Back to Main </a>
+            </div>
+        </div>
+        {% endblock %}
+
+        {% block content %} 
+            <div class="container" style="width: 700px; margin-left: 100px; border-style:groove;">
+                <div class="row" style="background-color: rgb(247, 238, 228); padding: 10px;">
+                    <h1 style="font-size: 27px;"> Type in Dish Details </h1>
+                </div>
+                <div class='row' style="padding: 10px;">
+                    <span style='font-family:Lucida Sans;'> Name </span> <br>
+                    <input type="text" class="form-control"></input> <br><br>
+                    <span style='font-family:Lucida Sans;'> Cook Time </span>
+                    <span style="font-family: Lucida Sans; margin-left: 300px;"> Prep Time </span>    
+                </div>
+                <div class="row" style="padding: 10px;">
+                    <input type="text" class="form-control" style="width: 150px;"></input>
+                    <input type="text" class="form-control" style="width: 150px; margin-left: 235px;"></input>
+                </div>
+                <div class='row' style="padding: 10px;">
+                    <button class="btn" type="button" style="width:150px; background-color: gray; color: azure; margin-bottom: 10px;"> Add to dishes </button>
+                </div>
+                
+            </div>
+        </div>
+        {% endblock %}
+
+    
+
+
+</html>

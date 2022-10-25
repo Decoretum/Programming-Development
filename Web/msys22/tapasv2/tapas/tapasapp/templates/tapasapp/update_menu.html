@@ -1,0 +1,59 @@
+{% extends 'tapasapp/base.html' %}
+{% load static %}
+
+<!-- I hereby attest to the truth of the following facts:
+- I have not discussed the <programming language used> language code in my program
+with anyone other than my instructor or the teaching assistants assigned to this course.
+- I have not used <programming language used> language code obtained from another
+student, or any other unauthorized source, either modified or unmodified.
+- If any <programming language used> language code or documentation used in my
+program was obtained from another source, such as a text book or course notes, that has
+been clearly noted with a proper citation in the comments of my program. -->
+
+{% block content %}
+<div class="row" style="margin-right: 40px;">
+    {{person}} is logged in
+</div>
+<div class="col-md-8">
+
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title"> Type in Dish Details:</h5>
+        </div>
+        <div class="card-body">
+
+            <form method="POST" action="{% url 'update_dish' pk=d.pk %}">{% csrf_token %}
+            
+                <div class="form-group">
+                    <label for="name"> Name: </label>
+                    <input type="text" class="form-control" id="dname" name="dname" value="{{d.name}}" disabled>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="vintage"> Cook Time: </label>
+                            <input type="number" class="form-control w-50" id="ctime" name="ctime" value="{{d.cook_time}}">
+                        </div>
+        
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="price"> Prep Time: </label>
+                            <input type="number" class="form-control w-50" id="ptime" name="ptime" value="{{d.prep_time}}">
+                        </div>
+        
+                    </div>
+                </div>
+
+
+
+                <button type="submit" class="mt-3 btn btn-primary">Update dish</button>
+            </form>                
+
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'tapasapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="col-md-8">
+
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title"> Dish Details:</h5>
+        </div>
+        <div class="card-body">
+
+            
+            <h2> {{d.name}} </h2>
+            <p>
+                Cook Time: {{d.cook_time}}
+            </p>
+            <p>
+                Prep Time: {{d.prep_time}}
+            </p>
+            <p>
+                <a href="{% url 'update_dish' pk=d.pk %}"  class="btn btn-success">Update</a>
+                <a href="{% url 'delete_dish' pk=d.pk %}"  class="btn btn-danger">Delete</a>
+
+            </p>
+            
+        </div>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'Halalan2022/base.html' %}
+{% load static %}
+
+<!-- I hereby attest to the truth of the following facts:
+- I have not discussed the <programming language used> language code in my program
+with anyone other than my instructor or the teaching assistants assigned to this course.
+- I have not used <programming language used> language code obtained from another
+student, or any other unauthorized source, either modified or unmodified.
+- If any <programming language used> language code or documentation used in my
+program was obtained from another source, such as a text book or course notes, that has
+been clearly noted with a proper citation in the comments of my program. -->
+
+
+{% block data %}
+<div class="container" style="padding: 10px;border: solid; border-radius: 30px; background-color:rgb(255, 255, 255); width: 900px; position:relative;top: -100px; font-family: Tahoma;">
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        <h1 style="color:rgb(148, 59, 67)"> Hi there, {{firstname}} {{lastname}}! </h1> <br><br>
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px;">
+        List of Candidates for the 2022 Elections in the Philippines
+    </div>
+    <div class="row" style="padding: 10px; margin-left: 10px; margin-top: 20px;">
+        <b>Candidates for President:</b>
+    </div>
+    {% for candidates in c %}
+    {% if candidates.position_id in p %}
+    <div class="row" style="padding: 10px; margin-left: 10px; margin-bottom: 10px; border: solid; border-radius: 20px; max-width: 850px; background-color:coral;">
+        Candidate {{candidates.pk}} <br>
+        {{candidates.position_id}} <br>
+        Name: {{candidates.first_name}} {{candidates.last_name}} <br> 
+        Nickname: {{candidates.nickname}} <br>
+        Slogan: '{{candidates.slogan}}' <br>
+    </div>
+    {% endif %}
+    {% endfor %}
+    
+    <div class="row" style="padding: 10px; margin-left: 10px; margin-top: 20px;">
+        <b>Candidates for Vice President:</b>
+    </div>
+    {% for candidates in c %}
+    {% if candidates.position_id in vp %}
+    <div class="row" style="padding: 10px; margin-left: 10px; margin-bottom: 10px; border: solid; border-radius: 20px; max-width: 850px; background-color:rgb(218, 195, 70);">
+        Candidate {{candidates.pk}} <br>
+        {{candidates.position_id}} <br>
+        Name: {{candidates.first_name}} {{candidates.last_name}} <br> 
+        Nickname: {{candidates.nickname}} <br>
+        Slogan: '{{candidates.slogan}}' <br>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+    <div class="row" style="padding: 10px; margin-left: 10px; margin-top: 20px;">
+        <b>Candidates for Senator:</b>
+    </div>
+    {% for candidates in c %}
+    {% if candidates.position_id in s %}
+    <div class="row" style="padding: 10px; margin-left: 10px; margin-bottom: 10px; border: solid; border-radius: 20px; max-width: 850px; background-color:rgb(91, 211, 165);">
+        Candidate {{candidates.pk}} <br>
+        {{candidates.position_id}} <br>
+        Name: {{candidates.first_name}} {{candidates.last_name}} <br> 
+        Nickname: {{candidates.nickname}} <br>
+        Slogan: '{{candidates.slogan}}' <br>
+    </div>
+    {% endif %}
+    {% endfor %}
+    
+</div>
+{% endblock %}

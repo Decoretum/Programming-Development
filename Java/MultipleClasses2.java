@@ -94,6 +94,7 @@ class HumanBeast implements Human, Beast{
         else if (Choice.equals("C")){
             System.out.printf("\nIt could be worse, but this could also suit you, %s",this.Name);
         }
+        question.close();
     }
 }
 
@@ -163,8 +164,8 @@ class ClassTwo{
     }
 
 
-    public int[] AddtoArray(int array[], int element){
-        int newarray[] = new int[array.length + 1];
+    public Object[] AddtoArray(Object array[], Object element){
+        Object newarray[] = new Object[array.length + 1];
 
         for (int i=0; i < array.length; i++){
             newarray[i] = array[i];
@@ -178,7 +179,7 @@ class ClassTwo{
 
 public class MultipleClasses2 {
     public static void main (String args []){
-        int array[] = {1,2,3,4,5,6};
+        Object array[] = {1,2,3,4,5,6};
         ClassOne Test1 = new ClassOne();
         Test1.Calculate(123, '-',12321);
         Test1.DateNow();
@@ -195,7 +196,7 @@ public class MultipleClasses2 {
             System.out.print(array[i] + " ");
         }
         System.out.println("");
-        int[]secondarray = Test2.AddtoArray(array, 15);
+        Object[]secondarray = Test2.AddtoArray(array, 15);
         for (int i=0; i<secondarray.length; i++){
             System.out.print(secondarray[i] + " ");
         }

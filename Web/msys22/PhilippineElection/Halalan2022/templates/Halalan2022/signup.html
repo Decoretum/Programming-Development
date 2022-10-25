@@ -1,0 +1,102 @@
+{% extends 'Halalan2022/base.html' %}
+{% load static %}
+
+<!-- I hereby attest to the truth of the following facts:
+- I have not discussed the <programming language used> language code in my program
+with anyone other than my instructor or the teaching assistants assigned to this course.
+- I have not used <programming language used> language code obtained from another
+student, or any other unauthorized source, either modified or unmodified.
+- If any <programming language used> language code or documentation used in my
+program was obtained from another source, such as a text book or course notes, that has
+been clearly noted with a proper citation in the comments of my program. -->
+
+{% block nav %}
+
+<div class="row">
+    <h1 style="background-color:rgb(122, 111, 45); border: solid; width: 1925px; margin-left: 10px; text-align: center;"> Signup </h1>
+</div>
+
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block data %}
+
+<form method="POST" action="{% url 'signup' %}">{% csrf_token %}
+
+    <div class="container" style="border: solid; border-radius: 20px; margin-top: 20px; position: relative; right: -340px; background-color: antiquewhite;">
+
+        <div class="row" style="padding: 10px;">
+            <div clas="col" style="margin-left: 15px;">
+                Username
+            </div>
+            <div class="col" style="margin-left: 145px;">
+                First Name
+            </div>  
+        </div>
+
+        <div class="row" style="padding: 10px;">
+            <div class="col">
+                <input type="text" class="form-control" style="width: 200px;" name="usern" idname="usern"></input>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" style="width: 200px;" name="firstn" idname="firstn"></input>
+            </div>
+        </div>
+
+
+        <div class="row" style="padding: 10px;">
+            <div class='col'>
+                Password
+            </div>
+            <div class="col">
+                Last Name
+            </div>
+        </div>
+
+        <div class="row" style="padding: 10px;">
+            <div class="col">
+                <input type="text" class="form-control" style="width: 200px;" name="passn" idname="passn"></input>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" style="width: 200px;" name="lastn" idname="lastn"></input>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="margin-left: 10px;">
+                Birthday
+            </div>
+            <div class="col" style="margin-right: 10px;">
+                Sex
+            </div>
+        </div>
+
+        <div class="row" style="padding: 10px;">
+            <div class="col">
+                <input type="date" class="form-control" style="width: 200px;" name="birthday1" idname="birthday1"></input>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" style="width: 200px;" name="sexx" idname="sexx"></input>
+            </div>
+        </div>
+
+
+        <div class="row" style="padding: 10px;">
+            <button class="btn" type="submit" style="width:300px; margin-left: 80px; background-color: rgb(71, 169, 226); color: azure; margin-bottom: 10px;"> Signup </button>
+        </div>
+        <div class="row" style="padding: 10px;">
+            <a href="{% url 'login' %}" class="btn" style="width:300px; margin-left: 80px; background-color: rgb(51, 212, 105); color: azure; margin-bottom: 10px;"> Back to login </a>
+        </div>
+
+    </div>
+</form>
+
+<div class="container" style="margin-left: 480px; margin-top: 70px; padding: 10px; width: 230px;">
+    {% for m in messages %}
+    <b> {{m}} </b>
+    {% endfor %}
+</div>
+
+{% endblock %}

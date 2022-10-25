@@ -1,0 +1,41 @@
+{% extends 'Myinventoryapp/base.html' %}
+{% load static %}
+
+<!-- I hereby attest to the truth of the following facts:
+- I have not discussed the <programming language used> language code in my program
+with anyone other than my instructor or the teaching assistants assigned to this course.
+- I have not used <programming language used> language code obtained from another
+student, or any other unauthorized source, either modified or unmodified.
+- If any <programming language used> language code or documentation used in my
+program was obtained from another source, such as a text book or course notes, that has
+been clearly noted with a proper citation in the comments of my program. -->
+
+
+{% block data %}
+
+<div class="row" style="position: relative; top: -100px; right: -1050px;">
+    Account logged in: {{user}} 
+</div>
+
+<div class="container" style="border: solid; border-radius: 30px; height: 530px;"> 
+    <h1 style="border: solid; border-radius: 20px; width: 250px; padding: 10px; margin-top: 10px; background-color: beige;"> {{o.Brand}} </h1><br>
+    <span style="font-size: 25px;">
+        <b> Cost: </b> {{o.Cost}}<br>
+        <b> SKU: </b> {{o.SKU}}<br>
+        <b> Size: </b> {{o.Size}}<br>
+        <b> Mouth Size: </b> {{o.MouthSize}}<br>
+        <b> Color: </b> {{o.Color}}<br>
+        <b> Quantity available: </b> {{o.CurrentQuantity}}<br>
+        <b> Supplier: </b> {{o.Suppliedby}}<br> 
+        <div class="row">
+            <a href="{% url 'update_bottle' pk=o.pk %}" class="btn btn-primary" style="margin-left: 10px; margin-top: 20px;"> Update </a><br>
+            <a href="{% url 'delete_bottle' pk=o.pk %}" class="btn btn-danger" style="margin-left: 10px; margin-top: 20px;"> Delete </a><br>
+            <a href="{% url 'view_bottles' %}" class="btn btn-success" style="margin-left: 10px; margin-top: 20px;"> Back </a><br>
+        </div>
+        </span>
+    <img src="/static/bottle.png" style="height: 200px; width: 200px; position: relative; float: right; top: -300px; left: -200px; border: solid; border-radius: 20px;"> 
+</div>
+<br><br><br><br>
+
+
+{% endblock %}

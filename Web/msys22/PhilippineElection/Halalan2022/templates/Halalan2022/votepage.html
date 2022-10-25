@@ -1,0 +1,102 @@
+{% extends 'Halalan2022/base.html' %}
+{% load static %}
+
+<!-- I hereby attest to the truth of the following facts:
+- I have not discussed the <programming language used> language code in my program
+with anyone other than my instructor or the teaching assistants assigned to this course.
+- I have not used <programming language used> language code obtained from another
+student, or any other unauthorized source, either modified or unmodified.
+- If any <programming language used> language code or documentation used in my
+program was obtained from another source, such as a text book or course notes, that has
+been clearly noted with a proper citation in the comments of my program. -->]
+
+{% block data %}
+<body style="background-image: url('/static/background.jpg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
+<div class="row" style="position: relative; right:-1010px; top: -150px; background-color: antiquewhite; max-height:45px; padding: 10px; border-radius: 10px;">
+    Account logged in: {{user}}  
+</div>
+
+<form method="POST" action="{% url 'votepage' pk=p.pk %}">{% csrf_token %}
+
+    <div class="container" style="width: 700px; background-color: rgb(211, 198, 181); position:relative; right: -30px; top: -100px; border-style:groove; margin-top: -50px; border-radius: 30px;">
+        <div class="row" style="background-color: rgb(228, 175, 115); padding: 10px; border-radius: 30px; padding: 10px;">
+            <h1 style="font-size: 27px; border-radius: 30px;"> Vote </h1>
+        </div>
+
+        <div class='row' style="padding: 10px;">
+            <span style='font-family:Lucida Sans;'> President </span>
+            <select class="form-control" name="pres" idname="pres"  aria-label="Default select example" data-live-search="true" data-selected-text-format="value" style="position: relative; right: -310px; border-radius: 10px; width: 280px;">
+                {% for candidate in c %}
+                {% if candidate.position_id in pres %}
+                <option> {{candidate.first_name}} {{candidate.last_name}} </option>
+                {% endif %}
+                {% endfor %}       
+            </select> 
+        </div>
+        <div class="row" style="padding: 10px;">
+            Comments for Presidential Vote
+        </div>
+        <div class='row' style="padding: 20px;">
+            <div class="input-group">
+                <textarea class="form-control" aria-label="With textarea" name="commentp" idname="commentp" style="height:200px;"></textarea>
+            </div>
+        </div>
+
+        <div class='row' style="padding: 10px;">
+            <span style='font-family:Lucida Sans;'> Vice-President </span>
+            <select class="form-control" name="vice" idname="vice"  aria-label="Default select example" data-live-search="true" data-selected-text-format="value" style="position: relative; right: -255px; border-radius: 10px; width: 300px;">
+                {% for candidate in c %}
+                {% if candidate.position_id in vice %}
+                <option> {{candidate.first_name}} {{candidate.last_name}} </option>
+                {% endif %}
+                {% endfor %}       
+            </select> 
+        </div>
+        <div class="row" style="padding: 10px;">
+            Comments for Vice-Presidential Vote
+        </div>
+        <div class='row' style="padding: 20px;">
+            <div class="input-group">
+                <textarea class="form-control" aria-label="With textarea" name="commentv" idname="commentv" style="height:200px;"></textarea>
+            </div>
+        </div>
+
+        <div class='row' style="padding: 10px;">
+            <span style='font-family:Lucida Sans;'> Senator </span>
+            <select class="form-control" name="sen" idname="sen"  aria-label="Default select example" data-live-search="true" data-selected-text-format="value" style="position: relative; right: -285px; border-radius: 10px; width: 320px;">
+                {% for candidate in c %}
+                {% if candidate.position_id in s %}
+                <option> {{candidate.first_name}} {{candidate.last_name}} </option>
+                {% endif %}
+                {% endfor %}       
+            </select> 
+        </div>
+        <div class="row" style="padding: 10px;">
+            Comments for Senatorial Vote
+        </div>
+        <div class='row' style="padding: 20px;">
+            <div class="input-group">
+                <textarea class="form-control" aria-label="With textarea" name="comments" idname="comments" style="height:200px;"></textarea>
+            </div>
+        </div>
+
+        <div class="row" style="padding: 10px;">
+            <button class="btn" type="submit" style="margin-left:80px; width:500px; background-color: rgb(28, 122, 19); color: azure; margin-bottom: 10px;"> Submit Vote </button> 
+        </div>
+
+
+
+
+    </div>
+</form>
+
+
+{% for m in messages %}
+<div class="col" style="position: relative; right:-120px; max-height: 70px; max-width: 160px; background-color: brown; border-radius: 15px; color: rgb(255, 255, 255); text-align: center; padding: 10px;">
+{{m}}
+</div>
+{% endfor %}
+
+</body>
+{% endblock %}
+
