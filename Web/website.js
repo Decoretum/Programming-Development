@@ -135,7 +135,7 @@ updatebutton.addEventListener('click',function update(){
         buttonupdate = 0;
     }
     else if (buttonupdate === 0) {
-        document.getElementById('whatsnew').innerHTML = 'Gael has learned new Python packages such as Pandas and SKlearning (Scikit-learning) for data science.<br>He also learned basic to intermediate javascript! (As of 9/11/2022) Pytorch (As of 10/3/2022)';
+        document.getElementById('whatsnew').innerHTML = 'Gael has learned new Python packages such as Pandas and SKlearning (Scikit-learning) for data science.<br>He also learned basic to intermediate javascript! (As of 9/11/2022) Pytorch (As of 10/3/2022), <br> and Java (10/10/2022)';
         whatsnew.style.backgroundColor = 'teal';
         whatsnew.style.borderColor = 'teal';
         whatsnew.style.padding = '10px';    

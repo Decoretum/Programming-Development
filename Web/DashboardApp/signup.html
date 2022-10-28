@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <script src="../DashboardApp/auth.js" defer> </script>
+</head>
+<body>
+    <div class="box"> 
+        <div class="Label"> Create a Deco Account! </div>
+        <div class="more"> ? </div>
+
+        <div class="entry a">
+            <label> Username </label>
+            <input type="text" class="Name"> </input> <br>
+        </div>
+
+        <div class="entry b">
+            <label> Password </label>
+            <input type="text" class="Password"> </input> <br>
+        </div>
+
+        <div class="entry c">
+            <label> Age </label>
+            <input type="text" class="Age"> </input> <br>
+        </div>
+
+        <div class="entry d"> 
+            <label> Sex </label>
+            <input type="text" class="Sex"> </input> <br>
+        </div>
+
+        <button class="button">
+            Create Account
+        </button>
+
+    </div>
+
+    <div class="nosignup">
+        Already have an account?
+        <button class="button l">
+            Login
+        </button>
+    </div>
+
+    <div class="info">
+        
+    </div>
+
+
+    </div>
+    <style>
+        .info{
+            display: inline;
+            border: transparent;
+            float: right;
+            position: absolute;
+            right: 400px;
+            top: 200px;
+        }
+        body{
+            background-color: rgb(230, 196, 152);
+        }
+        .box{
+            border-color: antiquewhite;
+            box-shadow: 10px 10px;
+            border-radius: 9px;
+            width: 50vh;
+            height: 70vh;
+            margin: auto;
+            margin-top: 10vh;
+            padding: 10px;
+            background-color:darkgoldenrod;
+        }
+
+        .button{
+            font-family:Georgia;
+            font-size: 15px;
+            border: transparent;
+            padding: 10px;
+            cursor: pointer;
+            background-color: aliceblue;
+            border-radius: 15px;
+            position: absolute;
+            bottom: 230px;
+            right: 900px;
+        }
+        
+        .button:hover{
+            background-color: rgb(205, 238, 153);
+        }
+
+        .nosignup{
+            font-family:Georgia;
+            position: absolute;
+            right: 870px;
+            bottom: 100px;
+        }
+        .button.l{
+            font-family: Georgia;
+            width: fit-content;
+            height: fit-content;
+            top: 40px;
+            right: 60px;
+        }
+
+        .more{
+            border-radius: 100px;
+            width: min-content;
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-style: oblique;
+            font-weight: 600;
+            background-color: darksalmon;
+            cursor: pointer;
+            margin-left: 420px;
+        }
+        .Name{
+            margin: 20px;
+            right: -100px;
+        }
+
+        .Password{
+            margin: 20px;
+        }
+
+        .Age{
+            margin: 20px;
+        }
+            
+        .Sex{
+            margin: 20px;
+        }
+
+        input{
+            background-color: azure;
+            border-radius: 9px;
+            height: 30px;
+        }
+        input:focus{
+            outline: none;
+            box-shadow: 0 0 10px rgb(236, 204, 99);
+        }
+        .Label{
+            
+            margin:auto;
+            margin-bottom: 5vh;
+            padding: 10px;
+            text-align: center;
+            vertical-align: middle;
+            font-family:Segoe UI;
+            font-size: 20px;
+            background-color:rgb(241, 226, 206);
+            border-radius: 9px;
+            height: 10%;
+            width: 30%;
+            
+        
+        }
+
+        label{
+            display: flex;
+        }
+
+        .entry{
+            position: absolute;
+            margin-left: 15vh;
+            font-family:Verdana;
+            
+            
+        }
+
+        .entry.b{
+            margin-top: 10vh;
+        }
+
+        .entry.c{
+            margin-top: 20vh;
+        }
+
+        .entry.d{
+            margin-top: 30vh;
+        }
+
+
+    </style>
+    
+</body>
+</html>
