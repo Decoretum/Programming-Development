@@ -17,3 +17,29 @@ more.addEventListener('mouseleave',function(){
     info.style.backgroundColor = '';
     info.style.boxShadow = '';
 })
+
+
+
+
+let create = document.getElementById('create');
+create.addEventListener('click',function(){
+    let Name = document.getElementById('Name').value;
+    let Password = document.querySelector('.Password').value;
+    let Age = document.querySelector('.Age').value;
+    let Sex = document.querySelector('.Sex').value;
+    if (Name === '' || Password === '' || Age === '' || Sex === ''){
+        console.log("Must complete all fields!");
+    }
+    else if (window.localStorage.getItem(Name) === null){
+        window.localStorage.setItem(Name,Name);
+        window.localStorage.setItem(Password,Password);
+        window.localStorage.setItem(Age,Age);
+        window.localStorage.setItem(Sex,Sex);
+        window.location.href='../DashboardApp/login.html';
+    }
+    else if (window.localStorage.getItem(Name) !== null){
+        console.log("User already exists!");
+
+    }
+})
+
