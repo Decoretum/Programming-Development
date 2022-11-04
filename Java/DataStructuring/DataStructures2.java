@@ -134,7 +134,7 @@ public class DataStructures2 {
 
 
         //Filtering stuff through HashSet
-        HashSet<Object>Filter = new HashSet<Object>();
+        HashSet<Object>Filter = new HashSet<>();
         HashSet<Object>IntFilter = new HashSet<Object>();
         HashSet<Object>BadFilter = new HashSet<Object>();
         Filter.add("Yo mama");
@@ -195,15 +195,15 @@ public class DataStructures2 {
             System.out.println("Finalizations complete");
         }
 
-        //throwing Exceptions: ArithmeticException, FileNotFoundException, ArrayIndexOutOfBoundsException, SecurityException
-        if(123 > 12){
+        // throwing Exceptions: ArithmeticException, FileNotFoundException, ArrayIndexOutOfBoundsException, SecurityException
+       /*  if(123 > 12){
             throw new SecurityException("The Number is not proper and appropriate!");
+            
         }
         else{
             System.out.println("It's alright!");
-        }
+        } */
 
-        
         
     }
 }
