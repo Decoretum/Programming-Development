@@ -1,5 +1,7 @@
 package DataStructuring;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class DataStructures2 {
     static void Identity(ArrayList<Object>array){
@@ -33,6 +35,35 @@ public class DataStructures2 {
             System.out.println("Key: " + i + ". Value: " + Hash.get(i));
         }
     }
+
+    interface Thoughts{
+        Object express(Object inp);
+    }
+
+    interface Expression{
+        Object express(Object str);
+    }
+
+    interface Digits{
+        Object count(int inp);
+    }
+
+    public static void WhatFeel(Object num, Expression feel){
+        Object result = feel.express(num);
+        System.out.println(result);
+    }
+
+    public static void WhatThink(Object inp, Thoughts idea){
+        Object result = idea.express(inp);
+        System.out.println(result);
+    }
+
+    public static void WhatCount(int inp, Digits style){
+        Object result = style.count(inp);
+        System.out.println(result);
+    }
+
+
 
     public static void main (String args[]){
         ArrayList<Object> Normal = new ArrayList<Object>();
@@ -204,6 +235,42 @@ public class DataStructures2 {
             System.out.println("It's alright!");
         } */
 
+        //Patterns
+        Pattern secretcode = Pattern.compile("Gaelissexy",Pattern.CASE_INSENSITIVE);
+        Matcher Match = secretcode.matcher("ohhh hahahah gaelis gaelissexy");
+        boolean thereis = Match.find();
+        if (thereis){
+            System.out.println("Oh my god, a stalker to Gael!");
+        }
+        else{
+            System.out.println("What is this? haha");
+        } 
+
+        //Java Lambda
+        Expression happy = (x) -> x + " A sign of happiness!";
+        Expression sad = (x) -> x + " A sign of sadness huhu.";
+        WhatFeel(69, sad);
+
+        Thoughts Calculating = (x) -> {
+            if (x.toString().contains("hard")){
+               x =   "This is a sign of effort, commitment, and perseverance!"; 
+            }
+            else if (x.toString().contains("chill")){
+                x  = "This is a sign that you are lacking, uncommitted, and have no direction!";
+            }
+            return x;
+        };
+
+        WhatThink("This Programming journey seems both easy AND hard!", Calculating);
+
+
+
+        Digits CountingOne = (x) -> {
+            int result = x-1;
+            return result + " is the distance of your input to 1";
+        };        
         
+        WhatCount(1231, CountingOne);
     }
+    
 }

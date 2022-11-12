@@ -1,0 +1,56 @@
+.Header{
+    font-size: larger;
+    font-family: Trebuchet MS;
+    margin: 10px;
+    display: inline-block;
+}
+
+
+.Create{
+    font-size: larger;
+    font-family: Trebuchet MS;
+    position: absolute;
+    padding: 16px;
+}
+
+.dropdown{
+    display:inline-block;
+    position: relative;
+    left: 100vh;
+    
+}
+.content{
+    position: absolute;
+    bottom: -700px;
+    left: 200px;
+    display: none;
+    z-index: 1; 
+    padding: 10px;
+}
+
+.content > *{
+    padding: 20px;
+    display: block;
+}
+
+.Title{
+    display: inline;
+}
+
+.Body{
+    padding: 10px 16px;
+    height: 300px;
+    width: 300px;
+    overflow: scroll;
+    resize:none;
+}
+
+.show{
+    display: block;
+    border-radius: 9px;
+    border: solid rgb(194, 179, 157);
+    background-color: rgb(131, 111, 20);
+}
+
+
+

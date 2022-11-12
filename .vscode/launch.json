@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Input",
+            "request": "launch",
+            "mainClass": "Input",
+            "projectName": "PersonalProjects_be73262"
+        },
+        {
+            "type": "java",
             "name": "Launch DataStructures",
             "request": "launch",
             "mainClass": "DataStructures",

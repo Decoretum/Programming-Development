@@ -1,6 +1,8 @@
 
 import magepack.*;
 import DataStructuring.*;
+import ObjectsSystem.*;
+
 import java.util.*;
 public class Input {
     public static void main (String args[]){
@@ -44,5 +46,23 @@ public class Input {
         
         DataStructures2 Gael = new DataStructures2();
         Gael.ObjectFilter(ErrorObject);
+
+        System.out.println("\n\n\n");
+
+        //PersonObject
+
+        /* 
+        Son Haha = new Son();
+        Haha.Pride();  an example of separate classes in separate files with inheritance
+        */
+
+        int[]array = {12,312,12,414,1222};
+        Functions.ArraySum(array);
+
+        GaelChild Publicity = new GaelChild();
+        Publicity.OnlyPublic();
+        GaelChild.CanBeStatic();
+
+        //Gael Iris = new Gael("Iris");
     }
 }

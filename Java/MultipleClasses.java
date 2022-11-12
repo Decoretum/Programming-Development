@@ -56,6 +56,7 @@ public class MultipleClasses { //several classes enclosed in one public class, u
                 System.out.println("Yo!");
             }
         }
+        
 
 
     public static void main (String args []){

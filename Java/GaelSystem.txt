@@ -1,0 +1,4 @@
+| GAEL SYSTEM STATS PERFORMANCE |
+| NAME | --> Iris
+| CURRENT CONDITION | --> Sad
+| MONEY | --> 400

@@ -80,4 +80,10 @@ public class HigherMages  {
 
     }
 
+    public static void main(String args[]){
+        HigherMages start = new HigherMages();
+        Necromancer G = start.new Necromancer("Abaddon", 2101, "Darkness", "Defense and Offense");
+        System.out.println(G.Status);
+
+    }
 }

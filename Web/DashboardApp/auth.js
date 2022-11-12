@@ -48,14 +48,6 @@ create.addEventListener('click',function(){
         window.localStorage.setItem(Password,Password);
         window.localStorage.setItem(Age,Age);
         window.localStorage.setItem(Sex,Sex);
-
-        window.sessionStorage.setItem("Username",Name);   
-        window.sessionStorage.setItem("Password",Password);
-        window.sessionStorage.setItem("Age",Age);
-        
-        window.sessionStorage.setItem("Sex",Sex);
-        
-
         window.location.href='../DashboardApp/login.html';
     }
     else if (window.localStorage.getItem(Name) !== null){

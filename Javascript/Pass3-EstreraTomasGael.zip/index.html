@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div class="bigbox">
+            <button class="100" data-value=100>
+                Question 1 <br>(Value 100)
+            </button>
+            <button class="200" data-value=200>
+                Question 2 <br>(Value 200)
+            </button>
+            <button class="300" data-value=300>
+                Question 3 <br>(Value 300)
+            </button>
+            <button class="400" data-value=400>
+                Question 4 <br>(Value 400)
+            </button>
+            <button class="500" data-value=500>
+                Question 5 <Br>(Value 500)
+            </button>
+        </div>
+
+        <div class="guide">
+            Click any of these buttons to generate the questions! No Cheating!
+        </div>
+
+    <br><br>
+    
+        <table>
+            <tr> 
+            <th> Difficulty / Value </th>
+            <th> Question </th>
+            </tr>
+            <tr>    
+                <td id="difficulty"> </td>
+                <td id="question"> </td>
+            </tr>
+        </table>
+   
+
+    <br>
+    <button id="refresh-question"> Submit answer! </button> <div class="raw"> </div> <input class="input"> </input> <div class="verdict"> </div> </div>  <div class="reminder"> </div>  
+    <br>
+    <div class="scoretext"> Score: <span class="score"> </span> <br><br>
+    <div class="comment"> </div>
+
+
+
+
+
+
+    <style>
+        .guide{
+            border-radius: 9px;
+            padding: 20px;
+            display: inline-block;
+            font-family: Segoe UI;
+            background-color: rgb(33, 145, 179);
+            margin-left: 10vh;
+        }
+        .invis{
+            display: none;
+        }
+        .bigbox{
+            display: inline-block;
+            border: solid;
+            width: 500px;
+            padding: 10px;
+            border-radius: 9px;
+            background-color: aquamarine;
+        }
+        .bigbox > *{
+            font-family:Verdana;
+            border: none;
+            margin: 10px;
+            padding: 50px;
+            background-color: rgb(206, 238, 91);
+        }
+        .bigbox > *:hover{
+            cursor: pointer;
+            background-color: beige;
+        }
+        .bigbox > *:active{
+            background-color: firebrick;
+            cursor: pointer;
+        }
+
+        .reminder{
+            display: inline;
+        }
+        .verdict{
+            padding: 10px;
+            display: inline;
+        }
+        input{
+            display: inline;
+            padding: 10px;
+            background-color: azure;
+        }
+        table{
+            padding: 10px;
+            align-items: center;
+            border: solid;
+            background-color: rgb(238, 216, 170);
+            height: 300px;
+            max-width: 1400px;
+            align-content: center;
+            resize: none;
+            font-family: 'Georgia';
+            border-color: transparent;
+            
+        }
+        th{
+            padding: 10px;
+            
+            margin: 10px;
+            background-color: chocolate;
+            max-width: 900px;
+            width: 500px;
+            height: 100px;
+            text-align: center;
+            resize: none;
+        }
+        td{
+            padding: 10px;
+            
+            margin: 10px;
+            max-width: 900px;
+            height: 200px;
+            text-align: center;
+            resize: none;
+        }
+        .raw{
+            display: inline;
+            
+            padding: 10px;
+            margin: 10px;
+        }
+
+
+
+    </style>
+
+    <script>
+            let score1 = document.querySelector('.score');
+            if (localStorage.number === undefined){
+                    localStorage.number === 0
+                    score1.innerHTML = 0;
+                }
+                else{
+                    score1.innerHTML = localStorage.number;
+                }
+
+            let nodes = document.querySelector('.bigbox').childNodes;
+            promise = nodes.forEach(node => {
+            node.addEventListener('click',take)
+            })
+
+
+            async function RandomInt(){ //This allows me to get random ID of questions with the corresponding value of the button that I've pressed 
+                let res = '';
+                minimum = Math.ceil(0);
+                maximum = Math.floor(100);
+                res = Math.floor((Math.random() * (maximum-minimum) + minimum)); 
+                return res;
+        }
+
+             
+            function take(){ //primary function for determining value of button that is pressed
+                ans = '';       
+                if (this.nodeType === 1){
+                    ans = this.dataset.value;
+                    this.classList.add('invis');
+                }
+                result(ans); 
+                }
+
+
+            let finalanswer = '';    
+            let valuewinloss = 0;
+            async function result(ans){ //awaiting random value returned from RandomInt()
+                let diff = document.getElementById('difficulty');
+                let cat = document.getElementById('category');
+                let question = document.getElementById('question');
+                let answer = document.getElementById('answer');
+                let airdate = document.getElementById('airdate');
+                let id = document.getElementById('id');
+
+                let num = await RandomInt();
+                let list = [];
+                console.log(`Chose ${ans}`);
+                let data = await fetch(`http://jservice.io/api/clues?value=${ans}&min_date=1985-02-20`);
+                let newdata = await data.json();
+                list.unshift(newdata);
+                console.log(list);
+                console.log(newdata[num])
+                diff.innerHTML = newdata[num].value;
+                question.innerHTML = newdata[num].question;
+                finalanswer = newdata[num].answer;
+                valuewinloss = newdata[num].value;
+                return newdata[num].answer;
+                }
+
+
+                let submit = document.getElementById('refresh-question');
+                submit.addEventListener('click',reload);
+                function reload(){
+                let answer = finalanswer;
+                let input = document.querySelector('.input');
+                let verdict = document.querySelector('.verdict');
+                let time = 0
+                let removed = answer.replace('<i>','').replace('</i>','').replace('<b>','').replace('</b>','').replace('<I>','').replace('</I>','');
+                if (input.value === removed){
+                    verdict.innerHTML = `Congratulations! You got the correct answer!`
+                    if (localStorage.number){
+                        localStorage.number = Number(localStorage.number) + valuewinloss;
+                    }
+                    else{
+                        localStorage.number = 0;
+                    }
+                }
+                else{
+                    verdict.innerHTML = `Oops, you got it wrong! The right answer is "${removed}"`
+                    if (localStorage.number){
+                        localStorage.number = Number(localStorage.number) - valuewinloss;
+                    }
+                    else{
+                        localStorage.number = 0;
+                    }
+                }
+                window.setTimeout(function(){
+                        window.location.reload()
+                    }, 6000)
+                score1.innerHTML = localStorage.number;
+                document.querySelector('.reminder').innerHTML = `This page will reload in 6 seconds!`;
+                    }
+
+
+    </script>  
+</body>
+</html>

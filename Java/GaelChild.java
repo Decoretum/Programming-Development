@@ -1,5 +1,13 @@
 public class GaelChild{ //another class that could access GaelClass attributes and methods
+    private String Secret = "I'm still a virgin!!";
+    public void OnlyPublic(){
+        System.out.println("Only public!");
+        System.out.println("My secret is " + Secret);
+    }
 
+    static void CanBeStatic(){
+        System.out.println("Static is the best!");
+    }
 
     public static void main(String[]arg){
         GaelClass GaelKid1 = new GaelClass("Gael","Ateneo de Manila University","BS MIS, Specialization in Data Science and Analytics","3rd Year",'M',"Single");
