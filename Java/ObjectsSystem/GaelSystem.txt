@@ -1,0 +1,6 @@
+| GAEL SYSTEM STATS PERFORMANCE |
+| NAME | --> Tinie
+| CONDITION | --> Sad
+| AGE | --> 19
+| CURRENT CONDITION | --> Sad
+| MONEY | --> 259

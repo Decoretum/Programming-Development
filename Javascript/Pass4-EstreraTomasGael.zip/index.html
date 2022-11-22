@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Web APIs with music and animation APIs </title>
+</head>
+<body>
+        <audio src="naturemusic.mp3"></audio>
+        <div class="bigbox">
+            <button class="100" data-value=100>
+                Question 1 <br>(Value 100)
+            </button>
+            <button class="200" data-value=200>
+                Question 2 <br>(Value 200)
+            </button>
+            <button class="300" data-value=300>
+                Question 3 <br>(Value 300)
+            </button>
+            <button class="400" data-value=400>
+                Question 4 <br>(Value 400)
+            </button>
+            <button class="500" data-value=500>
+                Question 5 <Br>(Value 500)
+            </button>
+        </div>
+
+        <div id="warning"> </div>
+
+        <div class="guide">
+            Click any of these buttons to generate the questions! No Cheating!
+        </div>
+
+    <br><br>
+    
+        <table>
+            <tr> 
+            <th> Difficulty / Value </th>
+            <th> Question </th>
+            </tr>
+            <tr>    
+                <td id="difficulty"> </td>
+                <td id="question"> </td>
+            </tr>
+        </table>
+   
+
+    <br>
+    <button id="refresh-question"> Submit answer! </button> <div class="raw"> </div> <input class="input"> </input> <div class="verdict"> </div>   
+    <br>
+    <div class="scoretext"> Score: <span class="score"> </span> </div> <br><br>
+    <div class="Q1"> Answered Questions </div>
+    <div class="answered"> </div>
+
+
+
+
+
+
+
+
+    <style>
+        @import 'animate.css';
+
+        .Q1{
+            font-size: 30px;
+        }
+
+        .answered{
+            font-size: 20px;
+            padding: 10px;
+            margin-top: 5vh;
+        }
+
+        .scoretext{
+            padding: 20px;
+            font-size: 20px;
+        }
+        .animate__animated.animate__pulse {
+        --animate-duration: 2s;
+        --animation-iteration-count: infinite;
+        }
+
+        #warning{
+            display: inline-block;
+            border-radius: 9px;
+            padding: 20px;
+            margin: 10vh;
+        }
+        .guide{
+            border-radius: 9px;
+            padding: 20px;
+            display: inline-block;
+            font-family: Segoe UI;
+            background-color: rgb(33, 145, 179);
+            margin-left: 10vh;
+            animation: pulse;
+            animation-duration: 3s;
+            animation-iteration-count:infinite;
+        }
+        .invis{
+            display: none;
+        }
+        .bigbox{
+            display: inline-block;
+            border: solid transparent;
+            box-shadow: 10px 10px rgb(189, 221, 170);
+            width: 500px;
+            padding: 10px;
+            border-radius: 9px;
+            background-color: aquamarine;
+        }
+        .bigbox > *{
+            font-family:Verdana;
+            border: none;
+            margin: 10px;
+            padding: 50px;
+            background-color: rgb(206, 238, 91);
+        }
+        .bigbox > *:hover{
+            cursor: pointer;
+            background-color: beige;
+        }
+        .bigbox > *:active{
+            background-color: firebrick;
+            cursor: pointer;
+        }
+
+        .reminder{
+            display: inline;
+        }
+        .verdict{
+            padding: 20px;
+            display: inline;
+            margin: 10vh;
+            font-size: 20px;
+        }
+        input{
+            display: inline;
+            padding: 10px;
+            background-color: azure;
+        }
+        table{
+            padding: 10px;
+            align-items: center;
+            border: solid transparent;
+            background-color: rgb(238, 216, 170);
+            height: 300px;
+            max-width: 1400px;
+            align-content: center;
+            resize: none;
+            font-family: 'Georgia';
+           
+            
+        }
+        th{
+            padding: 10px;
+            
+            margin: 10px;
+            background-color: chocolate;
+            max-width: 900px;
+            width: 500px;
+            height: 100px;
+            text-align: center;
+            resize: none;
+        }
+        td{
+            padding: 10px;
+            
+            margin: 10px;
+            max-width: 900px;
+            height: 200px;
+            text-align: center;
+            resize: none;
+        }
+        .raw{
+            display: inline;
+            
+            padding: 10px;
+            margin: 10px;
+        }
+
+        html{
+            background-color: beige;
+        }
+
+    </style>
+
+    <script>
+            let answered = document.querySelector('.answered');
+                let keylist = [];
+                for (i=0; i<window.localStorage.length;i++){
+                    keylist.unshift(window.localStorage.key(i));
+                    }
+                for (key of keylist){
+                    if ((key.includes("ID"))){
+                        answered.innerHTML += `${window.localStorage.getItem(key)} <br><br>`;
+                    }
+                
+                }
+
+              
+            let score1 = document.querySelector('.score');
+            let warn = document.getElementById('warning');
+            if (localStorage.number === undefined){
+                    localStorage.number === 0
+                    score1.innerHTML = 0;
+                }
+                else{
+                    score1.innerHTML = localStorage.number;
+                }
+
+
+            let AudioContext = window.AudioContext; 
+            let audioContext = new AudioContext(); //instance of context
+
+            let soundelement = document.querySelector('audio');
+            let passedelement = audioContext.createMediaElementSource(soundelement);
+
+            passedelement.connect(audioContext.destination); //passed to destination
+
+            
+            let soundcounter = 0;
+            let nodes = document.querySelector('.bigbox').childNodes;
+            promise = nodes.forEach(node => {
+            node.addEventListener('click', take)
+            node.addEventListener('click',()=>{
+                if (audioContext.state === "suspended"){
+                    audioContext.resume(); //autplay policy
+                }
+
+                if (soundcounter === 0){
+                    soundelement.play();
+                    soundcounter = 1;
+                }
+
+            })
+            })
+
+
+            async function RandomInt(){ //This allows me to get random ID of questions with the corresponding value of the button that I've pressed 
+                let res = '';
+                minimum = Math.ceil(0);
+                maximum = Math.floor(100);
+                res = Math.floor((Math.random() * (maximum-minimum) + minimum)); 
+                return res;
+        }
+
+
+             
+            function take(){ //primary function for determining value of button that is pressed
+                let dif = document.getElementById('difficulty');
+                ans = '';       
+                if (dif.textContent === ' ') {
+                    if (this.nodeType === 1){
+                        this.addEventListener('animationend',() => {this.classList.add('invis');})
+                        ans = this.dataset.value;
+                        this.classList.add('animate__animated', 'animate__flash'); 
+                        this.style.setProperty('--animate-duration','2s');
+                        result(ans); 
+                    }
+                }
+                else{
+                    warn.innerHTML = 'There is already an impending question!';
+                    warn.classList.add('warning');
+                    warn.style.backgroundColor = 'brown';
+                    warn.classList.add('animate__animated', 'animate__flash');
+                    warn.style.setProperty('--animate-duration','2s');    
+                    warn.addEventListener('animationend',()=>{
+                        warn.classList.remove('animate__animated', 'animate__flash') 
+                        warn.style.removeProperty('--animate-duration','2s');  
+                    })
+                                                    
+                }
+
+                }
+
+
+            let finalanswer = '';
+            let questionobject = '';    
+            let valuewinloss = 0;
+            async function result(ans){ //awaiting random value returned from RandomInt()
+                let diff = document.getElementById('difficulty');
+                let cat = document.getElementById('category');
+                let question = document.getElementById('question');
+                let answer = document.getElementById('answer');
+                let airdate = document.getElementById('airdate');
+                let id = document.getElementById('id');
+
+                let num = await RandomInt();
+                let list = [];
+                console.log(`Chose ${ans} value`);
+                let data = await fetch(`http://jservice.io/api/clues?value=${ans}&min_date=1985-02-20`);
+                let newdata = await data.json();
+                list.unshift(newdata);
+                console.log(list);
+                answer = newdata[num].answer; //answer
+                answerid = newdata[num].id; //id 
+                let correct = answer.replace('<i>','').replace('</i>','').replace('<b>','').replace('</b>','').replace('<I>','').replace('</I>','');
+                console.log("Answer: " + correct);
+
+                //value styling and display
+                diff.innerHTML = newdata[num].value;
+                diff.classList.add('animate__animated', 'animate__tada');
+                diff.style.setProperty('--animate-duration','2s'); 
+                diff.addEventListener('animationend', ()=>{
+                    diff.classList.remove('animate__animated', 'animate__tada') 
+                    diff.style.removeProperty('--animate-duration','2s'); 
+                })
+
+                //question display and styling
+                question.innerHTML = newdata[num].question;
+                question.classList.add('animate__animated', 'animate__tada');
+                question.style.setProperty('--animate-duration','2s'); 
+                question.addEventListener('animationend', ()=>{
+                    question.classList.remove('animate__animated', 'animate__tada'); 
+                    question.style.removeProperty('--animate-duration','2s'); 
+                })
+
+                finalanswer = newdata[num].answer;
+                valuewinloss = newdata[num].value;
+                questionobject = newdata[num];
+                return newdata[num].answer;
+                }
+
+                
+
+                let submit = document.getElementById('refresh-question');
+                submit.addEventListener('click',reload);
+                
+        
+                function reload(){
+                    if (soundcounter === 1){
+                        soundelement.pause();
+                    }
+                    let score1 = document.querySelector('.scoretext');
+                    warn.style.display = 'none';
+                    let pointer = 0;
+                    let answer = finalanswer;
+                    let object = questionobject;
+                    let objectid = object.id;
+                    let input = document.querySelector('.input');
+                    let time = 0
+                    let verdict = document.querySelector('.verdict');
+                    let removed = answer.replace('<i>','').replace('</i>','').replace('<b>','').replace('</b>','').replace('<I>','').replace('</I>','');
+                    if (input.value === removed){
+                
+                        for (key of keylist){
+                            if (key === `ID${objectid}` && window.localStorage.getItem(key) === answer){
+                                console.log("Key Already in Local Storage");
+                                pointer = 1;
+                                break;
+                            }
+                            else{
+                                localStorage.setItem(`ID${objectid}`,`Question: ${object.question}  ||  Answer: ${object.answer}`);
+                            }
+                        }
+                        if (pointer === 1){
+                            verdict.innerHTML = `Congratulations, but you already answered this question! This page will reload in 6 seconds! This question and answer won't be added to the list`;
+                            verdict.classList.add('animate__animated', 'animate__bounceInRight');
+                            verdict.style.setProperty('--animate-duration', '2s');
+                            verdict.addEventListener('animationend', ()=>{
+                            verdict.classList.remove('animate__animated', 'animate__bounceInRight');
+                            verdict.style.removeProperty('--animate-duration', '2s')
+                        })
+                        }
+                        else{
+                            verdict.innerHTML = `Congratulations! You got the correct answer! This page will reload in 6 seconds! This question and answer will be added to the list`;
+                            verdict.classList.add('animate__animated', 'animate__bounceInRight');
+                            verdict.style.setProperty('--animate-duration', '2s');
+                            verdict.addEventListener('animationend', ()=>{
+                            verdict.classList.remove('animate__animated', 'animate__bounceInRight');
+                            verdict.style.removeProperty('--animate-duration', '2s')
+                             })
+
+                            if (localStorage.number){
+                            localStorage.number = Number(localStorage.number) + valuewinloss;
+                            }
+
+                            else{
+                            localStorage.number = 0;
+                            }   
+                        }
+                    }
+
+                    else{
+                        verdict.innerHTML = `Oops, you got it wrong! The right answer is "${removed}". This page will reload in 6 seconds!`;
+                        verdict.classList.add('animate__animated', 'animate__bounceInRight');
+                        verdict.style.setProperty('--animate-duration', '2s');
+                        verdict.addEventListener('animationend', ()=>{
+                            verdict.classList.remove('animate__animated', 'animate__bounceInRight');
+                            verdict.style.removeProperty('--animate-duration', '2s')
+                        })
+                       
+                        if (localStorage.number){
+                            localStorage.number = Number(localStorage.number) - valuewinloss;
+                        }
+                        else{
+                            localStorage.number = 0;
+                        }
+                    }
+        
+                    score1.innerHTML = "Score: " + localStorage.number;
+                    score1.classList.add('animate__animated', 'animate__shakeX');
+                    score1.style.setProperty('--animate-duration','3s');  
+                  
+                    score1.addEventListener('animationend', ()=>{
+                        score1.classList.remove('animate__animated', 'animate__shakeX');
+                        score1.style.removeProperty('--animate-duration','3s'); 
+                      
+                    })
+
+                    
+
+                    window.setTimeout(function(){window.location.reload()}, 6000)
+                    }
+                    
+
+                    
+                    
+    </script>  
+</body>
+</html>

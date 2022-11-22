@@ -56,6 +56,7 @@ public class Input {
         Haha.Pride();  an example of separate classes in separate files with inheritance
         */
 
+        System.out.println("\n\n\n\n");
         int[]array = {12,312,12,414,1222};
         Functions.ArraySum(array);
 
@@ -63,6 +64,11 @@ public class Input {
         Publicity.OnlyPublic();
         GaelChild.CanBeStatic();
 
-        //Gael Iris = new Gael("Iris");
+        int[] TestArray = Functions.ManipulatedArray(array);
+        for (int i : TestArray){
+            System.out.println(i);
+        }
+
+        Gael Tinie = new Gael("Tinie");
     }
 }

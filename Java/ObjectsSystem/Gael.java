@@ -1,17 +1,21 @@
+//This java file simulates a software engineer / developer's life 
 package ObjectsSystem;
 import java.util.*;
+import java.util.jar.Attributes.Name;
 import java.io.*;
 
 public class Gael{
-    String Specialization = "Programming";
-    String Fear = "Insects";
+    private String Specialization = "Programming";
+    private String Fear = "Insects";
     String Interests = "Programming, Video Games, Music, Pewdiepie";
     short Age = 19;
     char Gender = 'M';
-    int Money;
-    String Agenda = "";
-    String Condition = "Neutral";
-    String Name;
+    private int Money;
+    private String Agenda = "";
+    private String Condition = "Neutral";
+    private String Name;
+    private int NoteCount = 0;
+
 
     public Gael(String name){
         Name = name;
@@ -55,7 +59,7 @@ public class Gael{
 
     public void Mission(){ 
         System.out.println("");
-        System.out.println("So much options in life! What to do?:\na. Work\nb. Study\nc. Watch Youtube/Netflix\nd. Gamble\n e. Rest");
+        System.out.println("So much options in life! What to do?:\na. Work\nb. Study\nc. Watch Youtube/Netflix\nd. Gamble\n e. Rest\nf. Note-Taking");
         Scanner line = new Scanner(System.in);
         String choice = line.next();
         if (choice.equals("a")){
@@ -78,6 +82,9 @@ public class Gael{
         }
         else if (choice.equals("e")){
             Rest();
+        }
+        else if (choice.equals("f")){
+            InfiniteInput();
         }
 
     }
@@ -213,11 +220,15 @@ public class Gael{
         System.out.println(String.format("Money: %d \nCondition: %s\n",Money,Condition));
         System.out.println("Check the directory for the stats of your performance");
         try{
-            FileWriter rawstats = new FileWriter("../PersonalProjects/Java/GaelSystem.txt");
+            FileWriter rawstats = new FileWriter("../PersonalProjects/Java/ObjectsSystem/GaelSystem.txt");
             BufferedWriter Stats = new BufferedWriter(rawstats);
             Stats.write("| GAEL SYSTEM STATS PERFORMANCE |");
             Stats.newLine();
             Stats.write(String.format("| NAME | --> %s",Name));
+            Stats.newLine();
+            Stats.write(String.format("| CONDITION | --> %s",Condition));
+            Stats.newLine();
+            Stats.write(String.format("| AGE | --> %s",Age));
             Stats.newLine();
             Stats.write(String.format("| CURRENT CONDITION | --> %s",Condition));
             Stats.newLine();
@@ -231,4 +242,43 @@ public class Gael{
         }
     
     }
+
+    public void InfiniteInput(){
+        ArrayList<Object> NoteArray = new ArrayList<>(); 
+        System.out.println("You will start writing your own Notes as of now! Prepare the lines");
+        System.out.println(String.format("%s's Notes",Name));    
+        Scanner LineNotes = new Scanner(System.in);
+        try{
+            FileWriter raw = new FileWriter(String.format("../PersonalProjects/Java/ObjectsSystem/%sNotes%d.txt",Name,NoteCount));
+            BufferedWriter notes = new BufferedWriter(raw);
+            while(true){
+                String newnotes = LineNotes.nextLine();
+                if (newnotes.equals("DONE")){
+                    System.out.println("You have finally finished Note-taking!");
+                    for (int i=0;i<NoteArray.size();i++){
+                        notes.write(String.format("Entry %d: ",i+1));
+                        notes.write(NoteArray.get(i).toString());
+                        notes.newLine();
+                    }
+                    notes.flush();
+                    notes.close();
+                    raw.close();
+                    NoteCount++;
+                    for (Object i : NoteArray){
+                        System.out.println(i);
+                    }
+                    break;
+                }  
+                else{
+                    NoteArray.add(newnotes);     
+                }
+        }
+            Mission();
+        }
+        catch (IOException e){
+            System.out.println("Error");
+            e.printStackTrace();
+        }
+    }
+
 }

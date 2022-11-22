@@ -47,6 +47,20 @@ public class Functions{ //recursions.  Remember, void used for methods that don'
     return 0;
    }
 
+   static int[] ManipulatedArray(int[]array){
+    int[]array2 = new int[array.length + 1];
+    for (int i =0;i<array.length;i++){
+        if (array[i] >= array.length/2){
+            array2[i] = array[i];
+            array2[array2.length - 1] = 9000;
+        }
+    }
+    for (int i : array2){
+        System.out.println(String.format("x(%d)",i));
+    }
+    return array2;
+   }
+
     public static void main(String args[]){
         Gael(79);
         System.out.println(RecursiveSum(79));
