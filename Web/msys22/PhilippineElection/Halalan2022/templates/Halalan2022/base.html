@@ -17,6 +17,7 @@ been clearly noted with a proper citation in the comments of my program. -->
         <link rel="stylesheet" href="{% static '/bootstrap/css/bootstrap.css' %}">
         <link rel="stylesheet" href="{% static 'custom.css' %}">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="{% static '/bootstrap/base.js'%}" defer> </script>
         <title> Halalan 2022 </title>
     </head>
     <style>
@@ -26,15 +27,30 @@ been clearly noted with a proper citation in the comments of my program. -->
           background-size: cover;
           background-attachment: fixed;
         }
+
+        #popup{
+            position: relative;
+            margin: auto;
+            margin-top: 2vw;
+            width: 30vw;
+            
+            
+        }
+
+        #head{
+            position: relative;
+        }
+
     </style>
 
     {% block nav %}
     <body>
-        <div class="row" style="padding:10px; margin-left: 10px; border: solid; border-radius: 20px; max-width: 1330px; background-color: coral; height: 100px;">
+        <div class="row" id="head" style="padding:10px; margin: auto; border: solid; border-radius: 20px; max-width: 1330px; background-color: coral; height: 100px;">
             <a href="{% url 'home' %}"  class='btn-success' style="border-radius: 10px; padding: 10px; text-decoration: none;"> Halalan 2022 </a> 
             <span style="position: relative; top: -50px; left: -50px; margin-left: 300px; font-family: Helvetica; font-size: 20px;"> This site was created in order to provide a just, fair, efficient, and standardized voting system for the people of the Philippines to vote with.</span>
             <span style="position: relative; right: -500px; top: -60px; font-family: Impact;"> - Gael Estrera, CEO and the only Programmer of Halalan 2022 Site </span>
-        </div>  
+        </div>
+        <span class="row" id="popup"> </span> 
     {% endblock %}
 
 

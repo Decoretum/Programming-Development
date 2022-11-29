@@ -1,0 +1,113 @@
+.maincenter{
+    width: 50%;
+    border: solid transparent;
+    background-color: antiquewhite;
+    margin: auto;
+    border-radius: 9px;
+    box-shadow: 10px 10px gainsboro;
+    display: grid; /* Allows me to make a container */
+    
+}
+
+/**************************/
+.header{
+
+    display: inline-block;
+    width: fit-content;
+    max-width: fit-content;
+    padding: 10px;
+    margin: 1vw;
+    font-family:Georgia;
+    
+}
+
+.texth{
+    font-size: 2.5vw;
+}
+
+.home{
+    color: rgb(99, 75, 53);
+    display: inline-block;
+    position: relative;
+    top: -3vw;
+    right: -15vw;
+    text-decoration: none;
+    font-family: Arial;
+    border-radius: 9px;
+    background-color: bisque;
+    padding: 6px;
+}
+
+.home:hover{
+    color: rgb(233, 163, 71);
+}
+.timer{
+    padding: 2vh;
+    display: inherit;
+    background-color: rgb(235, 209, 162);
+    border: solid rgb(116, 101, 99);
+    border-radius: 9px;
+    width:fit-content;
+    margin-left: 30vw;
+    float:right;
+    position:relative;
+    margin-top: -5.5vw;
+    
+}
+/*****************************/
+
+
+
+
+.wizardbox{
+    display: inline-grid;
+    background-color: rgb(73, 148, 144); 
+    border-radius: 30px; 
+    box-shadow:10px 10px teal;
+    width: 37%;
+    max-width: 100%;
+    font-family:Verdana;
+   
+}
+
+.wiz{
+    padding: 15px;
+    display: inline-flex;
+    max-width: 100%;
+    height: 70px;
+    width: fit-content;
+    text-align:center;
+    margin: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.desc{
+    letter-spacing: 2px; /* horizontal spacing */
+    line-height: 2vw; /* font height */
+    font-family: Verdana;
+    border: transparent;
+    border-radius: 9px;
+    float: left;
+    padding: 1vw;
+    margin: 1vw;
+    width: fit-content;
+    position: relative;
+    background-color:rgb(195, 196, 211);
+}
+
+html{
+    background-image: url(../picturesforweb/backgroundforme.png);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+}
+

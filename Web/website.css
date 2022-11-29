@@ -27,6 +27,10 @@ p{
 
 }
 
+img{
+    max-width: 100%;
+   
+}
 .randombutton{
     font-family:serif;
     font-stretch: condensed;
