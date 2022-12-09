@@ -1,7 +1,6 @@
 //This java file simulates a software engineer / developer's life 
 package ObjectsSystem;
 import java.util.*;
-import java.util.jar.Attributes.Name;
 import java.io.*;
 
 public class Gael{
@@ -242,7 +241,7 @@ public class Gael{
         }
     
     }
-
+    
     public void InfiniteInput(){
         ArrayList<Object> NoteArray = new ArrayList<>(); 
         System.out.println("You will start writing your own Notes as of now! Prepare the lines");
