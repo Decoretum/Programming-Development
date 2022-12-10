@@ -1,0 +1,19 @@
+GIT Guide
+
+GIT status:
+git status
+
+Pulling from remote repository to local machine:
+git clone <http/SSHclone link>
+
+Tracking/Staging all files:
+git add .
+
+Tracking/Staging specific files:
+git add <filename>
+
+Commit tracked/staged files:
+git commit -m "<message>" 
+
+Pushing Committed files in local machine to remote repository in github:
+git push 
