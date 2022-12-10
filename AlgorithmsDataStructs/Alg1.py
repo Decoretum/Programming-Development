@@ -14,10 +14,25 @@ class Human:
         Node.Relationship[self] = Relationship
 
     def Mutual(self,Node):
+        mutuals = []
+        condition = 0
         for key1 in self.Relationship:
             for key2 in Node.Relationship:
                 if key1 == key2:
-                    print('{} is a mutual as {} to {}'.format(key1.getName(),Node.Relationship[key1],Node.getName()))
+                    condition = 1
+                    mutuals.append(key1)
+        if condition == 1:
+            print('{}\'s Mutual/s with {}:'.format(self.getName(),Node.getName())) 
+            for x in mutuals:
+                print('{} as {} to {}'.format(x.getName(),Node.Relationship[x],Node.getName()))
+        else:
+            print('You, {}, have no mutual/s with {}'.format(self.getName(),Node.getName()))
+
+    def SameSchool(self,Node):
+        if Node.University == self.University:
+            print('{} studies in the same University as you, {}'.format(Node.getName(),self.getName()))
+        else:
+            print('{} and you don\'t study at the same university. {} studies at {}'.format(Node.getName(),Node.getName(),Node.University))
 
     def getName(self):
         return self.Name
@@ -28,6 +43,8 @@ class Human:
 
     def RelationshipChange(self,Node,Change):
         self.Relationship.update({Node : Change})
+
+    
 
 
 
