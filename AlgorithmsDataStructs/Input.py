@@ -1,4 +1,3 @@
-import Alg1
 from Alg1 import *
 
 Gael = Human('Gael','Ateneo de Manila University','BS MIS','Filipino')
