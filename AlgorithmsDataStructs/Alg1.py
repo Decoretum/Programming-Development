@@ -8,7 +8,6 @@ class Human:
         self.Nationality = nationality
         self.Relationship = {}
         
-
     def Connection(self,Node,Relationship):
         self.Relationship[Node] = Relationship
         Node.Relationship[self] = Relationship
@@ -44,6 +43,8 @@ class Human:
     def RelationshipChange(self,Node,Change):
         self.Relationship.update({Node : Change})
         Node.Relationship.update({self : Change})
+
+    
 
     
 
