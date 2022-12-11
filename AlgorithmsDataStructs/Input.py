@@ -22,3 +22,4 @@ Jack.Mutual(Gael)
 Gael.RelationshipChange(Jack,'Enemies')
 Jack.Relationships()
 Gael.Relationships()
+
