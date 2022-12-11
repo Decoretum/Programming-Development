@@ -12,6 +12,8 @@ public class Intro{
     }
 
     public static void main(String args[]){
+        Intro Gael = new Intro();
+        Gael.Introduction();
         
     }
 }
