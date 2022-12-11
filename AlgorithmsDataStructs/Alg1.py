@@ -43,6 +43,7 @@ class Human:
 
     def RelationshipChange(self,Node,Change):
         self.Relationship.update({Node : Change})
+        Node.Relationship.update({self : Change})
 
     
 
