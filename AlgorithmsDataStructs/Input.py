@@ -23,3 +23,6 @@ Gael.RelationshipChange(Jack,'Enemies')
 Jack.Relationships()
 Gael.Relationships()
 
+array = [1,2,3,4,5]
+print(array[:2])
+
