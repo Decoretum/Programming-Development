@@ -74,6 +74,24 @@ def recursiveMark(array):
         print(array)
 
 
+def RecursiveChildLeft(Node):
+    leftchildren = []
+    while Node.left:
+        leftchildren.append(Node.left.data)
+        Node = Node.left
+        break
+
+    return leftchildren
+
+def RecursiveChildRight(Node):
+    rightchildren = []
+    while Node.right:
+        rightchildren.append(Node.right.data)
+        Node = Node.right
+        break
+
+    return rightchildren
+
 class TreeNode:
     def __init__(self,data):
         self.data = data
@@ -90,47 +108,61 @@ class TreeNode:
         childrenlist = []
         childrenleft = []
         childrenright = []
-        NodeLeft = self.left
-        NodeRight = self.right
-        while NodeLeft != None:
-            childrenlist.append(NodeLeft.data)
-            if NodeLeft.left != None:
-                childrenlist.append(NodeLeft.left.data)
-                childrenleft.append(NodeLeft.left.data)
-            else:
-                pass
+        LeftCurrent = self.left
+        RightCurrent = self.right
+        childrenlist.append(LeftCurrent.data)
+        childrenlist.append(RightCurrent.data)
+        while LeftCurrent.left:
+            childrenlist.append(RecursiveChildLeft(LeftCurrent))
+            childrenlist.append(RecursiveChildRight(LeftCurrent))
+            if LeftCurrent.right:
+                childrenlist.append(RecursiveChildLeft(LeftCurrent.right))
+                childrenlist.append(RecursiveChildRight(LeftCurrent.right))
+            LeftCurrent = LeftCurrent.left
 
-            if NodeLeft.right != None:
-                childrenlist.append(NodeLeft.right.data)
-                childrenleft.append(NodeLeft.right.data)
-            else:
-                pass
-            NodeLeft = NodeLeft.left
 
-        while NodeRight != None:
-            childrenlist.append(NodeRight.data)
-            if NodeRight.left != None:
-                childrenlist.append(NodeRight.left.data)
-                childrenright.append(NodeRight.left.data)
-            else:
-                pass
+        while RightCurrent.right:
+            childrenlist.append(RecursiveChildLeft(RightCurrent))
+            childrenlist.append(RecursiveChildRight(RightCurrent))
+            if RightCurrent.left:
+                childrenlist.append(RecursiveChildLeft(RightCurrent.left))
+                childrenlist.append(RecursiveChildRight(RightCurrent.left))
+            RightCurrent = RightCurrent.right
 
-            if NodeRight.right != None:
-                childrenlist.append(NodeRight.right.data)
-                childrenright.append(NodeRight.right.data)
-            else:
-                pass
-            NodeRight = NodeRight.right
+        flattened = []
+        flattened.append(childrenlist[0])
+        flattened.append(childrenlist[1])
+        childrenlist.remove(childrenlist[0])
+        childrenlist.remove(childrenlist[0])
+        for sublist in childrenlist:
+            for item in sublist:
+                flattened.append(item)
 
-        print('Childrens from this Node: ', childrenlist)
-        print('All children Nodes from the left: ', childrenleft)
-        print('All children Nodes from the right: ', childrenright)
+        print(flattened)
 
 
 Gael = TreeNode(200)
+
 Gael.setLeft(15)
 Gael.setRight(10)
+
 Gael.left.setRight(20)
+Gael.left.setLeft(90)
+
+Gael.left.right.setLeft(12)
+Gael.left.right.setRight(11)
+
 Gael.right.setLeft(40)
+Gael.right.setRight(71)
+Gael.right.right.setLeft(41)
+Gael.right.right.left.setLeft(80)
+Gael.right.right.setRight(42)
+Gael.right.right.right.setLeft(21)
+Gael.right.right.right.setRight(22)
+
 Gael.Children()
+Gael.right.right.right.Children() #node 42
+Gael.right.Children() #Node 10
+
+#Gael.right.Children()
 
