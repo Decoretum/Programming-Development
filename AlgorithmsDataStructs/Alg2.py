@@ -74,23 +74,6 @@ def recursiveMark(array):
         print(array)
 
 
-def RecursiveChildLeft(Node):
-    leftchildren = []
-    while Node.left:
-        leftchildren.append(Node.left.data)
-        Node = Node.left
-        break
-
-    return leftchildren
-
-def RecursiveChildRight(Node):
-    rightchildren = []
-    while Node.right:
-        rightchildren.append(Node.right.data)
-        Node = Node.right
-        break
-
-    return rightchildren
 
 class TreeNode:
     def __init__(self,data):
@@ -104,30 +87,39 @@ class TreeNode:
     def setRight (self,Data):
         self.right = TreeNode(Data)
 
+    def checkLeft(self):
+        self.left != None
+    
+    def checkRight(self):
+        self.right != None
+
     def Children(self):
         childrenlist = []
         childrenleft = []
         childrenright = []
         LeftCurrent = self.left
         RightCurrent = self.right
+        leftcounter = ''
         childrenlist.append(LeftCurrent.data)
         childrenlist.append(RightCurrent.data)
-        while LeftCurrent.left:
-            childrenlist.append(RecursiveChildLeft(LeftCurrent))
-            childrenlist.append(RecursiveChildRight(LeftCurrent))
-            if LeftCurrent.right:
-                childrenlist.append(RecursiveChildLeft(LeftCurrent.right))
-                childrenlist.append(RecursiveChildRight(LeftCurrent.right))
+        counter = 0
+        while LeftCurrent:
+            childrenlist.append(TakingChild(LeftCurrent))
+            if LeftCurrent.checkRight():
+                childrenlist.append(TakingChild(LeftCurrent.right))
+            else:
+                break
             LeftCurrent = LeftCurrent.left
 
 
-        while RightCurrent.right:
-            childrenlist.append(RecursiveChildLeft(RightCurrent))
-            childrenlist.append(RecursiveChildRight(RightCurrent))
-            if RightCurrent.left:
-                childrenlist.append(RecursiveChildLeft(RightCurrent.left))
-                childrenlist.append(RecursiveChildRight(RightCurrent.left))
+        while RightCurrent:
+            childrenlist.append(TakingChild(RightCurrent))
+            if RightCurrent.checkLeft():
+                childrenlist.append(TakingChild(RightCurrent.left))
+            else:
+                pass
             RightCurrent = RightCurrent.right
+          
 
         flattened = []
         flattened.append(childrenlist[0])
@@ -139,7 +131,38 @@ class TreeNode:
                 flattened.append(item)
 
         print(flattened)
+    
+    def checking(self):
+        children = []
+        children.append(TakeChild(self))
+        #print(children)
+        print(children)
 
+
+def TakingChild(Node):
+    children = []
+    if Node.left:
+        children.append(Node.left.data)
+   
+    if Node.right:
+        children.append(Node.right.data)
+    
+    return children
+
+
+def TakeChild(Node):
+    children = []
+    while Node.checkLeft():
+        children.append(Node.left.data)
+        TakeChild(Node.left)
+        
+    
+    while Node.checkRight():
+        children.append(Node.right.data)
+        TakeChild(Node.right)
+    
+    
+    return children
 
 Gael = TreeNode(200)
 
@@ -154,6 +177,7 @@ Gael.left.right.setRight(11)
 
 Gael.right.setLeft(40)
 Gael.right.setRight(71)
+Gael.right.left.setRight(13)
 Gael.right.right.setLeft(41)
 Gael.right.right.left.setLeft(80)
 Gael.right.right.setRight(42)
@@ -161,8 +185,10 @@ Gael.right.right.right.setLeft(21)
 Gael.right.right.right.setRight(22)
 
 Gael.Children()
+Gael.left.right.Children()
 Gael.right.right.right.Children() #node 42
 Gael.right.Children() #Node 10
+Gael.right.right.Children() #Node 71
 
 #Gael.right.Children()
 
