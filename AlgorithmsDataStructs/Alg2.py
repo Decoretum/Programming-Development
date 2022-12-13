@@ -80,89 +80,48 @@ class TreeNode:
         self.data = data
         self.left = None
         self.right = None
+        self.parent = None
     
     def setLeft(self,Data):
         self.left = TreeNode(Data)
+        self.left.parent = self
     
     def setRight (self,Data):
         self.right = TreeNode(Data)
+        self.right.parent = self
 
     def checkLeft(self):
-        self.left != None
+        return self.left != None
     
     def checkRight(self):
-        self.right != None
+        return self.right != None
 
     def Children(self):
-        childrenlist = []
-        childrenleft = []
-        childrenright = []
-        LeftCurrent = self.left
-        RightCurrent = self.right
-        leftcounter = ''
-        childrenlist.append(LeftCurrent.data)
-        childrenlist.append(RightCurrent.data)
-        counter = 0
-        while LeftCurrent:
-            childrenlist.append(TakingChild(LeftCurrent))
-            if LeftCurrent.checkRight():
-                childrenlist.append(TakingChild(LeftCurrent.right))
-            else:
-                break
-            LeftCurrent = LeftCurrent.left
-
-
-        while RightCurrent:
-            childrenlist.append(TakingChild(RightCurrent))
-            if RightCurrent.checkLeft():
-                childrenlist.append(TakingChild(RightCurrent.left))
-            else:
-                pass
-            RightCurrent = RightCurrent.right
-          
-
-        flattened = []
-        flattened.append(childrenlist[0])
-        flattened.append(childrenlist[1])
-        childrenlist.remove(childrenlist[0])
-        childrenlist.remove(childrenlist[0])
-        for sublist in childrenlist:
-            for item in sublist:
-                flattened.append(item)
-
-        print(flattened)
-    
-    def checking(self):
         children = []
-        children.append(TakeChild(self))
-        #print(children)
-        print(children)
-
-
-def TakingChild(Node):
-    children = []
-    if Node.left:
-        children.append(Node.left.data)
-   
-    if Node.right:
-        children.append(Node.right.data)
-    
+        print(PreOrder(self,children))
+ 
+def PreOrder(Node,children):
+    if Node:
+        children.append(Node.data)
+        PreOrder(Node.left,children)
+        PreOrder(Node.right,children)
     return children
 
+def FindNode(Root,Node):
+    if Root:
+        if Root.data == Node:
+            if Root.parent.left.data == Node:
+                print('Node {} is found as left child with parent Node {}!'.format(Node,Root.parent.data))
+                if Root.parent.checkRight():
+                    print('This Node also has a right sibling Node {}'.format(Root.parent.right.data))
 
-def TakeChild(Node):
-    children = []
-    while Node.checkLeft():
-        children.append(Node.left.data)
-        TakeChild(Node.left)
-        
-    
-    while Node.checkRight():
-        children.append(Node.right.data)
-        TakeChild(Node.right)
-    
-    
-    return children
+            elif Root.parent.right.data == Node:
+                print('Node {} is found as right child with parent Node {}!'.format(Node,Root.parent.data))
+                if Root.parent.checkLeft():
+                    print('This Node also has a sibling Node {}'.format(Root.parent.left.data))
+        else:
+            FindNode(Root.left,Node)
+            FindNode(Root.right,Node)
 
 Gael = TreeNode(200)
 
@@ -184,11 +143,8 @@ Gael.right.right.setRight(42)
 Gael.right.right.right.setLeft(21)
 Gael.right.right.right.setRight(22)
 
-Gael.Children()
-Gael.left.right.Children()
-Gael.right.right.right.Children() #node 42
-Gael.right.Children() #Node 10
-Gael.right.right.Children() #Node 71
+Gael.right.right.left.Children()
+
 
 #Gael.right.Children()
 
