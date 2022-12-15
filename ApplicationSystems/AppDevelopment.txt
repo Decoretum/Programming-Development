@@ -1,0 +1,4 @@
+Python applications development:
+
+Swapping frames:
+https://www.geeksforgeeks.org/python-forget_pack-and-forget_grid-method-in-tkinter/

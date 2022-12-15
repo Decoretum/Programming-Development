@@ -10,19 +10,39 @@ myDB = mysql.connector.connect(
     host = "localhost",
     user = "root",
     password = "Cubil97823",
-    database = "gaeldatabase"
 )
+
+databasepresent = False
+database1 = ''
+cursor = myDB.cursor()
+cursor.execute("show databases")
+
+if ('gaeldatabase',) in cursor:
+    print("Database is present!")
+    databasepresent = True
+    
+else:
+    cursor = myDB.cursor()
+    cursor.execute("create database gaeldatabase")
+    databasepresent = True
+
+if databasepresent == True:
+    database1 = "gaeldatabase"
+    myDB = mysql.connector.connect(
+    host = "localhost",
+    user = "root",
+    password = "Cubil97823",
+    database = database1)
+    print("Database functional!")
+
+
 
 
 class NoteSystem:
     def __init__(self):
-        self.count = -1
         self.edit = False
         self.date = datetime.datetime.now()
         self.highest = 0       
-
-    def login(self):
-        print("Hi!")
 
     def initializeData(self):
         BodyCanvas.delete('1.0',END)
@@ -71,6 +91,8 @@ class NoteSystem:
             SQLvalues = (self.highest,BodyText,Head,Date)
             cursor.execute(SQL,SQLvalues)
             myDB.commit()
+            HeadTaker.delete(0,END)
+            NoteTaker.delete('1.0',END)
             self.initializeData()
 
         else:
@@ -85,19 +107,15 @@ class NoteSystem:
             if Body.isspace():
                 Body = ''
 
-            print(Head)
-            print(Body)
             for query in queries:
                 if str(query[0]) == TargetKey:
                     cursor = myDB.cursor()
                     if Head != '' and Body == '':
-                        print("1")
                         SQL = "update notes set NoteHeader = %s where NoteID = %s"
                         SQLvalues = (Head,query[0])
                         cursor.execute(SQL,SQLvalues)
         
                     elif Head != '' and Body != '':
-                        print("2")
                         SQL = "update notes set NoteBody = %s where NoteID = %s"
                         SQLvalues = (Body,query[0])
                         SQL2 = "update notes set NoteHeader = %s where NoteID = %s"
@@ -106,7 +124,6 @@ class NoteSystem:
                         cursor.execute(SQL2,SQLvalues2)
 
                     elif Head == '' and Body != '':
-                        print("3")
                         SQL = "update notes set NoteBody = %s where NoteID = %s"
                         SQLvalues = (Body,query[0])
                         cursor.execute(SQL,SQLvalues)
@@ -115,6 +132,8 @@ class NoteSystem:
                     self.initializeData()
                 else:
                     pass
+            HeadTaker.delete(0,END)
+            NoteTaker.delete('1.0',END)
                 
 
             
@@ -134,7 +153,7 @@ class NoteSystem:
         cursor = myDB.cursor()
         DelValue = KeyEntry.get()
         if repr(DelValue) != "''":
-            print("something is deleted")
+            print("Entry {} is deleted".format(DelValue))
             SQL = "delete from notes where NoteId = {}".format(DelValue)
             cursor.execute(SQL)
             myDB.commit()
@@ -155,7 +174,7 @@ app.configure(bg='#CACAE1')
 
 myfont = ("Verdana",12)
 label = Label(text="DecoreNotes", font=myfont, bg="#EEEE79")
-label.grid(column=0,row=0,sticky=W,padx=10,pady=10)
+label.grid(column=0,row=0,sticky=W,padx=10,pady=10,ipadx=10,ipady=10)
 
 Info = Label(text="This Applications serves to take down \nnotes and record them with headers!", font=myfont, bg="#BFBFEF")
 Info.grid(column=0, row=1,padx=10,pady=10)
@@ -175,8 +194,8 @@ EditLabel.place(x=500,y=80)
 KeyEntry = Entry(app, bg="#8787CE", font=myfont, width=10)
 KeyEntry.place(x=550, y=130)
 
-DeleteLabel = Button(app, text="Delete Entry", command=Gael.Delete)
-DeleteLabel.place(x=550,y=180)
+DeleteLabel = Button(app, text="Delete Entry", command=Gael.Delete, font=myfont, bg="#FFFFE4")
+DeleteLabel.place(x=540,y=170)
 
 headerlabel = Label(Container,text="Note Header", font=myfont, bg="#BFBFEF")
 headerlabel.grid(column=0,row=0,sticky=N,pady=20)
@@ -197,11 +216,11 @@ BodyCanvas.grid(column=0,row=2,padx=10,pady=10)
 
 
 
-Submit = Button(Container, text="Add Note", command= Gael.AddNote)
+Submit = Button(Container, text="Add Note", command= Gael.AddNote, font=myfont, bg="#FFFFE4")
 Submit.grid(column=0,row=4,sticky=W)
 
-EditButton = Button(Container, text="Edit", command= Gael.Edit)
-EditButton.grid(column=0,row=4,columnspan=1,sticky=W,padx=75)
+EditButton = Button(Container, text="Edit", command= Gael.Edit, font=myfont, bg="#FFFFE4")
+EditButton.grid(column=0,row=4,columnspan=1,sticky=W,padx=100)
 
 
 
