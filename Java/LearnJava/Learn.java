@@ -48,7 +48,19 @@ public class Learn {
 
     static void Playtime(){
         Scanner input = new Scanner(System.in);
+        String word = input.nextLine();
+        while (word.isBlank()){
+            word = input.nextLine();
+        }
+        if (word.equals("Done")){
+            System.out.println("Chill, you're done now");
+        }
+        else{
+            System.out.println("Loop done");
+        }
         
+        input.close();
+
     }
 
     static void Comparison(){
@@ -71,7 +83,48 @@ public class Learn {
 
     }
 
+    static void Matrix(int rows, int columns){
+       for (int i=0;i <= rows-1;i++){
+            System.out.println();
+            for (int j=0; j <= columns-1; j++){
+                System.out.print(" 0 ");
+            }
+       }
+        
+    }
+
+    static void Matrix2d(int rows, int columns){
+        Object[][] matrix = new Object[rows][columns];
+        for (int i = 0; i <= matrix.length - 1; i++){
+            System.out.println();
+            for (int j = 0; j <= matrix[i].length - 1; j++){
+                matrix[i][j] = j+1;
+            }
+        }
+        matrix[2][2] = "!";
+
+        for (int i = 0; i <= matrix.length - 1; i++){
+            System.out.println();
+            for (int j = 0; j <= matrix[i].length - 1; j++){
+                System.out.print(matrix[i][j] + " ");
+            }
+        }
+    }
+        
+    
+    static void AddtoArray(Object[] array,Object element){
+        Object[] NewArray = new Object[array.length + 1];
+        for (int i=0; i<=array.length-1; i++){
+            NewArray[i] = array[i];
+        }
+        NewArray[NewArray.length - 1] = element;
+        for (int i = 0; i<= NewArray.length; i++){
+            System.out.print(NewArray[i] + " ");
+        }
+    }
+
     public static void main (String args[]){
+        Object[] CoolArray = {1,2,3,4,5,6,7};
         Num = (int) Num / 2;
         placeholder = Good;
         Good = Bad;
@@ -82,5 +135,10 @@ public class Learn {
         //UserInput("Gael");
         //Check(100);
         //Comparison();
+        //Playtime();
+        //Matrix(5, 5);
+        //AddtoArray(CoolArray, "infinity");
+        System.out.println("\n");
+        Matrix2d(6, 6);
     }
 }
