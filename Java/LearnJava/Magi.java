@@ -16,6 +16,15 @@ public class Magi {
         System.out.println(String.format("Magi %s has been initiated into this world.",this.name));
     }
 
+    Magi(String name, String spec, String aura, int age, String Weapon){
+        this.Weapon = new Weapon(Weapon, aura);
+        this.name = name;
+        this.Specialization = spec;
+        this.Aura = aura;
+        this.Age = age;
+        System.out.println(String.format("Magi %s has been initiated into this world with the weapon '%s' of the %s.",this.name,this.Weapon.Name(),this.Weapon.Affinity));
+    }
+
     void TakeWeapon(Weapon wep){
         this.Weapon = wep;
         System.out.println(String.format("The weapon '%s' has been acquired by %s.",this.Weapon.Name(),this.name));
