@@ -25,9 +25,9 @@ public class Magi {
         System.out.println(String.format("Magi %s has been initiated into this world with the weapon '%s' of the %s.",this.name,this.Weapon.Name(),this.Weapon.Affinity));
     }
 
-    public String toString(){ //implicit and explicit return when calling an object
+    /*public String toString(){ //implicit and explicit return when calling an object
         return "Magi Name: " + this.name + " || Magi Age: "  + this.Age + " || Magi Specialization: " + this.Specialization + " || Magi Aura: " + this.Aura;
-    }
+    }*/
 
     void TakeWeapon(Weapon wep){
         this.Weapon = wep;

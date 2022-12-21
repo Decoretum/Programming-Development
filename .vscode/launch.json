@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch OOP",
+            "request": "launch",
+            "mainClass": "LearnJava.OOP",
+            "projectName": "Programming-Development_bc21ae1e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Method",
+            "request": "launch",
+            "mainClass": "LearnJava.Method",
+            "projectName": "Programming-Development_bc21ae1e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Collection",
+            "request": "launch",
+            "mainClass": "LearnJava.Collection",
+            "projectName": "Programming-Development_bc21ae1e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Strings",
+            "request": "launch",
+            "mainClass": "LearnJava.Strings",
+            "projectName": "Programming-Development_bc21ae1e"
+        },
+        {
+            "type": "java",
             "name": "Launch Input",
             "request": "launch",
             "mainClass": "Input",
