@@ -50,7 +50,7 @@ class NoteSystem:
         cursor = myDB.cursor()
         cursor.execute("show tables")
         tables = []
-        x = ('notes', )
+        x = ('Notes', )
         for i in cursor:
             tables.append(i)    
 
