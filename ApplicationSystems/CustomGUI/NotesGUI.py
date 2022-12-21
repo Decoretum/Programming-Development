@@ -46,6 +46,8 @@ class NoteSystem:
 
     def initializeData(self):
         BodyCanvas.delete('1.0',END)
+        HeadTaker.delete(0,END)
+        NoteTaker.delete('1.0',END)
         BodyCanvas.configure(bg="#EEEEEE")
         cursor = myDB.cursor()
         cursor.execute("show tables")
@@ -55,12 +57,13 @@ class NoteSystem:
             tables.append(i)    
 
         if x in tables:
-            print("Table is here!")
+            #print("Table is here!")
             cursor.execute('select * from notes')
             allqueries = cursor.fetchall()
             max = 0
 
             for query in allqueries:
+                print(query)
                 BodyCanvas.insert(INSERT,"Entry {} from the date of {} ".format(query[0],query[3]))
                 BodyCanvas.insert(INSERT,"\n")
                 BodyCanvas.insert(INSERT,"Title: " + str(query[2]))
@@ -116,12 +119,9 @@ class NoteSystem:
                         cursor.execute(SQL,SQLvalues)
         
                     elif Head != '' and Body != '':
-                        SQL = "update notes set NoteBody = %s where NoteID = %s"
-                        SQLvalues = (Body,query[0])
-                        SQL2 = "update notes set NoteHeader = %s where NoteID = %s"
-                        SQLvalues2 = (Head,query[0])
+                        SQL = "update notes set NoteBody = %s, NoteHeader = %s where NoteID = %s"
+                        SQLvalues = (Body,query[2],query[0])
                         cursor.execute(SQL,SQLvalues)
-                        cursor.execute(SQL2,SQLvalues2)
 
                     elif Head == '' and Body != '':
                         SQL = "update notes set NoteBody = %s where NoteID = %s"
@@ -134,6 +134,7 @@ class NoteSystem:
                     pass
             HeadTaker.delete(0,END)
             NoteTaker.delete('1.0',END)
+            self.Edit()
                 
 
             
@@ -143,11 +144,28 @@ class NoteSystem:
         if self.edit == False:
             self.edit = True
             EditButton.configure(text="Stop Editing")
-            print("Editing is active!") 
+            Submit.configure(text="Edit Entry")
+            #print("Editing is active!") 
+            Key = KeyEntry.get()
+            cursor = myDB.cursor()
+            cursor.execute("select * from notes")
+            queries = cursor.fetchall()
+            HeadTaker.delete(0,END)
+            NoteTaker.delete("1.0",END)
+            for query in queries:
+                if str(query[0]) == str(Key):
+                    HeadTaker.insert(INSERT,str(query[2]).rstrip())
+                    NoteTaker.insert(INSERT,str(query[1]).rstrip())
+            myDB.commit()
+
         else:
             self.edit = False
-            EditButton.configure(text="Edit")
-            print("Editing is inactive!")
+            HeadTaker.delete(0,END)
+            NoteTaker.delete('1.0',END)
+            EditButton.configure(text="Edit Entry")
+            Submit.configure(text="Add Note")
+            KeyEntry.delete(0,END)
+            #print("Editing is inactive!")
 
     def Delete(self):
         cursor = myDB.cursor()
@@ -197,6 +215,9 @@ KeyEntry.place(x=550, y=130)
 DeleteLabel = Button(app, text="Delete Entry", command=Gael.Delete, font=myfont, bg="#FFFFE4")
 DeleteLabel.place(x=540,y=170)
 
+EditButton = Button(app, text="Edit Entry", command= Gael.Edit, font=myfont, bg="#FFFFE4")
+EditButton.place(x=540, y=220)
+
 headerlabel = Label(Container,text="Note Header", font=myfont, bg="#BFBFEF")
 headerlabel.grid(column=0,row=0,sticky=N,pady=20)
 
@@ -219,8 +240,7 @@ BodyCanvas.grid(column=0,row=2,padx=10,pady=10)
 Submit = Button(Container, text="Add Note", command= Gael.AddNote, font=myfont, bg="#FFFFE4")
 Submit.grid(column=0,row=4,sticky=W)
 
-EditButton = Button(Container, text="Edit", command= Gael.Edit, font=myfont, bg="#FFFFE4")
-EditButton.grid(column=0,row=4,columnspan=1,sticky=W,padx=100)
+
 
 
 
