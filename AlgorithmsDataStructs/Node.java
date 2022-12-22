@@ -15,5 +15,13 @@ public class Node {
     Node getNext(){
         return this.next;
     }
+
+    void setNext(Node A){
+        this.next = A;
+    }
+
+    void unlink(){
+        this.next = null;
+    }
     
 }
