@@ -2,5 +2,5 @@ import os
 import sys
 
 d = os.getcwd()
-os.chdir('../../../../')
+os.chdir('../../../')
 print(os.getcwd())

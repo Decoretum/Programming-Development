@@ -6,10 +6,11 @@ from PIL import Image
 from PIL.ExifTags import TAGS
 from iptcinfo3 import IPTCInfo
 
-os.chdir('../../../../')
+os.chdir('../../../')
+curr = os.getcwd()
 filename = "p115_maynila.tif"
 file = sys.path[0] + "/{}".format(filename)
-film = sys.path[0] + "/Films"
+film = curr + "/Films"
 
 
 artist = ''
@@ -25,8 +26,8 @@ with ExifToolHelper() as et:
         artist = data['IPTC:Keywords'][2]
 
 
-yearpath = sys.path[0] + "/Films/{}".format(year)
-artistpath = sys.path[0] + "/Films/{}/{}".format(year,artist)
+yearpath = curr + "/Films/{}".format(year)
+artistpath = curr + "/Films/{}/{}".format(year,artist)
 
 if not os.path.exists(film):
     os.makedirs(film)
@@ -42,5 +43,6 @@ if not os.path.exists(artistpath):
 
 destpath =  artistpath + "/{}".format(filename)
 shutil.move(file,destpath)
+print(destpath)
 
 
