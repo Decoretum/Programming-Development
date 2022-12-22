@@ -23,8 +23,13 @@ public class OOP {
         for (int i = 0; i < Magises.size(); i++){
             System.out.println(Magises.get(i).name);
         }
-
+        ArrayList <Object> Artifacts = new ArrayList<>();
+        Artifacts.add(Gael);
+        Artifacts.add("ME");
+        Artifacts.add(12);
+        System.out.println(Artifacts);
         System.out.println(Magis[0]);
+        System.out.println(Artifacts.get(2));
 
 
 
