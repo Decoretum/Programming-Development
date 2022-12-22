@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Learn",
+            "request": "launch",
+            "mainClass": "LearnJava.Learn",
+            "projectName": "Programming-Development_bc21ae1e"
+        },
+        {
+            "type": "java",
             "name": "Launch Alg5",
             "request": "launch",
             "mainClass": "AlgorithmsDataStructs.Alg5",

@@ -1,5 +1,7 @@
 package LearnJava;
 
+import java.util.ArrayList;
+
 public class Magi {
     Weapon Weapon;
     String name;
@@ -7,12 +9,14 @@ public class Magi {
     String Aura;
     byte Charge = 0;
     int Age;
+    static ArrayList <Magi> MagisAura = new ArrayList<>(); //this is a single variable shared among all object instances since its on one class
 
     Magi(String name, String spec, String aura, int age){
         this.name = name;
         this.Specialization = spec;
         this.Aura = aura;
         this.Age = age;
+        MagisAura.add(this);
         System.out.println(String.format("Magi %s has been initiated into this world.",this.name));
     }
 
@@ -22,11 +26,12 @@ public class Magi {
         this.Specialization = spec;
         this.Aura = aura;
         this.Age = age;
+        MagisAura.add(this);
         System.out.println(String.format("Magi %s has been initiated into this world with the weapon '%s' of the %s.",this.name,this.Weapon.Name(),this.Weapon.Affinity));
     }
 
     public String toString(){ //implicit and explicit return when calling an object
-        return "Magi Name: " + this.name + " || Magi Age: "  + this.Age + " || Magi Specialization: " + this.Specialization + " || Magi Aura: " + this.Aura;
+        return "(Magi Name: " + this.name + " || Magi Age: "  + this.Age + " || Magi Specialization: " + this.Specialization + " || Magi Aura: " + this.Aura + ")";
     }
 
     void TakeWeapon(Weapon wep){

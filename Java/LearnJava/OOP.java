@@ -30,6 +30,9 @@ public class OOP {
         System.out.println(Artifacts);
         System.out.println(Magis[0]);
         System.out.println(Artifacts.get(2));
+        for (int i =0; i < Magi.MagisAura.size(); i++){
+            System.out.println(Magi.MagisAura.get(i));
+        }
 
 
 
