@@ -1,0 +1,29 @@
+{% extends 'Inventory/base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}     
+        <div class="Largetext"> Available Products </div>
+        {% for product in P %}
+        <div class="container"> 
+            Product Name:{{product.Name}} <br>
+            Product Brand: {{product.Brand}} <Br>
+            Product Color: {{product.Color}} <br>
+            Price: {{product.Cost}}<Br>
+            <!-- <a href="% url 'Order' %" class="Order"> Add to Cart </a> -->
+
+        </div>
+
+        {% endfor %}
+    {% endblock %}
+    
+</body>
+</html>

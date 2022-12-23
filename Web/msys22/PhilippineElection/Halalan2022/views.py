@@ -78,7 +78,8 @@ def home(request):
     users = Userperson.objects.all()
     v = Vote.objects.all()
     #Presidents
-
+    for cand in v:
+        print(cand)
     countleni = Vote.objects.filter(candidate_id=Candidate.objects.get(last_name__contains='Robredo')).count()
     countping = Vote.objects.filter(candidate_id=Candidate.objects.get(last_name__contains='Lacson')).count()
     countnob = Vote.objects.filter(candidate_id=Candidate.objects.get(last_name__contains='Gonzales')).count()

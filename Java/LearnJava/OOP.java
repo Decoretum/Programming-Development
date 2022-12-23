@@ -34,6 +34,10 @@ public class OOP {
             System.out.println(Magi.MagisAura.get(i));
         }
         System.out.println(Weapon.Weapons);
+        Apprentice Yuan = new Apprentice("Yuan", "Gaming", "Play", 19, "BladeSpire");
+        System.out.println(Yuan.Aura);
+        System.out.println(Yuan.University);
+        Yuan.BattleCry();
 
 
 
