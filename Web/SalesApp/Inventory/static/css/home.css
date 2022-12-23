@@ -1,0 +1,22 @@
+.container{
+    padding: 10px;
+    font-family: Verdana;
+    border: solid;
+    width: 50vw;
+
+}
+
+.Largetext{
+    font-size: 25px;
+    font-family: Verdana;
+    margin-bottom: 5vh;
+    padding: 15px;
+}
+
+.shape1{
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent; 
+    border-bottom: 100px solid blueviolet;
+}
