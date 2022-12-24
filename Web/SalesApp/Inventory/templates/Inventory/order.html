@@ -11,48 +11,50 @@
 </head>
 <body>
     {% block content %}
-    <form method="POST" action="{% url 'Signup' %}">{% csrf_token %}
+    <form method="POST" action="{% url 'order' pk=Current.pk %}">{% csrf_token %}
         <div class="formblock">
-            <div class="Largetext" style="margin: auto; width: 50%;"> Signup </div>
-            <div class="label"> Username </div>
-            <div class="forminput">
-                <input class="form-control forminput" type="text" name="usern"> </input>
+            <div class="Largetext" style="margin: auto; width: 50%;"> Order </div>
+            <div class="label"> Product: {{Current.Name}} </div>
+            <div class="label"> Brand: {{Current.Brand}} </div>
+            <div class="label"> Color: {{Current.Color}} </div>
+            <div class="label"> Cost: {{Current.Cost}} </div>
+            <div class="label"> Available Stock: {{Current.Stock}} </div>
+            <div class="container" style="border: transparent; width: inherit;">
+                <div class="label" style="display:inline; margin: auto; margin-left: 10.5vw;"> Quantity </div>
+                <select type="text" id="drop" style="display:inline;">
+                    {% for x in A %}
+                        <option type="text" id="num"> {{x}} </option>
+                    {% endfor %}
+                </select>
             </div>
+            <div class="label" id="totalcost"> Total Cost: <span id="cost"> </span> </div><br>
 
-            <div class="label"> Password </div>
-            <div class="forminput">
-                <input class="form-control forminput" type="text" name="passn"> </input>
-            </div>
-
-            <div class="label"> First Name </div>
-            <div class="forminput">
-                <input class="form-control forminput" type="text" name="firstn"> </input>
-            </div>
-
-            <div class="label"> Last Name </div>
-            <div class="forminput">
-                <input class="form-control forminput" type="text" name="lastn"> </input>
-            </div>
-
-            <div class="label"> Birthday </div>
-            <div class="forminput">
-                <input class="form-control forminput" type="date" name="birthday1"> </input>
-            </div>
-
-            <div class="label"> Sex </div>
-            <div class="forminput">
-                <input class="form-control forminput" type="text" name="sexx"> </input>
-            </div>
-
-            <button class="Submit" type="submit">
-                Submit
+            <button class="Submit" id="prelim" type="button" style="margin: auto; margin-left: 25%; width: 10vw; text-align: left;">
+                Order Product 
             </button>
 
-            <div class="Largetext" style="margin: auto; width: 50%; max-width: 100%;"> Already have an account? </div>
-                <a class="Button" href="{% url 'Login' %}"> Login </a> 
-            <br>
+            <div class="Largetext" style="margin: auto; width: 50%; max-width: 100%;"> Want to change product choice? </div>
+                <a class="Button" href="{% url 'Products' %}"> Browse Products </a> 
+            <br><br>
         </div>
     </form> 
+    <script>
+        let placeholder = document.getElementById('drop');
+        let result = document.getElementById('cost');
+        let prelim = document.getElementById('prelim');
+        let num = '{{A}}';
+        let cost = '{{Current.Cost}}';
+        let def = document.getElementById('num');
+        result.innerHTML = parseInt(def.value) * parseInt(cost.slice(1));
+
+        placeholder.addEventListener('change',()=>{
+            let chosen = document.getElementById('drop');
+            let val = chosen.value;
+            console.log(val);
+            console.log(cost);
+            result.innerHTML = parseInt(val) * parseInt(cost.slice(1));
+        })
+    </script>
     {% endblock %}
     
 </body>

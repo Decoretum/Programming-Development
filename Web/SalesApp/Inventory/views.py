@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate,login
 from django.contrib.auth.models import User, auth
 from django.template import loader
 from django.http import HttpResponse
+from django.core import serializers
 
 # Create your views here.
 def home(request):
@@ -12,8 +13,13 @@ def home(request):
     return render(request, 'Inventory/home.html')
 
 def Products(request):
-    P = Product.objects.all()
-    return render(request, 'Inventory/products.html',{'P':P})
+    User = Userperson.objects.all()
+    P = Product.objects.filter(Stock__gte = 0)
+    return render(request, 'Inventory/products.html',{
+        'P':P, 
+        'User':User,
+        'username' : request.session['user']
+        })
 
 def Signup(request):
     if request.method == 'POST':
@@ -78,7 +84,7 @@ def Login(request):
         return render(request,'Inventory/Login.html')
 
 def Users(request):
-    currentuser = Userperson.objects.filter(username = request.session['username'])
+    currentuser = Userperson.objects.filter(username = request.session['user'])
     return render(request,'Inventory/users.html',
     {'username' : request.session['user'],
     'userid' : request.session['userid'],
@@ -99,7 +105,16 @@ def Order(request,pk):
     if request.method == "POST":
         pass
     else:
-        return render(request,'Inventory/order.html')
+        array = []
+        P = Product.objects.all()
+        CurrentProd = get_object_or_404(Product, pk=pk)
+        for x in range(CurrentProd.Stock):
+            array.append(x+1)
+        return render(request,'Inventory/order.html',{ 
+            'P' : P,
+            'Current' : CurrentProd,
+            'A' : array,
+        })
 
 
     

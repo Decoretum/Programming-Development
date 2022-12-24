@@ -1,0 +1,14 @@
+GUIDE FOR EFFICIENT DJANGO:
+
+First of all, know the purpose of your project.
+
+
+User authentication
+After knowing the purpose, start creating python models for user authentication. 
+You then proceed to develop views pages for user authentication first.
+
+Displaying of User data as well as Product/service data of interests
+Proceed to create models for product/service data, and create views pages for these. This includes 
+request.session (User data) as well as querying objects. Remember to use primary and foreign keys as well
+to display data and zoom in to those data.
+

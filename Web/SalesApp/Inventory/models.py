@@ -7,6 +7,7 @@ class Product(models.Model):
     Brand = models.CharField(max_length=30)
     Color = models.CharField(max_length=20)
     Cost = models.CharField(max_length=10)
+    Stock = models.BigIntegerField()
 
 
 class Userperson(models.Model):
@@ -17,6 +18,7 @@ class Userperson(models.Model):
     birthday = models.DateField()
     sex = models.CharField(max_length=50)
     objects = models.Manager()
+   
 
     def getUsername(self):
         return self.username
