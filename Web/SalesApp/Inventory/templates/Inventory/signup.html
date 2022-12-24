@@ -1,0 +1,77 @@
+{% extends 'inventory/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/css/form.css'%}">
+</head>
+<body>
+    {% block header %}
+    <div class="header">
+        DecoreManufacturing Signup Site
+    </div>
+    <br>
+    {% endblock %}
+
+
+    {% block content %}
+    <form method="POST" action="{% url 'Signup' %}">{% csrf_token %}
+        <div class="formblock">
+            <div class="Largetext" style="margin: auto; width: 50%;"> Signup </div>
+            <div class="label"> Username </div>
+            <div class="forminput">
+                <input class="form-control forminput" type="text" name="usern"> </input>
+            </div>
+
+            <div class="label"> Password </div>
+            <div class="forminput">
+                <input class="form-control forminput" type="text" name="passn"> </input>
+            </div>
+
+            <div class="label"> First Name </div>
+            <div class="forminput">
+                <input class="form-control forminput" type="text" name="firstn"> </input>
+            </div>
+
+            <div class="label"> Last Name </div>
+            <div class="forminput">
+                <input class="form-control forminput" type="text" name="lastn"> </input>
+            </div>
+
+            <div class="label"> Birthday </div>
+            <div class="forminput">
+                <input class="form-control forminput" type="date" name="birthday1"> </input>
+            </div>
+
+            <div class="label"> Sex </div>
+            <div class="forminput">
+                <input class="form-control forminput" type="text" name="sexx"> </input>
+            </div>
+
+            <button class="Submit" type="submit">
+                Submit
+            </button>
+
+            <div class="Largetext" style="margin: auto; width: 50%; max-width: 100%;"> Already have an account? </div>
+                <a class="Button" href="{% url 'Login' %}"> Login </a> 
+            <br>
+        </div>
+    </form> 
+    {% for m in messages %}
+    <div class="label">
+        {{ m }}
+    </div>
+    {% endfor %}
+
+    {% endblock %}
+    <script>
+        function LoginF(){
+            location.href="{% url 'Login' %}";
+        }
+    </script>
+</body>
+</html>

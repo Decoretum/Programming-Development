@@ -8,6 +8,7 @@
     <title> DecoreManufacturing </title>
     <link rel="stylesheet" href="{% static '/css/base.css' %}">
     <link rel="stylesheet" href="{% static '/css/home.css' %}">
+    <link rel="stylesheet" href="{% static '/css/form.css' %}">
 </head>
 <body>
     {% block header %}
@@ -15,6 +16,7 @@
         <a class="Home" href="{% url 'home' %}"> Home </a>
         <a class="Products" href="{% url 'Products' %}"> Products </a>
         <a class="About" href="{% url 'home' %}"> About the Programmer </a>
+        <a class="User" href="{% url 'User' %}"> User Page </a>
 
 
     </div>

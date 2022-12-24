@@ -10,12 +10,14 @@ html{
     border-radius: 9px;
 }
 
-.header > *{
+div.header > a {
     margin: 10px;
     padding: 10px;
+    color: black;
+    text-decoration: none;
 }
 
-.header >*:hover{
+.header > a:hover{
     background-color: brown;
     cursor: pointer;
 }

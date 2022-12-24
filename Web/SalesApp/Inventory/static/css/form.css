@@ -1,0 +1,53 @@
+
+a{
+    color: black;
+}
+.formblock{
+    margin: auto;
+    max-width: 100%;
+    border: solid burlywood;
+    width: 50%;
+
+}
+
+.label{
+    padding: 10px;
+    font-family: Verdana;
+    font-size: 15px;
+    margin: auto;
+    max-width: 100%;
+    width: 50%;
+
+}
+
+.forminput{ 
+    padding: 10px;
+    margin: auto;
+    max-width: 100%;
+    width: 50%;
+}
+
+.Button{
+    text-decoration: none;
+    background-color: burlywood;
+    padding: 10px;
+    margin: auto;
+    margin-left: 25%;
+    max-width: 100%;
+    width: 7vw;
+    text-align: center;
+    border-radius: 9px;
+}
+
+.Button > *{
+    color: black;
+}
+.Button:hover{
+    cursor:pointer;
+    background-color: rgb(212, 147, 36);
+}
+
+.Submit{
+    font-family: Verdana;
+    font-size: 15px;
+}

@@ -8,6 +8,7 @@ class Product(models.Model):
     Color = models.CharField(max_length=20)
     Cost = models.CharField(max_length=10)
 
+
 class Userperson(models.Model):
     username = models.CharField(max_length=50, unique=True)
     password = models.CharField(max_length=50)
@@ -37,3 +38,8 @@ class Userperson(models.Model):
 
     def __str__(self):
         return 'pk' + ':' + ' ' + 'User ' + str(self.pk) + ':' + ' ' + str(self.username) + ',' + ' ' + str(self.first_name) + ' ' + str(self.last_name) + ',' + ' ' + str(self.birthday) + ',' + ' ' + str(self.sex)
+
+class OrderedProduct(models.Model):
+    Client = models.ForeignKey(Userperson, on_delete=models.CASCADE)
+    Order = models.ForeignKey(Product, on_delete=models.CASCADE)
+    remarks = models.CharField(max_length=200)
