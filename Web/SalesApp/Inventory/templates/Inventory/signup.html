@@ -11,7 +11,7 @@
 </head>
 <body>
     {% block header %}
-    <div class="header">
+    <div class="unfinished header">
         DecoreManufacturing Signup Site
     </div>
     <br>
@@ -53,12 +53,12 @@
             </div>
 
             <button class="Submit" type="submit">
-                Submit
+                Create Account
             </button>
 
             <div class="Largetext" style="margin: auto; width: 50%; max-width: 100%;"> Already have an account? </div>
                 <a class="Button" href="{% url 'Login' %}"> Login </a> 
-            <br>
+            <br><br>
         </div>
     </form> 
     {% for m in messages %}

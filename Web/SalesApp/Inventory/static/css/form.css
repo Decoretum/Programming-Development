@@ -1,12 +1,54 @@
+html{
+    background-color: antiquewhite;
+}
 
 a{
     color: black;
+    text-decoration: none;
+}
+
+.header{
+    max-width: 100%;
+    width: 50vw;
+    max-width: 100%;
+    border: solid rgb(18, 85, 124);
+    background-color: cadetblue;
+    padding: 10px;
+    border-radius: 9px;
+    margin: auto;
+}
+
+.header > a{
+    margin: auto;
+    margin-left: 5vw;
+    border-radius: 9px;
+    padding: 5px;
+}
+
+.header > a:hover{
+    background-color: rgb(49, 215, 233);
+    cursor: pointer;
+}
+
+
+.unfinished.header{
+    text-align: center;
+    margin: auto;
+    width: 25%;
+    max-width: 100%;
+    border: solid rgb(51, 39, 23);
+    padding: 20px;
+    border-radius: 9px;
+    font-family: Verdana;
 }
 .formblock{
     margin: auto;
     max-width: 100%;
-    border: solid burlywood;
+    border: solid rgb(235, 200, 157);
+    border-radius: 9px;
     width: 50%;
+    box-shadow: 10px 10px bisque;
+    background-color: rgb(210, 174, 127);
 
 }
 
@@ -40,7 +82,7 @@ a{
 
 .Button{
     text-decoration: none;
-    background-color: burlywood;
+    background-color: rgb(48, 162, 88);
     padding: 10px;
     margin: auto;
     margin-left: 25%;
@@ -55,10 +97,24 @@ a{
 }
 .Button:hover{
     cursor:pointer;
-    background-color: rgb(212, 147, 36);
+    background-color: rgb(56, 209, 110);
 }
 
 .Submit{
     font-family: Verdana;
     font-size: 15px;
+    background-color: rgb(213, 193, 101);
+    padding: 10px;
+    width: 10vw;
+    max-width: 100%;
+    margin: auto;
+    margin-left: 25%;
+    border-radius: 9px;
+    
+
+}
+
+.Submit:hover{
+    cursor: pointer;
+    background-color: rgb(84, 122, 122);
 }
