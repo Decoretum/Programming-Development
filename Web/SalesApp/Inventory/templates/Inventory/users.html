@@ -12,19 +12,26 @@
 <body>
     {% block content %}
     <Br>
-    <div class="container">
+    <div class="container" style="display: inline-block;">
         User Logged in: {{username}} <br>
         First name: {{firstname}} <Br>
         Last name: {{lastname}} <br>
         Birthday: {{birthday}} <br>
         Sex: {{sex}}
     </div>
-    <div class="containter" style="float: right;">
+
+    <div class="containter" style="display:inline-block; margin-left: 15%;">
         <a href="{% url 'logout' %}"> Logout </a>
     </div>
 
     <div class="container">
-        Product/s ordered:
+        Product/s ordered: <br> 
+        {% for p in OProducts %}
+
+        Order {{p.pk}}: {{p.Order.Name}} with a quantity of {{p.quantity}}. Total cost of P{{p.totalcost}}. <br>
+        Remarks: {{p.remarks}} <br><br>
+      
+        {% endfor %}
     </div>
     {% endblock %}
 </body>

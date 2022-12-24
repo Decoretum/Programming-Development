@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.shortcuts import render,redirect,get_object_or_404
-from .models import Userperson, Product
+from .models import Userperson, Product, OrderedProduct
 from django.contrib.auth import authenticate,login
 from django.contrib.auth.models import User, auth
 from django.template import loader
@@ -84,7 +84,10 @@ def Login(request):
         return render(request,'Inventory/Login.html')
 
 def Users(request):
-    currentuser = Userperson.objects.filter(username = request.session['user'])
+    currentuser = get_object_or_404(Userperson, username = request.session['user'])
+    OProducts = OrderedProduct.objects.filter(Client = currentuser)
+    for x in OProducts:
+        print(x.pk, x.Client, x.Order.Name)
     return render(request,'Inventory/users.html',
     {'username' : request.session['user'],
     'userid' : request.session['userid'],
@@ -93,7 +96,8 @@ def Users(request):
     'lastname' : request.session['lastname'],
     'birthday' : request.session['birthday'],
     'sex' : request.session['sex'],
-    'userobj' : currentuser})
+    'userobj' : currentuser,
+    'OProducts' : OProducts})
 
 def logout(request):
     auth.logout(request)
@@ -102,12 +106,22 @@ def logout(request):
     
 
 def Order(request,pk):
+    CurrentProd = get_object_or_404(Product, pk=pk)
+    CUser = get_object_or_404(Userperson, username = request.session['user'])
     if request.method == "POST":
-        pass
+        quantvalue = request.POST.get('drop')
+        totalcost3 = request.POST.get('totalcost')
+        remark = request.POST.get('remark')
+        OrderedProduct.objects.create(Client = CUser, Order = CurrentProd, 
+        remarks = remark, quantity = quantvalue, totalcost = totalcost3)
+        #Product.objects.filter(pk=pk).update(Stock -= quantvalue )
+        CurrentProd.Stock -= int(quantvalue)
+        CurrentProd.save()
+        
+        return redirect('Products')
     else:
         array = []
         P = Product.objects.all()
-        CurrentProd = get_object_or_404(Product, pk=pk)
         for x in range(CurrentProd.Stock):
             array.append(x+1)
         return render(request,'Inventory/order.html',{ 

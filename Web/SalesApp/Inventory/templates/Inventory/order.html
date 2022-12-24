@@ -21,17 +21,22 @@
             <div class="label"> Available Stock: {{Current.Stock}} </div>
             <div class="container" style="border: transparent; width: inherit;">
                 <div class="label" style="display:inline; margin: auto; margin-left: 10.5vw;"> Quantity </div>
-                <select type="text" id="drop" style="display:inline;">
+                <select type="text" id="drop" name="drop" style="display:inline;">
                     {% for x in A %}
-                        <option type="text" id="num"> {{x}} </option>
+                        <option type="text" id="num" name="num"> {{x}} </option>
                     {% endfor %}
                 </select>
             </div>
-            <div class="label" id="totalcost"> Total Cost: <span id="cost"> </span> </div><br>
+            <div class="label"> 
+                Total Cost: <input id="cost" name="totalcost">  </input> 
+            </div> <br>
 
-            <button class="Submit" id="prelim" type="button" style="margin: auto; margin-left: 25%; width: 10vw; text-align: left;">
+            <button class="Submit" id="prelim" type="submit" style="margin: auto; margin-left: 25%; width: 10vw; text-align: left;">
                 Order Product 
             </button>
+
+            <div class="Largetext" style="margin:auto; margin-left:22%; width:50%;"> Remarks </div>
+            <textarea class="forminput" name="remark" type="text" style="margin:auto; margin-left:25%; width:50%; height: 20vh;"> </textarea>
 
             <div class="Largetext" style="margin: auto; width: 50%; max-width: 100%;"> Want to change product choice? </div>
                 <a class="Button" href="{% url 'Products' %}"> Browse Products </a> 
@@ -45,14 +50,14 @@
         let num = '{{A}}';
         let cost = '{{Current.Cost}}';
         let def = document.getElementById('num');
-        result.innerHTML = parseInt(def.value) * parseInt(cost.slice(1));
+        result.value = parseInt(def.value) * parseInt(cost.slice(1));
 
         placeholder.addEventListener('change',()=>{
             let chosen = document.getElementById('drop');
             let val = chosen.value;
             console.log(val);
             console.log(cost);
-            result.innerHTML = parseInt(val) * parseInt(cost.slice(1));
+            result.value = parseInt(val) * parseInt(cost.slice(1));
         })
     </script>
     {% endblock %}
