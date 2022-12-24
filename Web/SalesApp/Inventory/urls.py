@@ -7,6 +7,7 @@ path('Products',views.Products, name='Products'),
 path('',views.Signup, name='Signup'),
 path('Login', views.Login, name='Login'),
 path('User', views.Users, name='User'),
-path('logout', views.logout, name='logout')
+path('logout', views.logout, name='logout'),
+path('order/<int:pk>/', views.Order, name='order')
 
 ]

@@ -18,6 +18,7 @@
             Product Brand: {{product.Brand}} <Br>
             Product Color: {{product.Color}} <br>
             Price: {{product.Cost}}<Br>
+            <a class="Button" href="{% url 'order' pk=userobj.pk %}"> Order Product </a>
             <!-- <a href="% url 'Order' %" class="Order"> Add to Cart </a> -->
 
         </div>

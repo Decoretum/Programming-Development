@@ -78,6 +78,7 @@ def Login(request):
         return render(request,'Inventory/Login.html')
 
 def Users(request):
+    currentuser = Userperson.objects.filter(username = request.session['username'])
     return render(request,'Inventory/users.html',
     {'username' : request.session['user'],
     'userid' : request.session['userid'],
@@ -85,7 +86,8 @@ def Users(request):
     'firstname' : request.session['firstname'],
     'lastname' : request.session['lastname'],
     'birthday' : request.session['birthday'],
-    'sex' : request.session['sex']})
+    'sex' : request.session['sex'],
+    'userobj' : currentuser})
 
 def logout(request):
     auth.logout(request)
@@ -93,8 +95,11 @@ def logout(request):
 
     
 
-#def Order(request):
-
+def Order(request,pk):
+    if request.method == "POST":
+        pass
+    else:
+        return render(request,'Inventory/order.html')
 
 
     
