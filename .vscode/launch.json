@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch OOP",
+            "request": "launch",
+            "mainClass": "JavaDev.OOP",
+            "projectName": "Programming-Development_bc21ae1e"
+        },
+        {
+            "type": "java",
+            "name": "Launch HeirtoDestr",
+            "request": "launch",
+            "mainClass": "JavaDev.MalleablePackage.HeirtoDestr",
+            "projectName": "Programming-Development_bc21ae1e"
+        },
+        {
+            "type": "java",
+            "name": "Launch CreationAgent",
+            "request": "launch",
+            "mainClass": "JavaDev.SturdyPackage.CreationAgent",
+            "projectName": "Programming-Development_bc21ae1e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Creation",
+            "request": "launch",
+            "mainClass": "JavaDev.MalleablePackage.Creation",
+            "projectName": "Programming-Development_bc21ae1e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Destruction",
+            "request": "launch",
+            "mainClass": "JavaDev.SturdyPackage.Destruction",
+            "projectName": "Programming-Development_bc21ae1e"
+        },
+        {
+            "type": "java",
             "name": "Launch Learn",
             "request": "launch",
             "mainClass": "LearnJava.Learn",

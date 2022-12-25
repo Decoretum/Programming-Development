@@ -1,6 +1,10 @@
 package JavaDev;
 import java.util.*;
 
+import javax.crypto.spec.DESKeySpec;
+
+import JavaDev.SturdyPackage.*;
+
 public class OOP {
     public static void main (String args[]){
         Weapon ChaosStaff = new Weapon("Staff of Chaos","Abyss");
@@ -39,6 +43,10 @@ public class OOP {
         System.out.println(Yuan.University);
         Yuan.BattleCry();
 
+        Destruction Dire = new Destruction();
+        CreationAgent Test = new CreationAgent();
+        System.out.println(Test.passed);
+        
 
 
 
