@@ -63,7 +63,6 @@ class NoteSystem:
             max = 0
 
             for query in allqueries:
-                print(query)
                 BodyCanvas.insert(INSERT,"Entry {}".format(query[0]))
                 BodyCanvas.insert(INSERT,"\n")
                 BodyCanvas.insert(INSERT,"Title: " + str(query[2]))
@@ -78,7 +77,7 @@ class NoteSystem:
             
 
         else:
-            cursor.execute("create table Notes (NoteID smallint(10) not null, NoteBody varchar(200) not null, NoteHeader varchar(100) not null, NoteDate varchar(100) not null, constraint note_pk primary key (NoteID))")
+            cursor.execute("create table Notes (NoteID smallint(10) not null, NoteBody varchar(2000) not null, NoteHeader varchar(100) not null, NoteDate varchar(100) not null, constraint note_pk primary key (NoteID))")
             print("Table created!")
 
 
