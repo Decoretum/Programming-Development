@@ -1,4 +1,4 @@
-package LearnJava;
+package JavaDev;
 
 import java.util.*;
 public class Learn {

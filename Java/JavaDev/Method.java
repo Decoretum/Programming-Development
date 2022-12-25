@@ -1,4 +1,4 @@
-package LearnJava;
+package JavaDev;
 
 //method name + method parameters = unique method signature
 

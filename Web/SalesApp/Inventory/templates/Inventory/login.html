@@ -19,7 +19,7 @@
     {% block content %}
     <br>
     
-        <form method="POST" action = "{% url 'Login' %}"> {% csrf_token %}
+        <form method="POST" action = "{% url 'Login' %}" autocomplete="off"> {% csrf_token %}
             <div class="formblock">
                 <div class="Largetext" style="margin: auto; width: 50%;"> Login </div>
                 <div class="label"> Username </div>
@@ -29,7 +29,7 @@
 
                 <div class="label"> Password </div>
                 <div class="forminput">
-                    <input class="forminput" name="password"> </input>
+                    <input class="forminput" name="password" type="password"> </input>
                 </div>
 
                 <button class="Button" type="submit">

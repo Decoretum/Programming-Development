@@ -1,4 +1,4 @@
-package LearnJava;
+package JavaDev;
 import javax.swing.*;
 
 public class GUI {

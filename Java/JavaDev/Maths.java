@@ -1,4 +1,4 @@
-package LearnJava;
+package JavaDev;
 import java.lang.Math;
 import java.util.*;
 

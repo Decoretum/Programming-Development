@@ -1,4 +1,4 @@
-package LearnJava;
+package JavaDev;
 
 public class Apprentice extends Magi{
     String University;

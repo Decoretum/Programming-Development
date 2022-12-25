@@ -29,7 +29,7 @@
 
             <div class="label"> Password </div>
             <div class="forminput">
-                <input class="form-control forminput" type="text" name="passn"> </input>
+                <input class="form-control forminput" type="text" name="passn" autocomplete="off"> </input>
             </div>
 
             <div class="label"> First Name </div>
@@ -56,11 +56,15 @@
                 Create Account
             </button>
 
-            <div class="Largetext" style="margin: auto; width: 50%; max-width: 100%;"> Already have an account? </div>
-                <a class="Button" href="{% url 'Login' %}"> Login </a> 
             <br><br>
+
+            <div class="Largetext" style="margin: auto; width: 50%; max-width: 100%;"> Already have an account? </div><br>
+                <a class="Button" href="{% url 'Login' %}"> Login </a> 
+            <br><br><br><br>
         </div>
+        <br><br>
     </form> 
+    <br><br>
     {% for m in messages %}
     <div class="label">
         {{ m }}

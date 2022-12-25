@@ -50,7 +50,7 @@ a{
     margin: auto;
     width: 25%;
     max-width: 100%;
-    border: solid rgb(51, 39, 23);
+    border-color: transparent;
     padding: 20px;
     border-radius: 9px;
     font-family: Verdana;
@@ -58,10 +58,10 @@ a{
 .formblock{
     margin: auto;
     max-width: 100%;
-    border: solid rgb(235, 200, 157);
+    border: transparent;
     border-radius: 9px;
     width: 50%;
-    box-shadow: 10px 10px bisque;
+    box-shadow: 10px 10px rgb(189, 163, 130);
     background-color: rgb(210, 174, 127);
 
 }

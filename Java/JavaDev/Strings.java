@@ -1,4 +1,4 @@
-package LearnJava;
+package JavaDev;
 
 public class Strings {
     static String name = "Gael";
