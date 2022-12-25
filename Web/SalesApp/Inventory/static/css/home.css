@@ -1,22 +1,41 @@
-.container{
-    padding: 10px;
-    font-family: Verdana;
-    border: solid;
-    width: 50vw;
-
-}
 
 .Largetext{
     font-size: 25px;
     font-family: Verdana;
-    margin-bottom: 5vh;
+    margin-bottom: 1vh;
     padding: 15px;
 }
 
 .shape1{
     width: 0;
     height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent; 
-    border-bottom: 100px solid blueviolet;
+    border-left: 3vw solid transparent;
+    border-right: 3vw solid transparent; 
+    border-bottom: 6vw solid blueviolet;
+    display: inline-block;
+}
+
+.shape2{
+    display: inline-block;
+    width: 5vw;
+    height: 5vw;
+    background: rgb(20, 161, 44);
+    border-radius: 50%
+}
+
+.shape3{
+    width: 5vw;
+    height: 5vw;
+    max-width: 100%;
+    display: inline;
+    padding: 10px;
+    border-radius: 9px;
+    background-color: brown;
+    border-color: transparent;
+    box-shadow: 7px 7px rgb(218, 116, 79);
+}
+
+.bodytext{
+    line-height: 2;
+    padding: 30px;
 }

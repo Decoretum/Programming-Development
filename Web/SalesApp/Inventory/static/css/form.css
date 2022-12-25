@@ -7,11 +7,24 @@ a{
     text-decoration: none;
 }
 
+.container{
+    padding: 10px;
+    font-family: Verdana;
+    background-color: rgb(232, 200, 160);
+    border: transparent;
+    border-radius: 9px;
+    box-shadow: 10px 10px rgb(180, 155, 125);
+    width: 50vw;
+    margin: auto;
+    max-width: 100%;
+}
+
 .header{
     max-width: 100%;
-    width: 50vw;
+    width: 55vw;
     max-width: 100%;
-    border: solid rgb(18, 85, 124);
+    border: transparent;
+    box-shadow: 9px 9px rgb(18, 85, 124);
     background-color: cadetblue;
     padding: 10px;
     border-radius: 9px;
@@ -19,6 +32,7 @@ a{
 }
 
 .header > a{
+    font-family:system-ui;
     margin: auto;
     margin-left: 5vw;
     border-radius: 9px;
@@ -98,6 +112,7 @@ a{
 .Button:hover{
     cursor:pointer;
     background-color: rgb(56, 209, 110);
+    transform: translateY(5px);
 }
 
 .Submit{
@@ -117,4 +132,27 @@ a{
 .Submit:hover{
     cursor: pointer;
     background-color: rgb(84, 122, 122);
+}
+
+#order{
+    margin: auto;
+    width: 20vw;
+    float: right;
+}
+
+.LOGOUT{
+    background-color: azure;
+    border-radius: 9px;
+    box-shadow: 8px 8px rgb(97, 94, 89);
+    text-decoration: none;
+    color: black;
+    width: 25%;
+    text-align: center;
+    padding: 10px;
+}
+
+.LOGOUT:hover{
+    background-color: aquamarine;
+    cursor: pointer;
+    transform: translateY(5px);
 }

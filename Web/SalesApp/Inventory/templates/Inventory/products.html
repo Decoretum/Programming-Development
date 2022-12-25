@@ -16,14 +16,16 @@
             {% for u in User %}
                 {% if u.username == username %}
         <div class="container"> 
-            Product Name:{{product.Name}} <br>
-            Product Brand: {{product.Brand}} <Br>
-            Product Color: {{product.Color}} <br>
-            Price: {{product.Cost}}<Br>
-            Stock: {{product.Stock}}
-            <a class="Button" href="{% url 'order' pk=product.pk %}"> Order Product </a>
-            <!-- <a href="% url 'Order' %" class="Order"> Add to Cart </a> -->
+            <div class="bodytext">
+                Product Name:{{product.Name}} <br>
+                Product Brand: {{product.Brand}} <Br>
+                Product Color: {{product.Color}} <br>
+                Price: {{product.Cost}}<Br>
+                Stock: {{product.Stock}}
+            <a class="Button" href="{% url 'order' pk=product.pk %}" id="order"> Order Product </a>
+            </div>
         </div>
+        <br><Br>
                 {% endif %}
             {% endfor %}
         {% endfor %}

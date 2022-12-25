@@ -7,32 +7,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Home </title> 
+    <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/form.css' %}">
 </head>
 <body>
 
-    {% block content %}
+        {% block content %}
     <br>
     <div class="container">
-        <div class="Largetext"> We advance the world through Technology. </div>
-        <div class="shape1"> </div>
+            <div class="Largetext"> <i> We advance the world through Technology. </i> </div>
+           
 
+            <div class="Largetext" style="display: inline;"> DecoreManufacturing </div>
+            <div class="shape2"> </div>
+            <div class="bodytext"> 
+                DecoreManufacturing is a company created and programmed by Gael Estrera to digitally 
+                create and manufacture products using Nano Technology. Using Nanotech and Java, Gael was able
+                to construct powerful technology to sell to people.
+            </div>
 
+            <div class="Largetext" style="display: inline;"> Purpose </div>
+            <div class="shape1"> </div>
+            <div class="bodytext">
+                Nanotech manufactured by DecoreManufacturing will have several brands which leads to 
+                several types and varieties of products within the Nanotech context.
+            </div>
 
+            <div class="Largetext" style="display: inline;"> What is this website? </div>
+            <img class="shape3" src="{% static '/pic/wizard.png' %}">
+            <div class="bodytext">
+                This is the DecoreManufacturing Website which is an online web application utilizing
+                Javascript and Django for the purpose of creating online digital orders of available
+                inventories. As inventories are purchased by several Users, the inventory stock decreases as well.
+            </div>
     </div>
-
-    <div class="container">
-        <div class="Largetext"> DecoreManufacturing </div>
-        DecoreManufacturing is a company created and programmed by Gael Estrera to digitally 
-        create and manufacture products using Nano Technology. Using Nanotech and Java, Gael was able
-        to construct powerful technology to sell to people.
-    </div>
-
-    <div class="container">
-        <div class="Largetext"> Purpose </div>
-        Nanotech manufactured by DecoreManufacturing will have several brands which leads to 
-        several types and varieties of products within the Nanotech context.
-    </div>
-    {% endblock %}
-    
+        {% endblock %}
 </body>
 </html>

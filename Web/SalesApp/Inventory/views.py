@@ -86,8 +86,14 @@ def Login(request):
 def Users(request):
     currentuser = get_object_or_404(Userperson, username = request.session['user'])
     OProducts = OrderedProduct.objects.filter(Client = currentuser)
+    array = []
     for x in OProducts:
-        print(x.pk, x.Client, x.Order.Name)
+        array.append(x.Client)
+    for x in array:
+        print(x)
+   
+    
+    print(currentuser)
     return render(request,'Inventory/users.html',
     {'username' : request.session['user'],
     'userid' : request.session['userid'],
@@ -97,9 +103,11 @@ def Users(request):
     'birthday' : request.session['birthday'],
     'sex' : request.session['sex'],
     'userobj' : currentuser,
-    'OProducts' : OProducts})
+    'OProducts' : OProducts,
+    'array' : array})
 
 def logout(request):
+    print('logout')
     auth.logout(request)
     return redirect('Login')
 
@@ -129,6 +137,9 @@ def Order(request,pk):
             'Current' : CurrentProd,
             'A' : array,
         })
+
+def Developer(request):
+    return render(request,'Inventory/programmer.html')
 
 
     
