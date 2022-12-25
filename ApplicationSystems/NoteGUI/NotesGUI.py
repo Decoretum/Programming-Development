@@ -53,12 +53,13 @@ class NoteSystem:
         cursor.execute("show tables")
         tables = []
         x = ('Notes', )
+        x1 = ('notes', )
         for i in cursor:
             tables.append(i)    
 
-        if x in tables:
+        if x in tables or x1 in tables:
             #print("Table is here!")
-            cursor.execute('select * from notes')
+            cursor.execute('select * from Notes')
             allqueries = cursor.fetchall()
             max = 0
 
