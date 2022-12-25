@@ -73,4 +73,6 @@ public class Alg7 {
         DectoN(11,2003);
         NtoDec(7, 101011111);
     }
+
+    
 }

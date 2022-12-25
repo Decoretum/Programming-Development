@@ -6,5 +6,7 @@ This repository contains files from University activities/projects, Capstone pro
     Inventory Order System (Web application, Personal Project) <br>
     POS System (Standalone application, University) <br>
     Note-taking System including editing, deletion, modification, and addition of entries using MySQL (Standalone Application, Personal Project) <br>
-    Data Structures and Algorithms written in python and Java (University and personal) <Br>
+    Data Structures and Algorithms written in python and Java (University and personal) <Br> <br>
+
+    There are still lots of programming assessments/activities from University that I've done that aren't featured in this repository.
 
