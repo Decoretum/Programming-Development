@@ -25,7 +25,7 @@ public class Alg7 {
 
     }
 
-    static void BinarytoDec(int a){
+    static void NtoDec(int N,int a){
         String A = Integer.toString(a); 
         int [] Bits = new int[A.length()];
         double [] Converted = new double[Bits.length];
@@ -36,7 +36,7 @@ public class Alg7 {
         double sum = 0;
 
         for (int i = 0; i <= Bits.length - 1; i ++){
-            double val = Math.pow(2, i);
+            double val = Math.pow(N, i);
             if (Bits[i] == 1){
                 Converted[i] = val;
                 sum += Converted[i];
@@ -46,12 +46,12 @@ public class Alg7 {
         System.out.println(sum);
     }
 
-    static void DectoBinary(int a){
+    static void DectoN(int N, int a){
         ArrayList <Integer> Digits = new ArrayList<>();
         int dig = a;
         while (dig != 0){
-            Digits.add(dig % 2);
-            dig = dig/2;
+            Digits.add(dig % N);
+            dig = dig/N;
         }
         Collections.reverse(Digits);
         System.out.println(Digits);
@@ -70,6 +70,7 @@ public class Alg7 {
         Swap("you","me");
         Robot();
         //BinarytoDec(110110110); //230167
-        DectoBinary(2003);
+        DectoN(11,2003);
+        NtoDec(7, 101011111);
     }
 }

@@ -9,6 +9,13 @@
             "name": "Launch Alg7",
             "request": "launch",
             "mainClass": "AlgorithmsDataStructs.Alg7",
+            "projectName": "PersonalProjects_be73262"
+        },
+        {
+            "type": "java",
+            "name": "Launch Alg7",
+            "request": "launch",
+            "mainClass": "AlgorithmsDataStructs.Alg7",
             "projectName": "Programming-Development_bc21ae1e"
         },
         {
