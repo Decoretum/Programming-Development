@@ -4,16 +4,35 @@ import JavaDev.DocumentSimulation.Reports.*;
 public class Collection {
   private String ReportDate;
   private String Gatherer;
-  private String ReportData;
-  private Report ReportResult;
+  private String ReportHeader;
+  private String ReportBody;
+  private String ReportConclusion;
 
-  Collection(String date, String person, String data){
+  Collection(String date, String person, String Header, String Body, String End){
     this.ReportDate = date;
     this.Gatherer = person;
-    this.ReportData = data;
+    this.ReportHeader = Header;
+    this.ReportBody = Body;
+    this.ReportConclusion = End;
   }
 
-  public void Fixdate(){ //if date is formatted correctly
-    
+  public String Date(){
+    return this.ReportDate;
+  }
+
+  public String Person(){
+    return this.Gatherer;
+  }
+
+  public String Header(){
+    return this.ReportHeader;
+  }
+
+  public String Body(){
+    return this.ReportBody;
+  }
+
+  public String Conclusion(){
+    return this.ReportConclusion;
   }
 }
