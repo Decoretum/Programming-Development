@@ -2,7 +2,7 @@ package JavaDev.DocumentSimulation.Outcome;
 import JavaDev.Collection;
 import JavaDev.DocumentSimulation.Gather.*;
 import JavaDev.DocumentSimulation.Outcome.*;
-import JavaDev.DocumentSimulation.Reports.Report;
+import JavaDev.DocumentSimulation.Reports.*;
 
 public class Page1 {
     public static void main(String [] args){
