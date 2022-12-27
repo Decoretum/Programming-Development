@@ -1,14 +1,14 @@
 package JavaDev.DocumentSimulation.Gather;
 import JavaDev.DocumentSimulation.Reports.*;
 
-public class Collection {
+public class CollectionReport {
   private String ReportDate;
   private String Gatherer;
   private String ReportHeader;
   private String ReportBody;
   private String ReportConclusion;
 
-  Collection(String date, String person, String Header, String Body, String End){
+  public CollectionReport(String date, String person, String Header, String Body, String End){
     this.ReportDate = date;
     this.Gatherer = person;
     this.ReportHeader = Header;

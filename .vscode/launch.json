@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Page1",
+            "request": "launch",
+            "mainClass": "JavaDev.DocumentSimulation.Outcome.Page1",
+            "projectName": "Programming-Development_bc21ae1e"
+        },
+        {
+            "type": "java",
             "name": "Launch OOP",
             "request": "launch",
             "mainClass": "JavaDev.OOP",
