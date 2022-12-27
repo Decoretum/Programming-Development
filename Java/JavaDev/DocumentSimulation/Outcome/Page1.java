@@ -1,15 +1,19 @@
 package JavaDev.DocumentSimulation.Outcome;
-import JavaDev.Collection;
-import JavaDev.DocumentSimulation.Gather.*;
-import JavaDev.DocumentSimulation.Outcome.*;
-import JavaDev.DocumentSimulation.Reports.*;
+import JavaDev.DocumentSimulation.Gather.CollectionReport;
+import JavaDev.DocumentSimulation.Reports.Report;
 
 public class Page1 {
     public static void main(String [] args){
-        String Body1 = "Gael spent majority of his time programming, coding, creating a Web applicaiton, as well as programming in Java and Python";
-        String Conc1 = "Despite Gael\'s programming journey during his vacation, he still found time to do other meaningful acivities.";
-        CollectionReport Doc1 = new CollectionReport("12/25/2022","Gael","Christmas Special",Body1,Conc1);
-        Report FinalDoc1 = new Report(Doc1);
+        CollectionReport Doc1 = new CollectionReport();
+        CollectionReport Doc2 = new CollectionReport();
+        Report Report1 = new Report(Doc1);
+        Report Report2 = new Report(Doc2);
+        
+
+        /*String Body2 = "Gael had heart-felt conversations with his Estrera family members, as well as Teopengcos!";
+        String Conc2 = "Gael\'s time allocation was efficient and harmonious with respect to family and programming";
+        CollectionReport Doc2 = new CollectionReport();
+        Report FinalDoc2 = new Report(Doc2);*/
 
     }
 }
