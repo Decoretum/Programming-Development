@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Alg7",
+            "request": "launch",
+            "mainClass": "AlgorithmsDataStructs.Alg7",
+            "projectName": "Programming-Development_bc21ae1e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Excercise",
+            "request": "launch",
+            "mainClass": "AlgorithmsDataStructs.Excercise",
+            "projectName": "Programming-Development_bc21ae1e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Excercise",
+            "request": "launch",
+            "mainClass": "JavaDev.Excercise",
+            "projectName": "Programming-Development_bc21ae1e"
+        },
+        {
+            "type": "java",
             "name": "Launch Page1",
             "request": "launch",
             "mainClass": "JavaDev.DocumentSimulation.Outcome.Page1",
