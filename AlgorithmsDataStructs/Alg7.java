@@ -28,19 +28,17 @@ public class Alg7 {
     static void NtoDec(int N,int a){
         String A = Integer.toString(a); 
         int [] Bits = new int[A.length()];
-        double [] Converted = new double[Bits.length];
         for (int i = A.length() - 1, j = 0; i >= 0; i--, j++){
             Bits[j] = Integer.parseInt(String.valueOf(A.charAt(i)));
         }
 
-        double sum = 0;
+        int sum = 0;
 
         for (int i = 0; i <= Bits.length - 1; i ++){
-            double val = Math.pow(N, i);
-            if (Bits[i] == 1){
-                Converted[i] = val;
-                sum += Converted[i];
-            }
+            int val = Bits[i] * (int) Math.pow(N, i);
+           
+            sum += val;
+      
         }
 
         System.out.println(sum);
@@ -48,13 +46,51 @@ public class Alg7 {
 
     static void DectoN(int N, int a){
         ArrayList <Integer> Digits = new ArrayList<>();
+        String finalint = "";
         int dig = a;
         while (dig != 0){
             Digits.add(dig % N);
             dig = dig/N;
         }
         Collections.reverse(Digits);
-        System.out.println(Digits);
+        for (int d : Digits){
+            finalint += Integer.toString(d);
+        }
+
+        System.out.println(finalint);
+    }
+
+    static void NtoN(int N1, int N2, int Num){
+        String finalint = "";
+        String A = Integer.toString(Num); 
+        int [] Bits = new int[A.length()];
+        for (int i = A.length() - 1, j = 0; i >= 0; i--, j++){
+            Bits[j] = Integer.parseInt(String.valueOf(A.charAt(i)));
+        }
+
+        int sum = 0;
+
+        for (int i = 0; i <= Bits.length - 1; i ++){
+            double val = Bits[i] * Math.pow(N1, i);
+            sum += val;
+        }
+
+
+        
+
+        ArrayList <Integer> Digits = new ArrayList<>();
+        while (sum != 0){
+            Digits.add(sum % N2);
+            sum = sum/N2;
+        }
+
+        Collections.reverse(Digits);
+        for (int x = 0; x <= Digits.size()-1; x++){
+            finalint += Integer.toString(Digits.get(x));
+        }
+
+        System.out.println(finalint);
+
     }
 
     public static void main(String args[]){
@@ -69,9 +105,15 @@ public class Alg7 {
         System.out.println(carea);
         Swap("you","me");
         Robot();
-        //BinarytoDec(110110110); //230167
-        DectoN(11,2003);
-        NtoDec(7, 101011111);
+        DectoN(2, 5);
+        DectoN(8, 15);
+        NtoDec(2, 100);
+        NtoN(2,8,111);
+        NtoDec(8, 10);
+        NtoN(8,10,10);
+        DectoN(2,2);
+      
+      
     }
 
     
