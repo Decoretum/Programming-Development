@@ -45,16 +45,46 @@ public class Alg7 {
     }
 
     static void DectoN(int N, int a){
-        ArrayList <Integer> Digits = new ArrayList<>();
+        ArrayList <Object> Digits = new ArrayList<>();
         String finalint = "";
         int dig = a;
         while (dig != 0){
             Digits.add(dig % N);
             dig = dig/N;
         }
+        
+        if (N == 16){
+            for (int i=0; i <= Digits.size()-1; i++){
+                if ((Digits.get(i)) == (Object) 15){
+                    Digits.set(i,"F");
+                }
+
+                else if ((Digits.get(i)) == (Object) 14){
+                    Digits.set(i,"E");
+                }
+
+                else if ((Digits.get(i)) == (Object) 13){
+                    Digits.set(i,"D");
+                }
+
+                else if ((Digits.get(i)) == (Object) 12){
+                    Digits.set(i,"C");
+                }
+
+                else if ((Digits.get(i)) == (Object) 11){
+                    Digits.set(i,"B");
+                }
+
+                else if ((Digits.get(i)) == (Object) 10){
+                    Digits.set(i,"A");
+                }
+            }
+        }
+
         Collections.reverse(Digits);
-        for (int d : Digits){
-            finalint += Integer.toString(d);
+        for (int x = 0; x <= Digits.size()-1; x++){
+            finalint += String.valueOf(Digits.get(x));
+
         }
 
         System.out.println(finalint);
@@ -78,15 +108,43 @@ public class Alg7 {
 
         
 
-        ArrayList <Integer> Digits = new ArrayList<>();
+        ArrayList <Object> Digits = new ArrayList<>();
         while (sum != 0){
             Digits.add(sum % N2);
             sum = sum/N2;
         }
 
+        if (N2 == 16){
+            for (int i=0; i <= Digits.size()-1; i++){
+                if ((Digits.get(i)) == (Object) 15){
+                    Digits.set(i,"F");
+                }
+
+                else if ((Digits.get(i)) == (Object) 14){
+                    Digits.set(i,"E");
+                }
+
+                else if ((Digits.get(i)) == (Object) 13){
+                    Digits.set(i,"D");
+                }
+
+                else if ((Digits.get(i)) == (Object) 12){
+                    Digits.set(i,"C");
+                }
+
+                else if ((Digits.get(i)) == (Object) 11){
+                    Digits.set(i,"B");
+                }
+
+                else if ((Digits.get(i)) == (Object) 10){
+                    Digits.set(i,"A");
+                }
+            }
+        }
+
         Collections.reverse(Digits);
         for (int x = 0; x <= Digits.size()-1; x++){
-            finalint += Integer.toString(Digits.get(x));
+            finalint += String.valueOf(Digits.get(x));
         }
 
         System.out.println(finalint);
@@ -111,8 +169,10 @@ public class Alg7 {
         NtoN(2,8,111);
         NtoDec(8, 10);
         NtoN(8,10,10);
-        DectoN(2,2);
-      
+        NtoN(8,16,100);
+        NtoN(16,10,25);
+        NtoN(16,2,37);
+        NtoN(16,8,40);
       
     }
 
