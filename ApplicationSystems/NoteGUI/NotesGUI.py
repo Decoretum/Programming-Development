@@ -64,21 +64,36 @@ class NoteSystem:
             max = 0
 
             for query in allqueries:
-                BodyCanvas.insert(INSERT,"Entry {}".format(query[0]))
-                BodyCanvas.insert(INSERT,"\n")
-                BodyCanvas.insert(INSERT,"Title: " + str(query[2]))
-                BodyCanvas.insert(INSERT,"\n")
-                BodyCanvas.insert(INSERT,"Content: " + str(query[1]))
-                BodyCanvas.insert(INSERT,str(query[3]))
-                BodyCanvas.insert(INSERT,"\n")
-                BodyCanvas.insert(INSERT,"\n")
+                if query[4] == None:
+                    BodyCanvas.insert(INSERT,"Entry {}".format(query[0]))
+                    BodyCanvas.insert(INSERT,"\n")
+                    BodyCanvas.insert(INSERT,"Title: " + str(query[2]))
+                    BodyCanvas.insert(INSERT,"\n")
+                    BodyCanvas.insert(INSERT,"Content: " + str(query[1]))
+                    BodyCanvas.insert(INSERT,"Created on: " + str(query[3]))
+                    BodyCanvas.insert(INSERT,"\n")
+                    BodyCanvas.insert(INSERT,"\n")
+
+                else:
+                    BodyCanvas.insert(INSERT,"Entry {}".format(query[0]))
+                    BodyCanvas.insert(INSERT,"\n")
+                    BodyCanvas.insert(INSERT,"Title: " + str(query[2]))
+                    BodyCanvas.insert(INSERT,"\n")
+                    BodyCanvas.insert(INSERT,"Content: " + str(query[1]))
+                    BodyCanvas.insert(INSERT,"Created on: " + str(query[3]))
+                    BodyCanvas.insert(INSERT,"\n")
+                    BodyCanvas.insert(INSERT,"Modified on: " + str(query[4]))
+                    BodyCanvas.insert(INSERT,"\n")
+                    BodyCanvas.insert(INSERT,"\n")
+
                 if query[0] > max:
                     max = query[0]
+
             self.highest = max 
             
 
         else:
-            cursor.execute("create table Notes (NoteID smallint(10) not null, NoteBody varchar(2000) not null, NoteHeader varchar(100) not null, NoteDate varchar(100) not null, constraint note_pk primary key (NoteID))")
+            cursor.execute("create table Notes (NoteID smallint(10) not null, NoteBody varchar(2000) not null, NoteHeader varchar(100) not null, NoteDate varchar(100) not null, EditDate varchar(100), constraint note_pk primary key (NoteID))")
             print("Table created!")
 
 
@@ -105,6 +120,7 @@ class NoteSystem:
             TargetKey = KeyEntry.get()
             Head = HeadTaker.get()
             Body = NoteTaker.get('1.0',END)
+            Date = str(self.date.strftime('%b')) + ' ' + str(self.date.strftime('%d')) + ' ' + str(self.date.strftime('%Y')) + ' ' + str(self.date.strftime('%X'))
             if Head.isspace():
                 Head = ''
 
@@ -117,6 +133,10 @@ class NoteSystem:
                     SQL = "update notes set NoteHeader = %s, NoteBody =  %s where NoteID = %s"
                     SQLvalues = (Head,Body,query[0])
                     cursor.execute(SQL,SQLvalues)
+
+                    SQL2 = "update notes set EditDate = %s where NoteID = %s"
+                    SQLvalues2 = (Date,query[0])
+                    cursor.execute(SQL2,SQLvalues2)
 
                     myDB.commit()
                     self.initializeData()
