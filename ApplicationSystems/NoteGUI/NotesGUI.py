@@ -86,7 +86,7 @@ class NoteSystem:
                     BodyCanvas.insert(INSERT,"\n")
                     BodyCanvas.insert(INSERT,"\n")
 
-                if query[0] > max:
+                if int(query[0]) > max:
                     max = query[0]
 
             self.highest = max 
@@ -106,7 +106,7 @@ class NoteSystem:
             Head = HeadTaker.get()
             BodyText = NoteTaker.get("1.0",END)
             Date = str(self.date.strftime('%b')) + ' ' + str(self.date.strftime('%d')) + ' ' + str(self.date.strftime('%Y')) + ' ' + str(self.date.strftime('%X'))
-            SQL = "insert into notes values (%s, %s, %s, %s)"
+            SQL = "insert into notes (NoteID, NoteBody, NoteHeader, NoteDate) values (%s, %s, %s, %s)"
             SQLvalues = (self.highest,BodyText,Head,Date)
             cursor.execute(SQL,SQLvalues)
             myDB.commit()

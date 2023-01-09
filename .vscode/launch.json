@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch HeirtoDestr",
+            "request": "launch",
+            "mainClass": "JavaDev.MalleablePackage.HeirtoDestr",
+            "projectName": "PersonalProjects_be73262"
+        },
+        {
+            "type": "java",
+            "name": "Launch Alg5",
+            "request": "launch",
+            "mainClass": "AlgorithmsDataStructs.Alg5",
+            "projectName": "PersonalProjects_be73262"
+        },
+        {
+            "type": "java",
             "name": "Launch Page1",
             "request": "launch",
             "mainClass": "JavaDev.DocumentSimulation.Outcome.Page1",
