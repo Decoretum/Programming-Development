@@ -1,7 +1,7 @@
 # Programming-Development
 This repository contains files from University activities/projects, and personal projects. <br><br>
 A separate repository will be created for my Business Applications Development, a trilogy of courses that aims to deliver a working and functional application suited for a direct business need with a real-life client. <br><br>
-My Capstone project, which is the culminating project for my MIS curriculum which intends to develop and/or deliver an IT application <br> will also have a separate repository as well
+My Capstone project, which is the culminating project for my MIS curriculum which intends to develop and/or deliver an IT application <br> will also have a separate repository as well.
 
 # H1 Samples of successful projects/activities include (but not limited to):
       * Philippine Election System (Web application, University)
