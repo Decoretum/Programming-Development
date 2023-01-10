@@ -9,5 +9,5 @@ A separate repository will be created for my Business Applications Development, 
       * Note-taking System including editing, deletion, modification, and addition of entries using MySQL (Standalone Application, Personal Project)
       * Data Structures and Algorithms written in python and Java (University and personal) 
 
-    There are still lots of programming assessments/activities from University that I've done that aren't featured in this repository.
+    * There are still lots of programming assessments/activities from University that I've done that aren't featured in this repository.
 
