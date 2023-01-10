@@ -8,7 +8,7 @@ My Capstone project, which is the culminating project for my MIS curriculum whic
       * Inventory Order System (Web application, Personal Project) 
       * POS System (Standalone application, University) 
       * Note-taking System including editing, deletion, modification, and addition of entries using MySQL (Standalone Application, Personal Project)
-      * Data Structures and Algorithms written in python and Java (University and personal) <br><br> 
+      * Data Structures and Algorithms written in python and Java (University and personal) 
 
  There are still lots of programming assessments/activities from University that I've done that aren't featured in this repository.
 
