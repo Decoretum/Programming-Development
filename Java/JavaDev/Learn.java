@@ -123,6 +123,18 @@ public class Learn {
         }
     }
 
+    static void NameInput(){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("What\'s your name?");
+        String name = scan.nextLine();
+        if (name.equals("Gael")){
+            System.out.println("Gael, you have returned!");
+        }
+        else{
+            System.out.println("Authentication failed");
+        }
+    }
+
     public static void main (String args[]){
         Object[] CoolArray = {1,2,3,4,5,6,7};
         Num = (int) Num / 2;
@@ -140,5 +152,6 @@ public class Learn {
         //AddtoArray(CoolArray, "infinity");
         System.out.println("\n");
         Matrix2d(6, 6);
+        NameInput();
     }
 }
