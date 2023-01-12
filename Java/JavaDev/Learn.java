@@ -33,6 +33,24 @@ public class Learn {
         System.out.println(String.format("%s has an IQ of %d",User, IQ));
     }
 
+    static void Chemistry(){
+        System.out.println("So, what do you want to check compatibility with?");
+        System.out.println("Option 1:");
+        Scanner scanner = new Scanner(System.in);
+        String one = scanner.nextLine();
+
+        System.out.println("Option 2:");
+        String two = scanner.nextLine();
+
+        if (one.equals("Good") && two.equals("Bad")){
+            System.out.println("This is not compatible!");
+        }
+
+        else{
+            System.out.println("This will require further assessment");
+        }
+    }
+
     static void Check(int value){
         switch(value){
             default:
@@ -98,17 +116,20 @@ public class Learn {
         for (int i = 0; i <= matrix.length - 1; i++){
             System.out.println();
             for (int j = 0; j <= matrix[i].length - 1; j++){
-                matrix[i][j] = j+1;
+                if (i == 2 && j == 2){
+                    matrix[i][j] = "!";
+                    System.out.print(matrix[i][j] + " ");
+                }
+                else{
+                    matrix[i][j] = j+1;
+                    System.out.print(matrix[i][j] + " ");
+                }
             }
         }
-        matrix[2][2] = "!";
+    }
 
-        for (int i = 0; i <= matrix.length - 1; i++){
-            System.out.println();
-            for (int j = 0; j <= matrix[i].length - 1; j++){
-                System.out.print(matrix[i][j] + " ");
-            }
-        }
+    static void MarkMatrix2d(Object[][] matrix,int x, int y, Object value){
+        matrix[x][y] = value;
     }
         
     
@@ -152,6 +173,7 @@ public class Learn {
         //AddtoArray(CoolArray, "infinity");
         System.out.println("\n");
         Matrix2d(6, 6);
-        NameInput();
+        Chemistry();
+        //NameInput();
     }
 }
