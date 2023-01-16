@@ -1,5 +1,5 @@
 package JavaDev.SturdyPackage;
-//import JavaDev.MalleablePackage.*;
+import JavaDev.MalleablePackage.*;
 
 public class CreationAgent extends Creation {
     public String passed = this.Code; //protected variable became public

@@ -11,7 +11,7 @@ public class Magi {
     int Age;
     static ArrayList <Magi> MagisAura = new ArrayList<>(); //this is a single variable shared among all object instances since its on one class
 
-    Magi(String name, String spec, String aura, int age){
+    public Magi(String name, String spec, String aura, int age){
         this.name = name;
         this.Specialization = spec;
         this.Aura = aura;
@@ -20,7 +20,7 @@ public class Magi {
         System.out.println(String.format("Magi %s has been initiated into this world.",this.name));
     }
 
-    Magi(String name, String spec, String aura, int age, String Weapon){
+    public Magi(String name, String spec, String aura, int age, String Weapon){
         this.Weapon = new Weapon(Weapon, aura);
         this.name = name;
         this.Specialization = spec;
@@ -34,7 +34,17 @@ public class Magi {
         return "(Magi Name: " + this.name + " || Magi Age: "  + this.Age + " || Magi Specialization: " + this.Specialization + " || Magi Aura: " + this.Aura + ")";
     }
 
-    void TakeWeapon(Weapon wep){
+    public String Name(){
+        return this.name;
+    }
+
+    public void MagesAura(){
+        for (Magi mage : MagisAura){
+            System.out.println(mage.Aura);
+        }
+    }
+
+    public void TakeWeapon(Weapon wep){
         this.Weapon = wep;
         System.out.println(String.format("The weapon '%s' has been acquired by %s.",this.Weapon.Name(),this.name));
     }
@@ -51,6 +61,10 @@ public class Magi {
             System.out.println(String.format("%s currently has no weapon equipped, cannot prepare null weapon.",this.name));  
         }
         
+    }
+
+    public Weapon WhatWeapon(){
+        return this.Weapon;
     }
 
     void Attack(){
