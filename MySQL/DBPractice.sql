@@ -89,4 +89,15 @@ show tables;
 select * from game
 where (Genre like "%S%");
 
+desc game;
+select * from game;
+
+/*insert into game values ("Terraria","Sandbox","Redit","MultiForm")*/
+
+select * from game
+where (Genre = "Sandbox") and Platform = "Multiform";
+
+select * from game
+where (Platform = "Multiform") and Genre = "Sandbox";
+
 
