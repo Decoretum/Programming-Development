@@ -3,7 +3,8 @@ import java.util.*;
 
 import javax.crypto.spec.DESKeySpec;
 
-import JavaDev.SturdyPackage.*;
+import JavaDev.SturdyPackage.CreationAgent;
+import JavaDev.SturdyPackage.Destruction;
 
 public class OOP {
     public static void main (String args[]){
