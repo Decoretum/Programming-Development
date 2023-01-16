@@ -84,5 +84,9 @@ where (NoteID > 4 or NoteID < 12)
 and NoteHeader like "%Gam%"
 order by NoteID; #enforces precedence, hence limited results
 
+show tables;
+
+select * from game
+where (Genre like "%S%");
 
 
