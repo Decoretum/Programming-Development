@@ -133,6 +133,17 @@ from game
 inner join company
 on game.Company = company.company_name;
 
+#left join from company
+select game.name, game.genre, company.company_name
+from company
+left join game
+on company_name = game.company;
+
+#right join from company
+select game.name, game.genre, company.company_name
+from company
+right join game
+on company_name = game.company;
 
 alter table company
 add GameTheme varchar(20) after company_location;
