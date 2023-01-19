@@ -1,0 +1,4 @@
+Asymptotic Analysis (Machine, constant or input size, algorithm can be factors, but some algorithms can still perform good once a certain asymptote or threshold constant has
+been reached)
+
+Best, average, worst case
