@@ -51,7 +51,7 @@ public class Binary {
             Total.add(NtoDec(2,Convert(array1.get(i))));
         }
 
-        long sum = 0;
+        int sum = 0;
         for (int i = 0; i < Total.size(); i++){
             sum += Total.get(i);
         }
@@ -93,7 +93,7 @@ public class Binary {
             }
             /* Use case for classic placeholder */
             if (i < multiplier.length - 1){
-                long remaining = (multiplier.length - 1) - i;
+                int remaining = (multiplier.length - 1) - i;
                 for (int j = 1; j <= remaining; j++){
                     First.add(0L);
                 }
