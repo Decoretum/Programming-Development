@@ -1,7 +1,7 @@
 package AlgorithmsDataStructs;
 import java.util.*;
 
-public class Binary{
+public class Binary {
     static void BinaryAddition(int array1[], int array2[]){
         int result[] = new int[array1.length + 1]; 
         int carry = 0;
@@ -41,7 +41,14 @@ public class Binary{
                 First.add(Integer.parseInt(Character.toString(ans1.charAt(k))));
             }
             Total.add(0,First);
+        }
 
+        int result[] = new int[First.get(0).size() + 1];
+        int carry = 0;
+
+
+        for (int i = First.size()-1, j=0; i >= 0; i--, j++){
+            
         }
         System.out.println(Total);
     }
