@@ -105,9 +105,6 @@ public class Alg7 {
             sum += val;
         }
 
-
-        
-
         ArrayList <Object> Digits = new ArrayList<>();
         while (sum != 0){
             Digits.add(sum % N2);
@@ -163,16 +160,7 @@ public class Alg7 {
         System.out.println(carea);
         Swap("you","me");
         Robot();
-        DectoN(2, 5);
-        DectoN(8, 15);
-        NtoDec(2, 100);
-        NtoN(2,8,111);
-        NtoDec(8, 10);
-        NtoN(8,10,10);
-        NtoN(8,16,100);
-        NtoN(16,10,25);
-        NtoN(16,2,37);
-        NtoN(16,8,40);
+        NtoN(3,4,2222.22);
       
     }
 
