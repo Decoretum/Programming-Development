@@ -93,7 +93,7 @@ class NoteSystem:
             
 
         else:
-            cursor.execute("create table Notes (NoteID smallint(10) not null, NoteBody varchar(2000) not null, NoteHeader varchar(100) not null, NoteDate varchar(100) not null, EditDate varchar(100), constraint note_pk primary key (NoteID))")
+            cursor.execute("create table Notes (NoteID smallint(10) not null, NoteBody text not null, NoteHeader varchar(100) not null, NoteDate varchar(100) not null, EditDate varchar(100), constraint note_pk primary key (NoteID))")
             print("Table created!")
 
 
