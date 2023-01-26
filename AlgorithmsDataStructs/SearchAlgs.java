@@ -3,7 +3,7 @@
 package AlgorithmsDataStructs;
 
 public class SearchAlgs{
-    static int LinSearch(int array[], int target){
+    static int LinSearch(int array[], int target){ //O(n) time complexity
         for (int i = 0; i < array.length; i++){
             if (array[i] == target){
                 return i;
@@ -23,7 +23,7 @@ public class SearchAlgs{
         System.out.println(String.format("Index is at %d",i));
     }
 
-    static void BinSearch(int array[], int target){ //considering the array is sorted 
+    static void BinSearch(int array[], int target){ //considering the array is sorted, O(logn) time complexity
         int high = array[array.length - 1];
         int low = array[0];
         while (low <= high){

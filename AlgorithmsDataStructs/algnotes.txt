@@ -56,3 +56,7 @@ input size. Space complexity includes both Auxiliary space and space used by inp
 
 Memory
 
+
+
+You can sort arrays or collection, then use a search algorithm
+
