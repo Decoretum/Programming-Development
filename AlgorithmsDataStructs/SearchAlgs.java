@@ -3,7 +3,7 @@
 package AlgorithmsDataStructs;
 
 public class SearchAlgs{
-    static int LinSort(int array[], int target){
+    static int LinSearch(int array[], int target){
         for (int i = 0; i < array.length; i++){
             if (array[i] == target){
                 return i;
@@ -11,8 +11,41 @@ public class SearchAlgs{
         }
         return 1;
     }
+
+    static void SentLinSearch(int array[], int target){
+        int last = array[array.length-1];
+        array[array.length-1] = target;
+        int i = 0;
+        while (array[i] != target){
+            i++;
+        }
+        array[array.length-1] = last;
+        System.out.println(String.format("Index is at %d",i));
+    }
+
+    static void BinSearch(int array[], int target){ //considering the array is sorted 
+        int high = array[array.length - 1];
+        int low = array[0];
+        while (low <= high){
+            int mid = (high + low) / 2;
+            if (array[mid] > target){
+                high = mid - 1;
+            }
+
+            else if (array[mid] < target){
+                low = mid + 1;
+            }
+
+            else if (array[mid] == target){
+                System.out.println(mid);
+                break;
+            }
+        }
+    }
+    
     public static void main (String args[]){
         int [] array = {1,2,3,4,5};
-        System.out.println(LinSort(array,3));
+        BinSearch(array,3);
+        SentLinSearch(array,2);
     }
 }
