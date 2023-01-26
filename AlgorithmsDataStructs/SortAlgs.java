@@ -28,9 +28,31 @@ public class SortAlgs{
 
     O(1) space complexity since space does not grow no matter the operations, loops, or input of data
     */
+
+    static void BubbleSort(int array[]){
+        int alength = array.length;
+        boolean sorted = false;
+        while (sorted == false){
+            sorted = true;
+            for (int i = 0; i < array.length - 1; i++){
+                if (array[i] > array[i+1]){
+                    int temp = array[i];
+                    array[i] = array[i+1];
+                    array[i+1] = temp;
+                }
+            }
+        }
+    }
+
+    /*
+    Time Complexity = O(n^2)
+    Space Complexity = O(1)
+    used for large datasets, though not efficient
+    */
     public static void main (String args[]){
         int [] array = {4,1,2,5,6};
-        SelectionSort(array);
+        //SelectionSort(array);
+        BubbleSort(array);
         for (int i =0; i<array.length; i++){
             System.out.print(array[i]);
         }
