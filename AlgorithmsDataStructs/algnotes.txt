@@ -43,3 +43,16 @@ But they contain an index with a key ID. In hashing, a key is assigned to specif
 
 In the randomized algorithm we use a random number so it gives immediate benefit. 
 The random number helps in deciding the expected outcome.
+
+
+
+
+Space Complexity
+
+Auxiliary Space is the extra space or temporary space used by an algorithm.
+
+The space Complexity of an algorithm is the total space taken by the algorithm with respect to the 
+input size. Space complexity includes both Auxiliary space and space used by input. 
+
+Memory
+
