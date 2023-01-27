@@ -77,11 +77,84 @@ public class SortAlgs{
     only few elements are misplaced in complete big array.
      */
 
+    
+    static void Merge(int [] left, int[] right, int[] array){
+        int arraysize = array.length;
+        int leftsize = arraysize / 2;
+        int rightsize = arraysize - leftsize;
+
+        //pointers
+        int p = 0, l = 0, r = 0;
+        while (l < leftsize && r < rightsize){
+            if (left[l] < right[r]){
+                array[p] = left[l];
+                l++;
+                p++;
+            }
+
+            else if (right[r] < left[l]){ //done under the assumption that you can still compare them and left and right arrays are still both incomplete
+                array[p] = right[r];
+                p++;
+                r++;
+            }
+        }
+
+        while (l < leftsize){
+            array[p] = left[l];
+            p++;
+            l++;
+        }
+
+        while (r < rightsize){
+            array[p] = right[r];
+            p++;
+            r++;
+        }
+    }
+
+    static void MergeSort(int [] array){
+        int alength = array.length;
+        if (alength <= 1){
+            return; //base case to stop recursion
+        }
+
+        int middle = alength / 2;
+        int [] left = new int[middle];
+        int [] right = new int[alength - middle];
+
+        int a = 0; //left counter
+        int b = 0; //right counter
+
+        for (; a < alength; a++){
+            if (a < middle){
+                left[a] = array[a];
+            }
+
+            else {
+                right[b] = array[a];
+                b++;
+            }
+        }
+
+        //dividing subsequent arrays through recursion
+        MergeSort(left);
+        MergeSort(right);
+        Merge(left, right, array); //separate function
+    }
+
+
+    /* MergeSort
+    Time Complexity = O(nlogn)
+    Divide and Conquert Algorithm
+    Space Complexity = O(n) cause of creation of new subarrays to create new elements during recursions
+    */
+
     public static void main (String args[]){
         int [] array = {4,1,2,5,6};
         //SelectionSort(array);
         //BubbleSort(array);
-        InsertionSort(array);
+        //InsertionSort(array);
+        MergeSort(array);
         for (int i =0; i<array.length; i++){
             System.out.print(array[i]);
         }
