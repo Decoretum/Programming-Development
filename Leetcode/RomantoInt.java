@@ -33,7 +33,7 @@ public class RomantoInt{
                     i += 1;
                  }
                  }
-
+    
                  else if (current.equals("X")){
                     if (next.equals("L")){
                         sum += 40;
