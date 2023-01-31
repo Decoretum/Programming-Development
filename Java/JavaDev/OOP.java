@@ -41,6 +41,7 @@ public class OOP {
         Destruction Dire = new Destruction();
         CreationAgent Test = new CreationAgent();
         System.out.println(Test.passed);
+        Yuan.LearnNew();
         
 
 
