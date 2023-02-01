@@ -6,28 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Gael's Vue Course </title>
     <script src="Vue.js" defer> </script>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"> </script> <!-- Adding Vue -->
+    <link rel="stylesheet" href="Style.css">  
 </head>
 <body>  
-    <div id="app">
-        {{ DevName }}
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"> </script>  <!-- Adding Vue -->
+    <div id="app" v-cloak>Name is : {{ DevName }} <!-- Vue directive for hiding anything from rendering until whole Vue application is done rendering-->
+        <input id="name" v-model="DevName" /> <!-- Vue directive different from HTML attribute-->
+        <!-- model directive allows dynamic changing of value of variable -->
+
+        <div v-if="Condition" class="shape"> Gael is True! </div>
+        <!-- if directive allows conditional display of HTML element -->
+
+        <!-- else-if and else directive allows conditional display of HTML element -->
+        <div v-else-if="Condition1" class="shape one"> Gael is False! </div>
+        <div v-else class="shape two"> Gael is I DO NOT KNOW! </div>
+    
     </div>
+    
+    <button id="submit"> Submit </button>
 
+<script>
+  //const { createApp } = Vue
+  async function Input(){
+    let button = document.getElementById('submit')
+    let name = button.value   
+  }
 
+  let value = document.getElementById("#name")
+  let condition = ""
+  if (value === "Gael Estrera"){
+    condition = true
+  }
+  else{
+    condition = false
+  }
 
+  Vue.createApp({
+    data() {
+      return {
+        DevName: "Gael Estrera",
+        Purpose: "Learn Vue JS",
+        Condition: false,
+        Condition1: true,
+        Condition2: false,
+      }
+    },
+  }).mount('#app')
 
-
-    <script>  
-        let app = Vue.createApp({
-            appdata: function(){
-                DevName = 'Gael Estrera the Developer!'
-                return{
-                    DevName
-                }
-            }
-        })
-        app.mount("#app") //Vue js instance can connect, display, manipulate DOM element within the div class HTML specified 
-    </script>
+</script>
     
 </body>
 </html>
