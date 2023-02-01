@@ -1,5 +1,6 @@
 package JavaDev;
 
+import javax.swing.*;
 import java.util.*;
 public class Learn {
     //Primitive (stores data, can hold 1 value) 
@@ -126,6 +127,7 @@ public class Learn {
                 }
             }
         }
+        System.out.println();
     }
 
     static void MarkMatrix2d(Object[][] matrix,int x, int y, Object value){
@@ -156,6 +158,31 @@ public class Learn {
         }
     }
 
+    static void Student(){
+        String name = JOptionPane.showInputDialog("What is your name?");
+        String course = JOptionPane.showInputDialog("What course do you belong to?");
+        String specialization = JOptionPane.showInputDialog("Do you have any specialization?");
+        int level = Integer.parseInt(JOptionPane.showInputDialog("What year level are you?"));
+        String aspiration = JOptionPane.showInputDialog("What career do you want to have in the future?");
+        
+        if (course.equals("") || course.isEmpty()){
+            JOptionPane.showMessageDialog(null, "How can you have no course? Answer it again");
+        }
+        else{
+            if (specialization.trim().isEmpty()){
+                JOptionPane.showMessageDialog(null, String.format("Student Name: %s || Student Course: %s || Year Level: %d || Aspiration: %s",name,course,level,aspiration));
+            }
+            else{
+                JOptionPane.showMessageDialog(null, String.format("Student Name: %s || Student Course: %s || Specialization: %s|| Year Level: %d || Aspiration: %s",name,course, specialization,level,aspiration));
+            }
+            
+        }
+
+        System.out.println("Thank you for the input.");
+        
+        
+    }
+
     public static void main (String args[]){
         Object[] CoolArray = {1,2,3,4,5,6,7};
         Num = (int) Num / 2;
@@ -173,7 +200,10 @@ public class Learn {
         //AddtoArray(CoolArray, "infinity");
         System.out.println("\n");
         Matrix2d(6, 6);
-        Chemistry();
+        //Chemistry();
+        Student();
         //NameInput();
+        String rand = "           ";
+        System.out.println(rand.trim().length());
     }
 }
