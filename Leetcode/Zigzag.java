@@ -2,7 +2,7 @@ package Leetcode;
 import java.util.*;
 
 public class Zigzag{
-    static String Convert(String s, int numRows){ //numRows also determine no. of values per columns
+    static void Convert(String s, int numRows){ //numRows also determine no. of values per columns
         int columns = s.length() / numRows; //number of columns
         int space = numRows - 2; //number of in between values
         ArrayList<ArrayList<String>> Columns = new ArrayList<>();
@@ -30,14 +30,14 @@ public class Zigzag{
                 l = 0;
                 i = i + space + 1;
             }
-
-
         }
 
+        System.out.println(Columns);
+        System.out.println(Spaces);
         }
     
     public static void main (String args[]){
-        System.out.println(14 % 4);
+        Convert("PAYPALISHIRING",4);
     }
 
 }
