@@ -14,6 +14,11 @@ select  product_description, product_t.product_id, order_line_t.order_id
 from order_line_t, product_t
 where (product_t.product_id = order_line_t.product_id);
 
+select customer_name, customer_address, product_description, ordered_quantity
+from customer_t, order_line_t, order_t, product_t
+where (order_line_t.order_id = order_t.order_id) and (order_t.customer_id = customer_t.customer_id)
+and (order_line_t.product_id = product_t.product_id);
+
 
 #non equijoins - no comparisons of primary & foreign keys
 #we need to match column values from different tables using comparison operators
