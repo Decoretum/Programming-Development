@@ -37,7 +37,7 @@ public class Zigzag{
         }
     
     public static void main (String args[]){
-        Convert("PAYPALISHIRING",4);
+        Convert("PAYPALISHIRING",3);
     }
 
 }
