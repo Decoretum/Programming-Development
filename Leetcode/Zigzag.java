@@ -1,6 +1,7 @@
 package Leetcode;
 import java.util.*;
 
+//My attempt at this annoying Leetcode solution, unfinished
 public class Zigzag{
     static void Convert(String s, int numRows){ //numRows also determine no. of values per columns
         int columns = s.length() / numRows; //number of columns
