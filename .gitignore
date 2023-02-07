@@ -1,4 +1,4 @@
 Web/msys22/Lib
 Web/SalesApp/Inventory/__pycache__/
 Web/SalesApp/Inventory/migrations/__pycache__/
-.class
+*.class
