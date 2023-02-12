@@ -43,7 +43,7 @@ select * from customer_t
 left join order_t
 on (customer_t.customer_id = order_t.customer_id);
 
-select customer_name, ordered_quantity, product_description, standard_price
+select customer_name, product_description, standard_price, ordered_quantity
 from customer_t, order_t, order_line_t, product_t
 where (customer_t.customer_id = order_t.customer_id)
 and (order_t.order_id = order_line_t.order_id)
