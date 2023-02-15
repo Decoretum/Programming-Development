@@ -201,9 +201,11 @@ public class Learn {
         System.out.println("\n");
         Matrix2d(6, 6);
         //Chemistry();
-        Student();
+        //Student();
         //NameInput();
         String rand = "           ";
+        String regex = "MoNsTEr";
         System.out.println(rand.trim().length());
+        System.out.println("monster".contains(regex.toLowerCase()));
     }
 }
