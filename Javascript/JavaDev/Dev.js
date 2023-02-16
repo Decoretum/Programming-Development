@@ -4,6 +4,7 @@ let Programmer = {
     Name : '',
     University : '',
     Field : '',
+    Insights : 0,
     Introduction : function(){
         if(this.University === ''){
             console.log(`My name is ${this.Name} and I\'m a self-taught developer!`);
@@ -13,7 +14,7 @@ let Programmer = {
             console.log(`My name is ${this.Name} and I\'m a student in ${this.University}.`);
             console.log(`My field of expertise is ${this.Field}.`)
         }       
-    }
+    },
 }
 
 //Instantiate using function
@@ -35,6 +36,7 @@ class ITBuilder{
         this.Name = Name;
         this.Field = Field;
         this.University = University;
+        this.Insights = 0;
     }
     Flex(){
         let pattern = /software development/i;
@@ -48,6 +50,15 @@ class ITBuilder{
         if (pattern.test(hate)){
             console.log(`I ABSOLUTELY hate front-end!`);
             console.log(`I prefer BACK-END!`);
+        }
+    }
+
+    Learn(topic){
+        let p1 = /prog/i;
+        if (p1.test(topic)){
+            this.Insights += 1;
+            console.log(`Improving programming skills!`);
+            console.log(`Insight level: ${this.Insights}`);
         }
     }
 }
@@ -66,3 +77,4 @@ Dam.Introduce;
 const Sean = new ITBuilder("Sean","Software Development","UP Diliman");
 Sean.Flex();
 Sean.Hate('FrontEnD');
+Sean.Learn('programming');
