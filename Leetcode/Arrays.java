@@ -84,11 +84,92 @@ public class Arrays{
         return proper;
     }
 
+    static int removeDuplicates(int[] nums){
+        //pointers
+        ArrayList<Integer> nodup = new ArrayList<>();
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        int len = nums.length;
+        while(j < len){
+            if (nodup.contains(nums[j]) == false){
+                nodup.add(nums[j]);      //when adding with hashset, elements added aren't retaining their order of adding       
+                i++;
+                j++;
+            }
+            else{
+                nums[j] = 101;
+                j++;
+            }
+        }
+
+        //reuse them
+        i = 0;
+        j = 0;
+
+
+        for (int l : nodup){
+            if (k < nodup.size()){
+                nums[k] = l;
+                k++;
+            }
+        }
+
+        while (k < len){
+            nums[k] = 101;
+            k++;
+        }
+
+        return nodup.size();
+    }
+
+    //Edge cases - scenarios that you wouldn't expect to encounter, extremities, oddities
+
+    static boolean checkIfExist(int[] arr){
+        boolean cond = false;
+        int i = 0;
+        int j = 1;
+        if (arr == null){
+            return false;
+        }
+
+        else{
+            while (i < arr.length && j < arr.length){
+                if (i != j && arr[i] == 2 * arr[j]){
+                    cond = true;
+                    break;
+                }
+                
+                else{
+                    if (j == arr.length - 1){
+                        i++;
+                        j = 0;
+                    }
+                    else{
+                        j++;
+                    }  
+                }     
+            }
+        }
+        return cond;
+    }
+
+    static boolean validMountainArray(int[] arr) {
+        if (arr.length < 3){
+            return false;
+        }
+        else{
+            
+        }
+    }
+
     public static void main (String args[]){
         int [] a1 = new int[10];
-        int[] a2 = {0,1,2,2,3,0,4,2};
+        int[] a2 = {-2,0,10,-19,4,6,-8};
 
-        System.out.println(removeElement(a2,2));
+        //System.out.println(removeElement(a2,2));
+        //removeDuplicates(a2);
+        System.out.println(checkIfExist(a2));
         for (int i : a2){
             System.out.println(i);
         }

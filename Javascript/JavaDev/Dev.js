@@ -45,6 +45,12 @@ class ITBuilder{
         }
     }
 
+    Status(){
+        if (this.Insights <= 2){
+            console.log(`It is still not enough insight! Learn more!`);
+        }
+    }
+
     Hate(hate){
         let pattern = /frontend/i;
         if (pattern.test(hate)){
@@ -78,3 +84,5 @@ const Sean = new ITBuilder("Sean","Software Development","UP Diliman");
 Sean.Flex();
 Sean.Hate('FrontEnD');
 Sean.Learn('programming');
+Sean.Learn('program');
+Sean.Status();
