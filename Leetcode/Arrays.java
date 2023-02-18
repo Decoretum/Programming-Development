@@ -155,21 +155,52 @@ public class Arrays{
     }
 
     static boolean validMountainArray(int[] arr) {
+        boolean cond = true;
+        boolean odd = false;
+        boolean inc = false;
+        boolean dec = false;
+        int i = 0;
+        int back = -1; //element before arr[i]
+
         if (arr.length < 3){
             return false;
         }
+        
         else{
-            
+            while(i < arr.length - 1){
+                if (arr[i] < arr[i+1] && dec == false){
+                    i++;
+                    inc = true;
+                }
+                else if (arr[i] > arr[i+1]){
+                    i++;
+                    dec= true;
+                }
+                else if (arr[i] < arr[i+1] && dec == true ){
+                    return false;
+                }
+                else if (arr[i] == arr[i+1]){
+                    return false;
+                }
+            }
         }
+        if (dec == true && inc == true){
+            cond = true;
+        }
+        else{
+            cond = false;
+        }
+        return cond;
     }
 
     public static void main (String args[]){
         int [] a1 = new int[10];
-        int[] a2 = {-2,0,10,-19,4,6,-8};
+        int[] a2 = {9,8,7,6,5,4,3,2,1,0};
 
         //System.out.println(removeElement(a2,2));
         //removeDuplicates(a2);
-        System.out.println(checkIfExist(a2));
+        //System.out.println(checkIfExist(a2));
+        System.out.println(validMountainArray(a2));
         for (int i : a2){
             System.out.println(i);
         }
