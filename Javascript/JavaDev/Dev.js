@@ -49,6 +49,9 @@ class ITBuilder{
         if (this.Insights <= 2){
             console.log(`It is still not enough insight! Learn more!`);
         }
+        else{
+            console.log(`You're a genius now!`);
+        }
     }
 
     Hate(hate){
@@ -85,4 +88,7 @@ Sean.Flex();
 Sean.Hate('FrontEnD');
 Sean.Learn('programming');
 Sean.Learn('program');
+if (Sean.Insights != 5){
+    Sean.Learn('programming');
+}
 Sean.Status();
