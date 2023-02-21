@@ -6,3 +6,4 @@ To run project:
 Components: 
 Components can be used alongside each other for front-end formatting, basically templates of each other
 Views are like views htmls, but they should have <script setup> tag, unlike in components that only have <script>
+
