@@ -1,8 +1,14 @@
-<template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
-</template>
+<script setup> //For views, do not remove setup
+import AboutGael from '../components/AboutGael.vue';
+
+</script>
+
+      <template>
+        <main>
+          <AboutGael /> 
+        </main>
+      </template>
+ 
 
 <style>
 @media (min-width: 1024px) {

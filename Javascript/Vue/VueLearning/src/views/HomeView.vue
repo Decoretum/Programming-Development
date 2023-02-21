@@ -5,6 +5,5 @@ import TheWelcome from '../components/TheWelcome.vue'
 <template>
   <main>
     <TheWelcome />
-    <span class=""> {{ lar }}</span> 
   </main>
 </template>
