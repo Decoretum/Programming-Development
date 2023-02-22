@@ -38,8 +38,9 @@
         <label for="phone"> Phone Number: </label>
         <input class="inp" type="text" id="phone" v-model="ph"> 
         <span class="errors">
-            <span v-if="ph.length < 11 && ph != ''"> Number is missing {{ 11 - ph.length }} </span>
-            <span v-else-if="ph == ''"> </span>
+            <span v-if="ph.toString().length < 11 && ph != ''"> Number is missing {{ 11 - ph.toString().length }} more digits </span>
+            <span v-else-if="ph.toString().length + 10 != 21 && ph.toString().length === 11"> Accepted! </span>
+            <span v-else-if="ph ='' "> </span>
             <span v-else> Number accepted! </span>
         </span><br>
         
@@ -58,7 +59,8 @@ export default{
             mail : "",
             first : "",
             last : "",
-            ph : "",
+            ph : 0,
+            num : 'number'
         }
     },
         methods:
@@ -81,6 +83,29 @@ export default{
                   if (p != ''){
                     console.log(p)
                   }
+
+                  if (m.includes('@') && (!m.includes('gmail.com') && !m.includes('yahoo.com'))){
+                    alert('Your Email has missing identifiers such as gmail.com/yahoo.com');
+                  }
+                  else if (!m.includes('@')){
+                    alert('Your Email has missing identifiers such as @gmail/@yahoo and/or .com');
+                  }
+                  
+                  if (o.slice(0,1) != o.slice(0,1).toUpperCase() || n.slice(0,1) != n.slice(0,1).toUpperCase()){
+                    alert('Name inputs should have a starting uppercase letter!');
+                  }
+                  else if (o.length < 4 || n.length < 4){
+                    alert('Name is too short!');
+                  }
+
+                  if (p.length < 11){
+                    alert('Number is too short!');
+                  }
+                  else{
+                    alert('Account successfully created!');
+
+                  }
+                  
                     },
                 }
             }
