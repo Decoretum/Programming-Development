@@ -1,31 +1,17 @@
-<script>
-//App.vue is the main component that could utilize other components as well
-//App.vue is basically the core of the single-file-application view since it is always present
-//simply specify the template, then add the <RouterView /> header on a place to direct to other views
-import { def } from '@vue/shared';
+<script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-
-export default{
-  name: "app",
-  components: {
-    HelloWorld,
-  }
-}
-
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
     <div class="wrapper">
-      <HelloWorld msg="You did it!"  />
+      <HelloWorld msg="Gael Estrera" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/Projects"> Projects </RouterLink>
+        <RouterLink to="/"> Home </RouterLink>
+        <RouterLink to="/form"> Signup </RouterLink>
+        <RouterLink to="/user"> User Information </RouterLink>
       </nav>
     </div>
   </header>
@@ -74,6 +60,8 @@ nav a:first-of-type {
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
+    position: relative;
+    margin-top: -30vh;
   }
 
   .logo {
