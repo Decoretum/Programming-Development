@@ -1,6 +1,8 @@
 <template>
   <main>
-    <h1>This is an about page</h1>
+    <h1>This will be a website about Gael's journey on conquering his fear of CSS! Hopefully, Gael
+      will not fear CSS anymore by the end of this semester. Hopefully.
+    </h1>
   </main>
 </template>
 
