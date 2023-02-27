@@ -1,3 +1,4 @@
+drop database pinevalley;
 create database pinevalley;
 use pinevalley;
 
