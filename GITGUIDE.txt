@@ -22,3 +22,6 @@ git push
 If you want to ignore existing files/directory that are already added in the repository, do:
 git rm -r --cached .
 git add .
+
+To undo commits you've done:
+git reset --soft HEAD~5
