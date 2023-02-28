@@ -19,6 +19,12 @@ WHERE (state NOT LIKE "%NJ%")
 AND (state NOT LIKE "%NY%")
 AND (state NOT LIKE "%FL%");
 
+SELECT customer_name, state
+FROM customer_t
+WHERE NOT (state = "NJ")
+AND NOT (state = "NY")
+AND NOT (state = "FL");
+
 SELECT product_description, product_finish, standard_price
 FROM product_t
 WHERE (standard_price < 300) OR (standard_price > 500)
