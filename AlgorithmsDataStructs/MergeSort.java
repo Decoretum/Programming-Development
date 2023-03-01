@@ -57,7 +57,7 @@ public class MergeSort{
         }
     }
     public static void main (String args[]){
-        int [] superlist = {1,5,2,12,6,92,150,59};
+        int [] superlist = {5,1,1,2,0,0};
         Sort(superlist);
         for (int i : superlist){
             System.out.print(i + " ");
