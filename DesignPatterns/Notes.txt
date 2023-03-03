@@ -1,0 +1,23 @@
+Design Patterns
+
+SOURCES:
+https://sourcemaking.com/design_patterns
+https://medium.com/javarevisited/6-best-free-design-pattern-courses-for-experienced-developers-f39f6dd5f31c
+https://www.udemy.com/course/learn-creational-design-patterns-in-java/learn/lecture/10268220#overview
+https://www.youtube.com/watch?v=NU_1StN5Tkk (What im based on rn)
+
+Creational - Ways to create objects
+Structural - Ways these objects are related
+Behavioral - Interaction/communication between these objects
+
+Coupling - how much objects are dependent or coupled to each other
+- if you change an aspect or characteristic of an object (which is where other objects are depended on), this could create cascading effects on the 
+other dependent classes
+- application should be loosely coupled using interfaces
+
+interfaces
+- a contract that specifices capabilities that a class should provide
+
+Encapsulation
+- bundling data (access modifiers), setting methods for those data (getter, setter)
+- for robust applications
