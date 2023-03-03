@@ -12,6 +12,7 @@ public class JavaStructs{
         String peeking = my.peek();
         System.out.println(peeking);
         System.out.println(my.search("You"));
+        System.out.println(6 % 10);
     }
 }
 
