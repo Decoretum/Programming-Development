@@ -64,7 +64,8 @@ public class JavaStructs{
         addFirst() / push() / offerFirst() - add at first
         removeFirst() - remove first
         removeLast() - remove last
-        poll() - is identical to pop(), but this doesnt return exception when deque is empty
+        poll() - is identical to pop(), but this doesnt return exception when deque is empty,
+        pollFirst(), pollLast()
 
     
         */
