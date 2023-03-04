@@ -1,4 +1,4 @@
-package AlgorithmsDataStructs;
+
 
 public class LinkedList {
     Node head;

@@ -1,5 +1,5 @@
-package AlgorithmsDataStructs;
 import java.util.*;
+
 
 public class JavaStructs{
     public static void main (String args[]){
@@ -77,6 +77,18 @@ public class JavaStructs{
         deq.offer(90);
         deq.removeFirst();
         System.out.println(deq);
+
+
+        //LinkedLists
+        /*
+        Containers (nodes) that point to a next container (node)
+        add first, add last, remove first, remove last,
+        get first, get last
+         */
+        LinkedList <String> GaelList = new LinkedList<>();
+        GaelList.add("Yo");
+        GaelList.add("Mama");
+        GaelList.add("HasLove");
 
 
 

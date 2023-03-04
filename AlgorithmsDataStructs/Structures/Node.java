@@ -1,4 +1,4 @@
-package AlgorithmsDataStructs;
+
 
 public class Node {
     String data;
