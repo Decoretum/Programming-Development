@@ -11,30 +11,49 @@ public class Graphs{
     What I can do:
     Instead of primitive data types such as int or maybe referenced like String, Characters,
     use NODE data structure instead since NODE data structure could incorporate more features and methods
+    
+    Distance of Vertices:
+    Distance from vertex A to B
+
+    Eccentricity of Vertices:
+    Maximum distance that vertex A has to all other vertices
+
+    Radius of a connected graph:
+    Minimum value of eccentricity from all vertices
+
+    Diameter of a connected graph:
+    Maximum value of eccentricity from all vertices
+    
+    Central Point and Centre:
+    Vertex that has minimum value of eccentricity is central point.
+    Centre consists of sets of all central point.
     */
 
 
     //initializing Adjacency list for Graph
-    static ArrayList<ArrayList<Integer>> CreateAdjList(int vertices){
-        ArrayList<ArrayList<Integer>> Graphs = new ArrayList<>();
+    static ArrayList<ArrayList<Node>> CreateAdjList(int vertices){
+        ArrayList<ArrayList<Node>> Graphs = new ArrayList<>();
         for (int i =0; i< vertices; i++){
-            ArrayList<Integer> NewList = new ArrayList<>();
+            ArrayList<Node> NewList = new ArrayList<>();
             Graphs.add(NewList);
         }
         return Graphs;
     }
 
     //This is for adding an edge to an undirected graph in Adjacency List
-    static void AddEdge(ArrayList<ArrayList<Integer>> Graphs, int num1, int num2){
-        Graphs.get(num1).add(num2);
-        Graphs.get(num2).add(num1);
+    static void AddEdge(ArrayList<ArrayList<Node>> Graphs, int num1, int num2){
+        Node n1 = new Node(String.valueOf(num1));
+        Node n2 = new Node(String.valueOf(num2));
+        Graphs.get(num1).add(n2);
+        Graphs.get(num2).add(n1);
     }
 
-    static void PrintGraph(ArrayList<ArrayList<Integer>> Graphs){
+    static void PrintGraph(ArrayList<ArrayList<Node>> Graphs){
         for (int i=0; i<Graphs.size(); i++){
             System.out.println("Linked List for vertex " + i);
             for (int j=0; j<Graphs.get(i).size(); j++){
-                System.out.print(Graphs.get(i).get(j) + " --> ");
+                Node Current = Graphs.get(i).get(j);
+                System.out.print("--> " + Current.getData());
             }
             System.out.println("");
         }
@@ -68,9 +87,11 @@ public class Graphs{
     
 
     public static void main (String args[]){
-        ArrayList<ArrayList<Integer>> Graph1 = CreateAdjList(10);
+        ArrayList<ArrayList<Node>> Graph1 = CreateAdjList(10);
         AddEdge(Graph1, 4, 5);
         AddEdge(Graph1, 4, 6);
+        AddEdge(Graph1, 4, 2);
+        AddEdge(Graph1, 6, 2);
         PrintGraph(Graph1);
 
         int[][] Matrix1 = AdjMatrix(8);

@@ -1,26 +1,40 @@
-
+import java.util.*;
 
 public class Node {
     String data;
     Node next;
+    ArrayList<Node>Connected = new ArrayList<>();
+    
 
-    Node(String data){
+    public Node(String data){
         this.data = data;
     }
 
-    String getData(){
+    public String getData(){
         return this.data;
     }
 
-    Node getNext(){
+    public void Connect(Node node){
+        Connected.add(node);
+    }
+    
+    public void Connections(){
+        System.out.println(this.getData());
+        for (Node node : Connected){
+            System.out.println("--> " + node.getData());
+        }
+        System.out.println("");
+    }
+
+    public Node getNext(){
         return this.next;
     }
 
-    void setNext(Node A){
+    public void setNext(Node A){
         this.next = A;
     }
 
-    void unlink(){
+    public void unlink(){
         this.next = null;
     }
     

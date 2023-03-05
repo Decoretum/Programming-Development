@@ -5,6 +5,7 @@ https://sourcemaking.com/design_patterns
 https://medium.com/javarevisited/6-best-free-design-pattern-courses-for-experienced-developers-f39f6dd5f31c
 https://www.udemy.com/course/learn-creational-design-patterns-in-java/learn/lecture/10268220#overview
 https://www.youtube.com/watch?v=NU_1StN5Tkk (What im based on rn)
+https://github.com/kamranahmedse/design-patterns-for-humans (VERY GOOD)
 
 Creational - Ways to create objects
 Structural - Ways these objects are related
