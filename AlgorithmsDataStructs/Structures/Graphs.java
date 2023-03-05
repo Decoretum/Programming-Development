@@ -6,6 +6,13 @@ public class Graphs{
     Searching on Graphs – Search an entity in the graph.
     Traversal of Graphs – Traversing all the nodes in the graph.
 */
+    
+    /* 
+    What I can do:
+    Instead of primitive data types such as int or maybe referenced like String, Characters,
+    use NODE data structure instead since NODE data structure could incorporate more features and methods
+    */
+
 
     //initializing Adjacency list for Graph
     static ArrayList<ArrayList<Integer>> CreateAdjList(int vertices){
