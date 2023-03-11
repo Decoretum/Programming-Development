@@ -145,6 +145,8 @@ from company
 right join game
 on company_name = game.company;
 
+#Alter field of database table
+
 alter table company
 add GameTheme varchar(20) after company_location;
 
@@ -153,6 +155,8 @@ add FoundDate varchar(30) after GameTheme;
 
 desc company;
 select * from company;
+
+#Update existing record
 
 update company
 set GameTheme = "MMORPG"
@@ -176,6 +180,8 @@ desc game;
 alter table game #Renaming/Changing column name in table
 change column Endorser Company varchar(20);
 
+#Inserting values rows
+
 desc company;
 insert into company 
 values 
@@ -188,3 +194,10 @@ insert into company
 values ("Bethesda","USA","Sandbox","4/2/1989");
 
 select * from company;
+
+
+#Deleting records
+
+DELETE 
+FROM company
+WHERE (GameTheme = "Nudity");
