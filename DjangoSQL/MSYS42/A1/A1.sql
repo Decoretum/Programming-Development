@@ -11,8 +11,9 @@ Description VARCHAR(200) NOT NULL
 
 SELECT * FROM A1_item;
 SELECT * FROM A1_order;
-DELETE FROM A1_item
-WHERE name = "";
+SELECT * FROM A1_item_order;
+DELETE FROM A1_order
+WHERE id = 1;
 
 ALTER TABLE A1_item;
 DROP TABLE A1_item;
