@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <br><br>
+    <div style="float: right; margin-right: 2vw;">
+        <a href="{% url 'home' %}"> Home </a>
+    </div>
+    {% if L <= 0 %} 
+    <br><br>
+        <div class="box">
+            <h1>There are no orders yet!</h1>
+        </div>
+
+    {% else %}
+    {% for o in O %}<br><br>
+        <div class="box">
+            <h1> Order {{o.pk}} </h1>
+            <p> Order Date: {{o.orderdate}} </p>
+            <p> Payment Type: {{o.paymenttype}} </p>
+            <p> Total Amount: ${{o.amountpaid}} </p>
+            {% for i in IO %}
+                {% if i.order_id == o %}
+                    <h1 style="font-weight: 100;"> Product Ordered: {{i.item_id.item_name}} </h1>
+                    <p> Product Price: ${{i.item_id.item_price}} </p>
+                    <p> Quantity Ordered: {{i.quantity}} </p>
+                    <p> Line Total: ${{i.line_total}} </p>
+                {% endif %}
+            {% endfor %}
+        </div> <br>
+
+    {% endfor %}
+
+    {% endif %}
+    
+</body>
+</html>

@@ -1,0 +1,20 @@
+Use this to set the mySQL path WITHIN the virtual environment, assuming you activated VE.
+export PATH=$PATH:/usr/local/mysql/bin
+
+An error will occur:
+Reason: Image not found
+Just do: 
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib
+
+We changed timezone to "Hongkong"
+We edited allowed hosts to be "127.0.0.1" and "localhost"
+Changed database to MySQL
+
+For Project settings.py, we included
+"appname" in installed apps
+
+For project urls.py, we included
+path('',include('app.urls'))
+
+if I had errors on database, comment out everything involving database
+and migrate with python3 manage.py migrate --FAKE

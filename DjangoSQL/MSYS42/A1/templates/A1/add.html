@@ -1,0 +1,79 @@
+{% load static %}
+
+{% if status == 'ADD' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+</head>
+<body>
+    <h1> Add Product </h1>
+    <form action="{% url 'add' %}" method="POST"> {% csrf_token %}
+        <p> Product Name </p>
+        <input id="name" name="name"> <br><br>
+
+        <p> Product Price </p>
+        <input id="price" name="price"> <br><br>
+
+        <p> Product Stock </p>
+        <input id="stock" name="stock" value="{{obj.stock}}"> <br><br>
+
+        <p> Description </p>
+        <textarea id="desc" name="desc"> </textarea> <br><br>
+        <button type="submit"> Submit </button>
+        <a href="{% url 'home' %}" style="margin-left: 2vw;"> Back </a>
+    </form>
+    <style>
+        textarea{
+            height: 20vh;
+            width: 100vh;
+        }
+    </style>
+</body>
+</html>
+
+{% else %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+</head>
+<body>
+    <h1> Edit Product </h1>
+    <form action="{% url 'edit' pk=obj.pk %}" method="POST"> {% csrf_token %}
+        <p> Product Name </p>
+        <input id="name" name="name" value="{{obj.item_name}}"> <br><br>
+
+        <p> Product Price </p>
+        <input id="price" name="price" value="{{obj.item_price}}"> <br><br>
+
+        <p> Product Stock (Add Stock)</p>
+        <input id="stock" name="stock" value="{{obj.stock}}"> <br><br>
+
+        <p> Description </p>
+        <textarea id="desc" name="desc"> {{obj.description}} </textarea> <br><br>
+        <button type="submit"> Submit </button>
+        <a href="{% url 'home' %}"> Back </a>
+    </form>
+    <style>
+        textarea{
+            height: 20vh;
+            width: 100vh;
+        }
+    </style>
+</body>
+</html>
+
+
+
+{% endif %}

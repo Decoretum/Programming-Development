@@ -1,0 +1,108 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <title>Order</title>
+</head>
+<body>
+    <br><br>
+    {% if L > 0 %}
+        <form method="POST" action="{% url 'order' %}"> {% csrf_token %}
+            <div class="box" style="width: 30vw; position: relative;">
+                <h1> Total Cost: </h1> <input id="total_amount" name="total_amount" style="height: 5vh;" readonly>
+                <button type="submit" style="margin-left: 2vw;"> Close Order </button>
+                <a href="{% url 'home' %}" style="margin-left: 1vw;"> Back </a><br><br>
+                <p> Payment Method </p>
+                <input id="credit" type="radio" name="payment_method" id="payment_method" value=1>  
+                <label for="credit"> Cash </label>
+
+                <input id="debit" type="radio" name="payment_method" id="payment_method" value=2> 
+                <label for="debit"> Credit card </label>
+                
+                <input id="complete_order" name="complete_order" type="hidden">  
+            </div>
+        </form>
+
+        <div class="box" style="float: right; margin-left: 40vw;  position: absolute; top: 7vh;">
+            <h1 style="display: inline-block;"> Items for Sale </h1> 
+            {% for m in messages %}
+                <span style="display: inline; color: red; margin-left: 2vw;"> {{m}} </span>
+            {% endfor %}
+            <table style="border: solid;" id="table">
+                <tr id="firstheader">
+                    <th> Item Name </th>
+                    <th> Item Price </th>
+                    <th> Item Quantity </th>
+                    <th> Action </th>
+                </tr>
+                {% for i in I %}
+                    <tr>
+                        <td> {{i.item_name}} </td>
+                        <td> ${{i.item_price}} </td>
+                        <td>
+                            <select type="text" class="drop" data-q="{{i.stock_quantity}}">                             
+                            </select>
+                        </td>
+                        <th> <button class="add" data-name="{{i.item_name}}" data-cost="{{i.item_price}}" data-pk="{{i.pk}}"> Add </button></th>
+                    </tr>
+                {% endfor %}
+
+            </table>
+
+        </div> <br>
+        <div class="box" style="width: 30vw; display: none; float: left; border: solid; position: relative;" id="purchases">
+
+
+        </div> <br><br>
+
+    {% else %}
+        <div class="box" style="width: 30vw;">
+            <h1> No products to order! </h1><br>
+            <p> Add Products in the home page! </p><br>
+            <a href="{% url 'home' %}"> Back </a><br><br>
+        </div>
+
+
+    {% endif %}
+    <style>
+
+
+    </style>
+    <script>
+        let drop = document.querySelectorAll('.drop');
+        let add = document.querySelectorAll('.add');
+        let totalcost = document.getElementById('total_amount');
+        let TCnum = 0;
+
+        
+        drop.forEach(d => {
+            for (let i=1; i <= d.dataset.q; i++){
+                d.innerHTML += `<option type="text"> ${i} </option>`;           
+            }
+        })
+
+        add.forEach(button => {
+            button.addEventListener('click', () => {
+                let P = document.getElementById('purchases');
+                let hidden = document.getElementById('complete_order');
+                //button.dataset.name
+                //button.dataset.cost
+                let selected = button.parentNode.parentNode.childNodes[5].childNodes[1].selectedOptions[0].value;
+                P.style.display = "block";
+                P.innerHTML += `<div style="padding: 20px; margin-top: 3vh; border:solid 1px; background-color: #F7C815"> Product ${button.dataset.pk}: ${button.dataset.name} : $${button.dataset.cost} x ${selected} </div>`
+                TCnum += Number((Number(button.dataset.cost) * selected).toFixed(2));
+                hidden.value += button.dataset.pk + " : " + selected + "-";
+                totalcost.value = '$' + TCnum;
+            })
+        })
+        
+
+
+    </script>
+</body>
+</html>

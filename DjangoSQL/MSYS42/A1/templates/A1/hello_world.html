@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gael's Domain</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <h1> Gael's MySQL-Django POS System </h1>
+    <p> Who is Gael? </p>
+    <p> Gael is an incoming Fullstack Developer intern in Cynder that will transform the world using <br>
+    ExpressJS, NodeJS, and ReactJS. </p>
+    <p> He is also the main Dev of his MSYS 42, which allowed him to grow as a developer and landed him his internship <br> through Object-oriented training as well as JavaScript training. </p>
+    <p> This Django Application will demonstrate Django and Vanilla JS development coupled with MySQL components. </p>
+    <p> Instead of using the given HTML template, this application uses built-from-scratch CSS and JS components, but it still follows the flow of the instructions. </p>
+    <p> For ex., collecting the "completed_order" data from the orders is still in the format of "1 : 3-2 : 5-1 : 6-" </p>
+    <p> Hence, data for order will be processed according to that format. </p>
+    {% if len == 0 %}
+    <h1> You have no items in MySQL Database yet! </h1>
+    <p> Add with the button below: </p><br>
+    <a href="{% url 'add' %}"> Add Product </a>
+
+    {% else %} 
+    <br>
+    <div class="headers">
+        <a href="{% url 'add' %}"> Add Product </a>
+        <a href="{% url 'order' %}"> Add Order </a>
+        <a href="{% url 'orders' %}"> View Orders </a>
+    </div> <br><br>
+    <h1> Products </h1>
+        {% for i in I %}
+        <div class="box">
+            <p> Product ID: {{i.pk}}</p>
+            <p> Product: {{i.item_name}} </p>
+            <p> Price: ${{i.item_price}} </p>
+            <p> Stock: {{i.stock_quantity}} </p>
+            <p> Out of Stock: {{i.outofstock}}</p>
+            <p> Description: {{i.description}} </p> <br>
+            <a href="{% url 'delete' pk=i.pk %}"> Delete </a>
+            <a href="{% url 'edit' pk=i.pk %}" style="margin-left: 2vw;"> Edit </a><br><br>
+        </div><br><br>  
+        {% endfor %}<br><br>
+        
+
+    {% endif %}
+    <style>
+        
+    </style>
+</body>
+</html>
