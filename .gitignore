@@ -1,6 +1,5 @@
 Web/msys22/Lib
-Javascript/Lab1-EstreraTomasGael/
-Javascript/Lab2-EstreraTomasGael/
+node_modules/
 Web/SalesApp/Inventory/__pycache__/
 Web/SalesApp/Inventory/migrations/__pycache__/
 *.class

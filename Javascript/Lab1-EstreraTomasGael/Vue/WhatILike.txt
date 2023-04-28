@@ -1,0 +1,8 @@
+What do I like about Vue.js framework?
+
+- I like this framework's ability to reuse components repeatedly!
+- Components can reuse other components for front-end formatting, hence these components
+could then serve as templates to one another, making front-end designing and coding pontentially cleaner!
+- Data-binding in Vue.js is something i also like because I like how i return component data within the component
+which is then returned to the document itself! It's similar to Django's front-end views but with no
+manipulation or access to queried objects in the database.

@@ -1,0 +1,8 @@
+This is the 2nd framework that I used to create the form after Vue. 
+
+What I like about Svelte is its simple syntax and simple interface which allows me to somehow
+find it familiar to Vue's single page application system wherein you simply need to export the component 
+and add it as an HTML element.
+
+Svelte's data binding is also somewhat similar to Vue wherein they're reactive to each other since changing
+the input value would also change the JS variable. 

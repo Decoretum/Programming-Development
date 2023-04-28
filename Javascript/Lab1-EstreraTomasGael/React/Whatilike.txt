@@ -1,0 +1,8 @@
+What I like about React is how it incorporates some Object-Oriented concepts and
+rules for setting up components, integrating components, and binding data together.
+
+In order to create a solid component for an App, I needed to create a Class that would contain
+constructors, states (data binding), methods, and event handlers, as well as conditional 
+rendering through functions. I liked all of these! It reminds me of Django, but as a front-end version 
+of it. This is coming from someone who hates CSS. I find React to be similar to Vue in such a way
+that they reuse components.
