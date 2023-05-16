@@ -10,4 +10,4 @@ class Person{
     }
 }
 
-module.exports = {Person}
+module.exports.C1 = Person
