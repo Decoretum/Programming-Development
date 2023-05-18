@@ -7,6 +7,7 @@ https://www.udemy.com/course/learn-creational-design-patterns-in-java/learn/lect
 https://www.youtube.com/watch?v=NU_1StN5Tkk (What im based on rn)
 https://github.com/kamranahmedse/design-patterns-for-humans (VERY GOOD)
 
+
 Creational - Ways to create objects
 Structural - Ways these objects are related
 Behavioral - Interaction/communication between these objects
@@ -22,3 +23,12 @@ interfaces
 Encapsulation
 - bundling data (access modifiers), setting methods for those data (getter, setter)
 - for robust applications
+
+
+
+MSYS 42 Insights
+
+- When doing error validations, group variable validations into one group of condition (to avoid sparse code)
+    - if a variable could be null, make an if condition with corresponding child conditions
+- Keep testing
+- Use algorithms that do not cause server-side lag or delays
