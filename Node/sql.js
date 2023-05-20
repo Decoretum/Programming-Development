@@ -43,40 +43,41 @@ readFile(passpath, 'utf-8',(err,result)=>{
     else{
         console.log(result);
         pass2 = result
+        const server = mysql.createConnection({
+            host: 'localhost',
+            user: 'root',
+            password: 'Cubil97823',
+            //port: 3306,
+            database: 'TAIWANSTEEL'
+        })
+        
+        server.connect((err) => {
+            if (err){
+                console.log(err);
+            }
+            else{
+                server.query("SHOW TABLES", (err, result, fields)=> {
+                    if (err){
+                        console.log(err);
+                    }
+                    else{
+                        server.query("SELECT * FROM Inventory_finalorder", (err,result) => {
+                            if (err){
+                                console.log(err)
+                            }
+                            else{
+                                console.log(result)
+                            }
+                        })
+                    }
+                });
+            }
+        })
     }
 
 });
  
 
-const server = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'Cubil97823',
-    //port: 3306,
-    database: 'TAIWANSTEEL'
-})
 
-server.connect((err) => {
-    if (err){
-        console.log(err);
-    }
-    else{
-        server.query("SHOW TABLES", (err, result, fields)=> {
-            if (err){
-                console.log(err);
-            }
-            else{
-                server.query("SELECT * FROM Inventory_finalorder", (err,result) => {
-                    if (err){
-                        console.log(err)
-                    }
-                    else{
-                        console.log(result)
-                    }
-                })
-            }
-        });
-    }
-})
 
 
