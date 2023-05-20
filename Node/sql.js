@@ -46,7 +46,7 @@ readFile(passpath, 'utf-8',(err,result)=>{
         const server = mysql.createConnection({
             host: 'localhost',
             user: 'root',
-            password: 'Cubil97823',
+            password: pass2,
             //port: 3306,
             database: 'TAIWANSTEEL'
         })
