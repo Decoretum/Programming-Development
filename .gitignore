@@ -7,3 +7,4 @@ Web/SalesApp/Inventory/migrations/__pycache__/
 DjangoSQL/django/
 __pycache__/
 .DS_Store
+password.txt

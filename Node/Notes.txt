@@ -1,0 +1,3 @@
+Setup your code asynchronously.
+- Dont use blocking code, because it affects the server due to the focus on the block.
+- offload process using asynchronous code
