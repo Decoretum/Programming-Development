@@ -5,7 +5,8 @@
   "main": "App.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "nodemon sql.js"
+    "start" : "nodemon asyncsql.js",
+    "main" : "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
