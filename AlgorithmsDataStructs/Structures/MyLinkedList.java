@@ -133,8 +133,6 @@ public class MyLinkedList {
             } if (counter == 0){
                 if (counter != index){} 
                 else if (current.prev == null && current.next == null && index == counter){ //just 1 node
-                    //current = null;
-                    //current.val = -1;
                     this.head.val = -1;
                 } else { //more than 1 node
                     MyLinkedList after = current.next;
@@ -158,9 +156,7 @@ public class MyLinkedList {
         } catch (Exception e){
             System.out.println(e);
         }
-
     }
-
 }
 
 /**
