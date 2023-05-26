@@ -1,4 +1,6 @@
+package Structures;
 import java.util.*;
+
 
 public class Tree{
     Object value;
