@@ -78,10 +78,32 @@ public class Trees{
         InOrderRecur(root.right);
     }
 
-    //traverse left subtrees then right subtrees
+    //traverse left subtrees then right subtrees, then root node
+    //For deleting nodes
     static void PostOrderItera(Tree root){
-        
+        Stack<Tree> rightchild = new Stack<>();
+        Stack<Tree> mainstack = new Stack<>();
+        Tree current = root;
+
+        while (current != null || !stack1.isEmpty()){ 
+            while (current != null){
+                stack1.push(current);
+                current = current.left;
+            }
+            
+        }
+        System.out.println(stack1);
     }
+
+    static void PostOrderRecur(Tree root){
+        if (root == null){
+            return;
+        }
+        PostOrderRecur(root.left);
+        PostOrderRecur(root.right);
+        System.out.println(root.getValue());
+    }
+
 
 
 
@@ -102,8 +124,9 @@ public class Trees{
         L2.addRight(M2);
         M2.addLeft(N2);
         N1.addLeft(O1);
-        PreOrderIterative(Main);
+        //PreOrderIterative(Main);
         //InOrderIterative(Main);
+        PostOrderItera(Main);
 
     }
 }
