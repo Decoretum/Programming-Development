@@ -32,5 +32,6 @@ readFile('./TextTwo/WhoAmI.txt', 'utf8', (err,result)=>{
 
 })
 
+console.log('Initializing processes now!');
 const seek = path.join('/TextTwo','/WhoAmI.txt');
 
