@@ -5,7 +5,7 @@ My Capstone project, which is the culminating project for my MIS curriculum whic
 
 # Samples of successful projects/activities include (but not limited to):
       - Philippine Election System (Web application, University)
-      - Inventory Order System (Web application, Personal Project) 
+      - Inventory Order Management System (Web application, Systems Project for a Client) 
       - POS System (Standalone application, University) 
       - Note-taking System including editing, deletion, modification, and addition of entries using MySQL (Standalone Application, Personal Project)
       - Data Structures and Algorithms written in python and Java (University and personal) 
