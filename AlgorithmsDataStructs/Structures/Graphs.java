@@ -92,6 +92,7 @@ public class Graphs{
         AddEdge(Graph1, 4, 6);
         AddEdge(Graph1, 4, 2);
         AddEdge(Graph1, 6, 2);
+        AddEdge(Graph1, 9, 2);
         PrintGraph(Graph1);
 
         int[][] Matrix1 = AdjMatrix(8);
