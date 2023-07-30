@@ -15,61 +15,87 @@ public class DFS{
         return Container;
     }
 
-    public static void miniFunc(ArrayList<LinkedList<Integer>> Graph, Stack<Integer> s, ArrayList<Integer> Visited, int index, int count ){
-        while (!s.isEmpty()){
-            //This is the current node popped 
-            int current = s.pop();
-
-            int chosen = Graph.get(current).get(count);
-            if (!Visited.contains(chosen)){
-                System.out.print(chosen + " ");
-                s.add(chosen);
-                index = 0;
-            } else {
-                index++;
+    public static void recur(ArrayList<LinkedList<Integer>> Graph, int node, boolean visited[]){
+        System.out.print(node + " ");
+        visited[node] = true;
+        for (int i = 0; i < Graph.get(node).size(); i++){
+            if (!visited[Graph.get(node).get(i)]){
+                recur(Graph, Graph.get(node).get(i), visited);
             }
         }
     }
 
-    public static void dfs (int number, ArrayList<LinkedList<Integer>> Graph){
-        Stack<Integer> s = new Stack<>();
-        ArrayList<Integer> Visited = new ArrayList<>();
-
-        Visited.add(number);
-        s.add(number);
-        System.out.print(number + " ");
-
-        //This will be dynamic
-        int index = 0; 
-
-        //This will be the counter
-        int count = 0;
-
-        //size of edges of chosen node
-        int length = Graph.get(number).size();
-
-        while (count < length){
-            miniFunc(Graph, s, Visited, index, count);
-            count++;
-
-        //stack is  empty at this point
+    public static void iter(ArrayList<LinkedList<Integer>> Graph, Stack<Integer> s, int node, boolean visited[]){
+        
+        while (!s.isEmpty())
+        {
+            //popped node
+            int popped = s.pop();
+        
+        //Visit popped node and mark it as visited
+        if (visited[popped] == false){
+            visited[popped] = true;
+            System.out.print(popped + " ");
         }
-        
 
-        
+        for (int i = Graph.get(popped).size()-1; i >= 0; i--){
+            int chosen = Graph.get(popped).get(i);
+            if (!visited[chosen]){
+                s.push(chosen);
+            }
+        }
 
+        //iterate to the edges of the popped node (neighbors)
+        // for (int i = 0; i < Graph.get(popped).size(); i++){
+        //     int chosen = Graph.get(popped).get(i);
+        //         if (visited[chosen] == false){
+        //             //System.out.print(chosen + " ");
+        //             s.push(chosen);
+        //             for (int j = 0; j < Graph.get(chosen).size(); j++){
+        //                 if (!visited[Graph.get(chosen).get(j)]){
+        //                     s.push(Graph.get(chosen).get(j));
+        //                 }
+                        
+        //             }
+        //     }
+        // }
+    }
 
     }
+
+    public static void dfs (int number, ArrayList<LinkedList<Integer>> Graph){
+        boolean visited[] = new boolean[Graph.size()];
+
+        Stack<Integer> s = new Stack<>();
+        //recur(Graph, number, visited);
+        s.push(number);
+        iter(Graph, s, number, visited);
+    }
+
+    
     public static void main (String args[]){
-        ArrayList<LinkedList<Integer>> Graph =  makeGraph(4);
+        // ArrayList<LinkedList<Integer>> Graph =  makeGraph(4);
+        // addEdge(0, 1, Graph);
+        // addEdge(0, 2, Graph);
+        // addEdge(1, 2, Graph);
+        // addEdge(2, 0, Graph);
+        // addEdge(2, 3, Graph);
+        // addEdge(3, 3, Graph);
+
+        ArrayList<LinkedList<Integer>> Graph =  makeGraph(6); 
+          
         addEdge(0, 1, Graph);
         addEdge(0, 2, Graph);
-        addEdge(1, 2, Graph);
+        addEdge(1, 0, Graph);
+        addEdge(1, 3, Graph);
         addEdge(2, 0, Graph);
         addEdge(2, 3, Graph);
-        addEdge(3, 3, Graph);
+        addEdge(3, 4, Graph);
+        addEdge(3, 5, Graph);
+        addEdge(4, 3, Graph);
+        addEdge(5, 3, Graph); 
 
-        dfs(2, Graph);
+        dfs(0, Graph);
         System.out.println(Graph);
     }
 }
