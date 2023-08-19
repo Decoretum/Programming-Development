@@ -32,17 +32,17 @@ public class DFS{
             //popped node
             int popped = s.pop();
         
-        //Visit popped node and mark it as visited
-        if (visited[popped] == false){
-            visited[popped] = true;
-            System.out.print(popped + " ");
-        }
-
-        for (int i = Graph.get(popped).size()-1; i >= 0; i--){
-            int chosen = Graph.get(popped).get(i);
-            if (!visited[chosen]){
-                s.push(chosen);
+            //Visit popped node and mark it as visited
+            if (visited[popped] == false){
+                visited[popped] = true;
+                System.out.print(popped + " ");
             }
+
+            for (int i = Graph.get(popped).size()-1; i >= 0; i--){
+                int chosen = Graph.get(popped).get(i);
+                if (!visited[chosen]){
+                    s.push(chosen);
+                }
         }
 
         //iterate to the edges of the popped node (neighbors)
