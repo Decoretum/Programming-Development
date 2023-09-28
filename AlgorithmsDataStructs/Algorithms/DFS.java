@@ -1,3 +1,5 @@
+package AlgorithmsDataStructs.Algorithms;
+
 import java.util.*;
 import java.util.LinkedList;
 
