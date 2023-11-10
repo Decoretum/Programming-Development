@@ -25,3 +25,9 @@ git add .
 
 To undo commits you've done:
 git reset --soft HEAD~5
+
+To REMOVE FILES from BEING TRACKED:
+git update-index --assume-unchanged FILE_NAME
+
+To revert this, just do:
+git update-index --no-assume-unchanged FILE_NAME
