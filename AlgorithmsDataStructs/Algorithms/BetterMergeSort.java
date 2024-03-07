@@ -1,3 +1,5 @@
+package AlgorithmsDataStructs.Algorithms;
+
 class Solution {
     public void Sort(int[]arr){
         int size = arr.length;

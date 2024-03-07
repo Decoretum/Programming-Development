@@ -1,5 +1,5 @@
 //https://www.tutorialspoint.com/data_structures_algorithms/index.htm
-package AlgorithmsDataStructs;
+package AlgorithmsDataStructs.Algorithms.Sorting;
 
 public class SortAlgs{
 
@@ -11,7 +11,7 @@ public class SortAlgs{
                 if (array[min] > array[j]){
                     min = j;
                 }
-            }
+            }   
             int temp = array[min];
             array[min] = array[i];
             array[i] = temp;
@@ -31,7 +31,6 @@ public class SortAlgs{
     */
 
     static void BubbleSort(int array[]){
-        int alength = array.length;
         boolean sorted = false;
         while (sorted == false){
             sorted = true;

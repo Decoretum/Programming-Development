@@ -1,4 +1,4 @@
-
+package AlgorithmsDataStructs.Structure;
 
 public class LinkedList {
     Node head;
@@ -7,12 +7,12 @@ public class LinkedList {
     this.head = A;
     } 
 
-    LinkedList(String A){
+    public LinkedList(String A){
         Node node = new Node(A);
         this.head = node;
     }
 
-    void printList(){
+    public void printList(){
         Node current = this.head;
         String list = current.getData();
         while (current.next != null){
@@ -22,7 +22,7 @@ public class LinkedList {
         System.out.println(list);
     }
 
-    void addNode(Node A){
+    public void addNode(Node A){
         Node current = this.head;
         while (current.next != null){
             current = current.next;
@@ -30,7 +30,7 @@ public class LinkedList {
         current.next = A;
     }
 
-    void addNode(String A){
+    public void addNode(String A){
         Node node = new Node(A);
         Node current = this.head;
         while (current.next != null){
@@ -39,7 +39,7 @@ public class LinkedList {
         current.setNext(node);
     }
 
-    void insertNode(int position,String A){
+    public void insertNode(int position,String A){
         Node node = new Node(A);
         Node before = null;
         Node current = this.head;
@@ -55,7 +55,7 @@ public class LinkedList {
         System.out.println(before.getData());
     }
 
-    void insertNode(int position,Node A){
+    public void insertNode(int position,Node A){
         Node before = null;
         Node current = this.head;
         int index = 0;
@@ -70,7 +70,7 @@ public class LinkedList {
         System.out.println(before.getData());
     }
 
-    void replace(String oldData, String newData){ //using data method
+    public void replace(String oldData, String newData){ //using data method
         byte cond = 0;
         Node New = new Node(newData);
         Node before = null;
@@ -109,7 +109,7 @@ public class LinkedList {
         }    
         }
     
-    void replace(int index, String data){ //using position method
+    public void replace(int index, String data){ //using position method
         Node node = new Node(data);
         int i = 0;
         Node before = null;
@@ -135,7 +135,7 @@ public class LinkedList {
         }
     }
 
-    void Remove(int index){
+    public void Remove(int index){
         Node before = null;
         Node current = this.head;
         Node after = null;
@@ -158,7 +158,7 @@ public class LinkedList {
         }
     }
 
-    void Pop(){
+    public void Pop(){
         Node next = this.head.next;
         this.head.unlink();
         this.head = next;

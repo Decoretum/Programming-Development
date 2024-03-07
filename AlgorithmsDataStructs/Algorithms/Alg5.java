@@ -1,4 +1,7 @@
-package AlgorithmsDataStructs;
+package AlgorithmsDataStructs.Algorithms;
+
+import AlgorithmsDataStructs.Structure.LinkedList;
+import AlgorithmsDataStructs.Structure.Node;
 
 public class Alg5 {
     public static void main (String args[]){

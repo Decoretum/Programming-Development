@@ -8,3 +8,4 @@ DjangoSQL/django/
 __pycache__/
 .DS_Store
 password.txt
+*.log

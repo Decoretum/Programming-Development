@@ -1,3 +1,4 @@
+package AlgorithmsDataStructs.Structure;
 // Doubly Linked List
 public class MyLinkedList {
     MyLinkedList next;

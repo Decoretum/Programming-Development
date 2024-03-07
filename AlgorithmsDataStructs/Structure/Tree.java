@@ -1,4 +1,4 @@
-package Structures;
+package AlgorithmsDataStructs.Structure;
 import java.util.*;
 
 
